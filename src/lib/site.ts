@@ -55,9 +55,9 @@ export const services = [
     body: "Netjes en op tijd. Betaalt iemand niet, dan stuurt hij een vriendelijke herinnering. Jij hoeft er niet meer achteraan.",
   },
   {
-    tag: "Design",
-    title: "Maakt je social media posts",
-    body: "Plaatjes en teksten voor Instagram, Facebook of LinkedIn, in jouw huisstijl. Jij hoeft alleen nog ja te zeggen.",
+    tag: "Socials",
+    title: "Beheert je social media",
+    body: "Posts bedacht, gemaakt en ingepland voor Instagram, Facebook of LinkedIn. Komt er een reactie of berichtje binnen, dan staat het antwoord voor je klaar.",
   },
   {
     tag: "Data",
@@ -70,9 +70,9 @@ export const services = [
     body: "Wat vraagt de concurrent? Welke leverancier is goedkoper? Jij stelt de vraag, hij komt met een helder antwoord.",
   },
   {
-    tag: "Routine",
-    title: "Regelt het terugkerende werk",
-    body: "Afspraken bevestigen, bestellingen verwerken, retouren afhandelen. Het werk dat elke week terugkomt, doet hij voortaan.",
+    tag: "Administratie",
+    title: "Houdt je administratie bij",
+    body: "Bestellingen verwerkt, afspraken bevestigd, bonnetjes en overzichten op orde. Alles netjes klaargezet, ook voor je boekhouder.",
   },
 ];
 
@@ -228,6 +228,10 @@ export const faq = [
   {
     q: "Wat is Tibbe nou precies?",
     a: "Een medewerker die op de computer werkt, maar dan eentje die nooit naar huis gaat. Hij beantwoordt je mail, stuurt je facturen, schrijft je teksten en regelt het werk dat elke week terugkomt. Jij zegt wat er moet gebeuren, hij doet het.",
+  },
+  {
+    q: "Kan hij ook mijn social media en administratie doen?",
+    a: "Ja, allebei. Hij bedenkt en maakt posts, plant ze in en zet antwoorden op reacties voor je klaar. En je administratie houdt hij bij: bestellingen, afspraken, bonnetjes en overzichten, netjes op orde voor je boekhouder. Jij zegt overal ja of nee tegen.",
   },
   {
     q: "Wat doet hij op de eerste dag al?",

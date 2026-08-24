@@ -18,8 +18,8 @@ export function Hero() {
 
             <Reveal delay={0.05}>
               <p className="lead mx-auto mt-6 max-w-[520px] text-white/85">
-                Tibbe beantwoordt je mail, stuurt je facturen en regelt het
-                geregel. Ook 's nachts. Jij zegt alleen nog ja of nee.
+                Tibbe beantwoordt je mail, houdt je administratie bij en
+                beheert je socials. Ook 's nachts. Jij zegt alleen nog ja of nee.
               </p>
             </Reveal>
 
