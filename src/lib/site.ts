@@ -15,6 +15,11 @@ export function waLink(
 /* Primaire CTA "Plan een kennismaking" gaat naar WhatsApp */
 export const BOOKING_URL = waLink();
 
+/* Premium e-commercehomepage: één concrete CTA met passende vooringevulde tekst. */
+export const AUDIT_URL = waLink(
+  "Hoi, ik wil graag een gratis workflow-audit voor mijn webshop plannen.",
+);
+
 /* Oprichter — vul je naam in, dan verschijnt hij overal.
    Foto komt later; zolang photo leeg is tonen we een initialen-avatar. */
 export const FOUNDER = {
@@ -31,10 +36,9 @@ export const BETA_SEATS_TAKEN = 3; // TODO: bijwerken per verkochte plek
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
 
 export const nav = [
-  { label: "Wat hij doet", href: "/#diensten" },
+  { label: "Workflows", href: "/#workflows" },
   { label: "Hoe het werkt", href: "/#hoe-het-werkt" },
   { label: "Vertrouwen", href: "/#vertrouwen" },
-  { label: "Prijzen", href: "/#prijzen" },
 ];
 
 /* Zeven taken van je AI-werknemer */

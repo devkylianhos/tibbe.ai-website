@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { ArrowRight, Plug, Bot, LayoutDashboard } from "lucide-react";
 import { currentUser } from "@/lib/session";
 import {
@@ -9,7 +10,8 @@ import {
 } from "@/lib/portal";
 
 export default async function PortalOverview() {
-  const user = (await currentUser())!;
+  const user = await currentUser();
+  if (!user) redirect("/app/login");
   const name = user.split("@")[0];
   const connections = await connectionsByAuthConfig(user);
   const active = toolkits.filter((t) => {

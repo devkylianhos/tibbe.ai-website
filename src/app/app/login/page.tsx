@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { BrandMark } from "@/components/BrandMark";
+import { AUDIT_URL } from "@/lib/site";
 import { currentUser, signIn } from "@/lib/session";
 
 async function login(formData: FormData) {
@@ -41,8 +42,14 @@ export default async function LoginPage() {
         </form>
         <p className="mt-5 text-center text-[13px] text-muted-fg">
           Nog geen Tibbe?{" "}
-          <a href="/#prijzen" className="font-600 text-accent" style={{ fontWeight: 600 }}>
-            Meld je aan voor een betaplek
+          <a
+            href={AUDIT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-600 text-accent"
+            style={{ fontWeight: 600 }}
+          >
+            Plan een gratis workflow-audit
           </a>
         </p>
       </div>

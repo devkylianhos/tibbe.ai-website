@@ -17,19 +17,34 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tibbe.nl"),
-  title: "Tibbe — de AI-medewerker die 24/7 doorwerkt",
+  metadataBase: new URL("https://tibbe.app"),
+  title: "Tibbe — AI-operaties voor e-commerce",
   description:
-    "Tibbe is een AI-operator voor het Nederlandse MKB. Neemt het terugkerende werk over: klantcontact, planning, facturen, offertes en administratie. Binnen een week aan het werk. Jij keurt goed wat telt.",
+    "Tibbe bouwt AI-agents voor Nederlandse e-commercebedrijven: geselecteerde workflows voor klantenservice, orders en retention, met approvals en een traceerbaar logboek.",
+  applicationName: "Tibbe",
   icons: { icon: "/brand/favicon.svg" },
   openGraph: {
-    title: "Tibbe — de AI-medewerker die 24/7 doorwerkt",
+    title: "Tibbe — AI-operaties voor e-commerce",
     description:
-      "Een betrouwbare AI-medewerker voor je bedrijf. Binnen een week aan het werk. Jij keurt goed wat telt.",
-    url: "https://tibbe.nl",
+      "AI-agents die niet alleen antwoorden, maar geselecteerde e-commerceworkflows uitvoeren — met approvals en een traceerbaar logboek.",
+    url: "https://tibbe.app",
     siteName: "Tibbe",
     locale: "nl_NL",
     type: "website",
+    images: [
+      {
+        url: "/brand/tibbe-mark-512.png",
+        width: 512,
+        height: 512,
+        alt: "Tibbe merkteken",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Tibbe — AI-operaties voor e-commerce",
+    description:
+      "Geselecteerde workflows voor klantenservice, orders en retention, met approvals en logboek.",
     images: ["/brand/tibbe-mark-512.png"],
   },
 };
