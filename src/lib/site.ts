@@ -1,6 +1,6 @@
 /* Tibbe site content — single source of truth.
-   Positionering: een AI-werknemer voor elk bedrijf, 24/7.
-   Placeholders flagged with TODO are the "nog invullen met echte gegevens" items. */
+   Homepagepositionering: custom AI-operaties voor groeiende teams.
+   Oudere contentcollecties hieronder ondersteunen nog secundaire routes. */
 
 /* Contact loopt via WhatsApp (nog geen mail).
    Nummer in internationaal formaat zonder + of spaties. */
@@ -15,9 +15,9 @@ export function waLink(
 /* Primaire CTA "Plan een kennismaking" gaat naar WhatsApp */
 export const BOOKING_URL = waLink();
 
-/* Premium e-commercehomepage: één concrete CTA met passende vooringevulde tekst. */
+/* Premium operations-homepage: één concrete CTA met passende vooringevulde tekst. */
 export const AUDIT_URL = waLink(
-  "Hoi, ik wil graag een gratis workflow-audit voor mijn webshop plannen.",
+  "Hoi, ik wil graag een gratis workflow-audit voor een proces in mijn bedrijf plannen.",
 );
 
 /* Oprichter — vul je naam in, dan verschijnt hij overal.
