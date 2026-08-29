@@ -74,13 +74,14 @@
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
-  color: var(--home-paper);
-  border: 1px solid rgba(242, 239, 234, .34);
+  color: var(--home-ink);
+  background: var(--home-paper);
+  border: 1px solid var(--home-paper);
   font-size: 13px;
   font-weight: 600;
-  transition: background 160ms ease, border-color 160ms ease;
+  transition: background 160ms ease, border-color 160ms ease, translate 160ms ease;
 }
-.navCta:hover { background: rgba(242, 239, 234, .08); border-color: rgba(242, 239, 234, .6); }
+.navCta:hover { background: var(--home-white); border-color: var(--home-white); translate: 0 -1px; }
 
 .hero {
   position: relative;
@@ -91,6 +92,15 @@
   background-image: linear-gradient(rgba(242,239,234,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(242,239,234,.035) 1px, transparent 1px);
   background-size: 72px 72px;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(62% 54% at 76% 28%, rgba(120,160,255,.1), transparent 72%),
+    linear-gradient(118deg, transparent 20%, rgba(242,239,234,.025) 48%, transparent 68%);
+  pointer-events: none;
+}
 .hero::after {
   content: "";
   position: absolute;
@@ -99,7 +109,7 @@
   background: var(--home-line);
 }
 
-.heroGrid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(44px, 7vw, 92px); align-items: center; }
+.heroGrid { position: relative; z-index: 1; display: grid; grid-template-columns: .84fr 1.16fr; gap: clamp(42px, 6vw, 78px); align-items: center; }
 .heroCopy { padding-bottom: 30px; animation: hero-copy-in .72s cubic-bezier(.16,1,.3,1) both; }
 .eyebrow {
   display: block;
@@ -129,7 +139,9 @@
 .primaryCta:hover { background: #3569e4; translate: 0 -1px; }
 .secondaryCta { color: var(--home-paper); border: 1px solid rgba(242,239,234,.24); }
 .secondaryCta:hover { background: rgba(242,239,234,.07); border-color: rgba(242,239,234,.44); translate: 0 -1px; }
-.heroNote { margin-top: 20px; color: rgba(242,239,234,.62); font-size: 12px; }
+.heroProof { display: flex; flex-wrap: wrap; gap: 7px 0; margin-top: 22px; color: rgba(242,239,234,.67); font-size: 10px; font-weight: 600; letter-spacing: .045em; text-transform: uppercase; }
+.heroProof span { display: inline-flex; align-items: center; }
+.heroProof span:not(:last-child)::after { content: ""; width: 1px; height: 10px; margin-inline: 11px; background: rgba(242,239,234,.24); }
 
 .heroVisual { min-width: 0; animation: hero-visual-in .86s .08s cubic-bezier(.16,1,.3,1) both; }
 .visualCaption { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 10px; color: rgba(242,239,234,.58); font-size: 9px; font-weight: 600; letter-spacing: .13em; }
@@ -178,8 +190,11 @@
 .marqueeViewport::after { right: 0; mask-image: linear-gradient(to left, black, transparent); }
 .marqueeTrack { display: flex; width: max-content; animation: integration-marquee 38s linear infinite; animation-play-state: paused; will-change: transform; }
 .integrationSet { display: flex; flex: 0 0 auto; align-items: stretch; margin: 0; padding: 0; }
-.integrationSet li { width: 174px; min-height: 82px; display: flex; align-items: center; gap: 11px; padding: 0 22px; color: rgba(242,239,234,.74); border-right: 1px solid var(--home-line); font-size: 13px; font-weight: 600; white-space: nowrap; }
-.integrationMark { width: 28px; height: 28px; flex: 0 0 28px; display: grid; place-items: center; padding: 3px; background: var(--home-paper); }
+.integrationSet li { position: relative; width: 184px; min-height: 88px; display: flex; align-items: center; gap: 12px; padding: 0 22px; color: rgba(242,239,234,.78); border-right: 1px solid var(--home-line); font-size: 13px; font-weight: 600; white-space: nowrap; transition: color 180ms ease, background 180ms ease; }
+.integrationSet li::before { content: ""; position: absolute; inset: 0 0 auto; height: 2px; background: var(--integration-color); opacity: .48; transition: opacity 180ms ease; }
+.integrationSet li:hover { color: var(--home-white); background: rgba(242,239,234,.035); }
+.integrationSet li:hover::before { opacity: 1; }
+.integrationMark { width: 34px; height: 34px; flex: 0 0 34px; display: grid; place-items: center; padding: 6px; background: var(--home-paper); border: 1px solid color-mix(in srgb, var(--integration-color) 42%, transparent); }
 .integrationMark img { width: 100%; height: 100%; object-fit: contain; }
 
 .workflows, .processSection, .offer { padding: 116px 0; }
@@ -334,7 +349,7 @@
   .integrationHeading { grid-template-columns: 1fr; gap: 14px; }
   .integrationHeading p { grid-column: auto; }
   .marqueeViewport { margin-top: 34px; }
-  .integrationSet li { width: 156px; min-height: 74px; padding-inline: 17px; }
+  .integrationSet li { width: 166px; min-height: 78px; padding-inline: 17px; }
   .workflows, .processSection, .offer { padding: 82px 0; }
   .sectionIntro { grid-template-columns: 1fr; gap: 20px; margin-bottom: 45px; }
   .sectionIndex, .sectionIndexLight { padding-top: 0; }

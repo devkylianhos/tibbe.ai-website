@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -21,17 +22,17 @@ import { AUDIT_URL, waLink } from "@/lib/site";
 import styles from "./PremiumHome.module.css";
 
 const integrations = [
-  { name: "Stripe", slug: "stripe" },
-  { name: "Notion", slug: "notion" },
-  { name: "Slack", slug: "slack" },
-  { name: "HubSpot", slug: "hubspot" },
-  { name: "Shopify", slug: "shopify" },
-  { name: "WooCommerce", slug: "woocommerce" },
-  { name: "Gmail", slug: "gmail" },
-  { name: "Microsoft", slug: "microsoft" },
-  { name: "Airtable", slug: "airtable" },
-  { name: "Google Sheets", slug: "googlesheets" },
-  { name: "Meta", slug: "meta" },
+  { name: "Stripe", slug: "stripe", color: "#635bff" },
+  { name: "Notion", slug: "notion", color: "#ffffff" },
+  { name: "Slack", slug: "slack", color: "#e01e5a" },
+  { name: "HubSpot", slug: "hubspot", color: "#ff7a59" },
+  { name: "Shopify", slug: "shopify", color: "#95bf47" },
+  { name: "WooCommerce", slug: "woocommerce", color: "#96588a" },
+  { name: "Gmail", slug: "gmail", color: "#ea4335" },
+  { name: "Microsoft", slug: "microsoft", color: "#f25022" },
+  { name: "Airtable", slug: "airtable", color: "#18bfff" },
+  { name: "Google Sheets", slug: "googlesheets", color: "#34a853" },
+  { name: "Meta", slug: "meta", color: "#0668e1" },
 ];
 
 const workflows = [
@@ -126,8 +127,8 @@ function ApprovalPanel() {
 function IntegrationSet({ hidden = false }: { hidden?: boolean }) {
   return (
     <ul className={styles.integrationSet} aria-hidden={hidden || undefined}>
-      {integrations.map(({ name, slug }) => (
-        <li key={name}>
+      {integrations.map(({ name, slug, color }) => (
+        <li key={name} style={{ "--integration-color": color } as CSSProperties}>
           <span className={styles.integrationMark}><Image src={`/integrations/${slug}.svg`} alt="" width={23} height={23} loading="eager" /></span>
           <span>{name}</span>
         </li>
@@ -159,7 +160,9 @@ export function PremiumHome() {
                 <a className={styles.primaryCta} href={AUDIT_URL} target="_blank" rel="noopener noreferrer">Plan een gratis workflow-audit <ArrowUpRight size={17} /></a>
                 <a className={styles.secondaryCta} href="#operatie">Bekijk de controlelaag <ArrowRight size={17} /></a>
               </div>
-              <p className={styles.heroNote}>Maatwerk voor founders en operationele teams met terugkerend werk tussen meerdere systemen.</p>
+              <div className={styles.heroProof} aria-label="Inhoud van de gratis workflow-audit">
+                <span>30 minuten</span><span>Workflowkaart</span><span>Risico&apos;s</span><span>Build/no-buildadvies</span>
+              </div>
             </div>
             <div className={styles.heroVisual}>
               <div className={styles.visualCaption}><span>ILLUSTRATIEF DASHBOARD · OPERATIONELE LAAG</span><span>CONTEXT · BESLUIT · LOGBOEK</span></div>
