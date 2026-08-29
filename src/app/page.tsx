@@ -1,53 +1,36 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { IntegrationsStats } from "@/components/IntegrationsStats";
-import { Audiences } from "@/components/Audiences";
-import { Services } from "@/components/Services";
-import { HowItWorks } from "@/components/HowItWorks";
-import { DayFeed } from "@/components/DayFeed";
-import { WhyTrust } from "@/components/WhyTrust";
-import { Compare } from "@/components/Compare";
-import { FounderNote } from "@/components/FounderNote";
-import { Pricing } from "@/components/Pricing";
-import { Faq } from "@/components/Faq";
-import { CtaBand } from "@/components/CtaBand";
-import { Footer } from "@/components/Footer";
-import { faq } from "@/lib/site";
+import type { Metadata } from "next";
+import { PremiumHome } from "@/components/PremiumHome";
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faq.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a },
-  })),
+export const metadata: Metadata = {
+  title: "Tibbe — AI-operaties voor e-commerce",
+  description:
+    "Tibbe bouwt AI-agents voor klantenservice, orders en retention. Gekoppeld aan je e-commerce-stack, met approvals en een traceerbaar logboek.",
+  alternates: { canonical: "/" },
 };
 
-/* Verhaallijn in 10 secties, elk één boodschap:
-   wie (hero) -> waarmee (koppelingen) -> voor wie -> wat -> hoe -> een dag
-   -> waarom vertrouwen -> wat het scheelt -> wie erachter zit -> prijs -> vragen */
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Tibbe",
+  url: "https://tibbe.app",
+  logo: "https://tibbe.app/brand/tibbe-mark-512.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Parelweg 11",
+    postalCode: "1812 RS",
+    addressLocality: "Alkmaar",
+    addressCountry: "NL",
+  },
+};
+
 export default function Home() {
   return (
-    <main>
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
-      <Navbar />
-      <Hero />
-      <IntegrationsStats />
-      <Audiences />
-      <Services />
-      <HowItWorks />
-      <DayFeed />
-      <WhyTrust />
-      <Compare />
-      <FounderNote />
-      <Pricing />
-      <Faq />
-      <CtaBand />
-      <Footer />
-    </main>
+      <PremiumHome />
+    </>
   );
 }

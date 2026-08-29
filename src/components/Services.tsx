@@ -25,7 +25,7 @@ export function Services() {
                 Wat hij allemaal voor je doet.
               </h2>
               <p className="lead mt-5 max-w-[420px]">
-                Zeven dingen waar je nu losse mensen of programma's voor nodig
+                Zeven dingen waar je nu losse mensen of programma&apos;s voor nodig
                 hebt. Tibbe doet ze allemaal, voor één vast bedrag per maand.
               </p>
               <a
