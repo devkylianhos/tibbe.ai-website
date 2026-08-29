@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { BrandMark } from "@/components/BrandMark";
 import { Countdown } from "@/components/Countdown";
@@ -48,12 +49,12 @@ export default async function LaunchPage() {
       />
 
       <div className="container-x relative py-10">
-        <a href="/" className="inline-flex items-center gap-2.5">
+        <Link href="/" className="inline-flex items-center gap-2.5">
           <BrandMark />
           <span className="font-display text-[20px]" style={{ fontWeight: 600 }}>
             Tibbe
           </span>
-        </a>
+        </Link>
 
         <div className="mt-14 grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
           {/* verhaalkant */}
@@ -145,13 +146,13 @@ export default async function LaunchPage() {
                 <a href={BOOKING_URL} className="btn-primary mt-7 w-full">
                   Plan een kennismaking
                 </a>
-                <a
-                  href="/#diensten"
+                <Link
+                  href="/#workflows"
                   className="mt-4 block text-center text-[14px] font-600 text-accent hover:text-accent-dark"
                   style={{ fontWeight: 600 }}
                 >
                   Eerst kijken wat Tibbe doet
-                </a>
+                </Link>
               </>
             ) : (
               <>

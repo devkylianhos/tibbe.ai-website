@@ -1,53 +1,50 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { IntegrationsStats } from "@/components/IntegrationsStats";
-import { Audiences } from "@/components/Audiences";
-import { Services } from "@/components/Services";
-import { HowItWorks } from "@/components/HowItWorks";
-import { DayFeed } from "@/components/DayFeed";
-import { WhyTrust } from "@/components/WhyTrust";
-import { Compare } from "@/components/Compare";
-import { FounderNote } from "@/components/FounderNote";
-import { Pricing } from "@/components/Pricing";
-import { Faq } from "@/components/Faq";
-import { CtaBand } from "@/components/CtaBand";
-import { Footer } from "@/components/Footer";
-import { faq } from "@/lib/site";
+import type { Metadata } from "next";
+import { PremiumHome } from "@/components/PremiumHome";
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faq.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a },
-  })),
+export const metadata: Metadata = {
+  title: "Tibbe — AI-operaties voor groeiende teams",
+  description:
+    "Tibbe bouwt custom AI-agents voor terugkerend werk over support, sales, administratie en rapportage — gekoppeld aan je bestaande stack.",
+  alternates: { canonical: "/" },
 };
 
-/* Verhaallijn in 10 secties, elk één boodschap:
-   wie (hero) -> waarmee (koppelingen) -> voor wie -> wat -> hoe -> een dag
-   -> waarom vertrouwen -> wat het scheelt -> wie erachter zit -> prijs -> vragen */
+const homepageJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tibbe.app/#organization",
+      name: "Tibbe",
+      url: "https://tibbe.app",
+      logo: "https://tibbe.app/brand/tibbe-mark-512.png",
+      description: "Tibbe ontwerpt en bouwt custom AI-operaties voor groeiende teams.",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Parelweg 11",
+        postalCode: "1812 RS",
+        addressLocality: "Alkmaar",
+        addressCountry: "NL",
+      },
+    },
+    {
+      "@type": "Service",
+      provider: { "@id": "https://tibbe.app/#organization" },
+      name: "Custom AI-operaties",
+      description: "Ontwerp en bouw van AI-agents voor terugkerend werk over support, sales, administratie en rapportage.",
+      areaServed: { "@type": "Country", name: "Nederland" },
+      audience: { "@type": "BusinessAudience", audienceType: "Founders en operationele teams bij groeiende bedrijven" },
+    },
+  ],
+};
+
 export default function Home() {
   return (
-    <main>
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd) }}
       />
-      <Navbar />
-      <Hero />
-      <IntegrationsStats />
-      <Audiences />
-      <Services />
-      <HowItWorks />
-      <DayFeed />
-      <WhyTrust />
-      <Compare />
-      <FounderNote />
-      <Pricing />
-      <Faq />
-      <CtaBand />
-      <Footer />
-    </main>
+      <PremiumHome />
+    </>
   );
 }

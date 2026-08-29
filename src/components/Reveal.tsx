@@ -18,13 +18,12 @@ export function Reveal({
   className?: string;
 }) {
   const reduced = useReducedMotion();
-  if (reduced) return <div className={className}>{children}</div>;
   return (
     <motion.div
       initial={{ opacity: 0.72, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.45, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: reduced ? 0 : 0.45, delay: reduced ? 0 : delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}
     >
       {children}

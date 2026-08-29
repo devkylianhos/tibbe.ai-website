@@ -67,7 +67,7 @@ export function DayFeed() {
             <Reveal>
               <h2 className="display-2">Een gewone dinsdag, terwijl jij wat anders doet.</h2>
               <p className="lead mt-5 max-w-[420px]">
-                Dit deed Tibbe op een doorsnee dag. Ook 's nachts en in het weekend.
+                Dit deed Tibbe op een doorsnee dag. Ook &apos;s nachts en in het weekend.
                 Alles wat naar een klant gaat, ziet jij eerst.
               </p>
               <p className="mt-6 text-[13px] text-muted-fg">

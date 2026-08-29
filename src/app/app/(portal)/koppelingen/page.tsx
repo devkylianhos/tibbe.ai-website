@@ -1,4 +1,5 @@
 import { Check, Plug } from "lucide-react";
+import { redirect } from "next/navigation";
 import { currentUser } from "@/lib/session";
 import {
   toolkits,
@@ -8,7 +9,8 @@ import {
 } from "@/lib/portal";
 
 export default async function KoppelingenPage() {
-  const user = (await currentUser())!;
+  const user = await currentUser();
+  if (!user) redirect("/app/login");
   const connections = await connectionsByAuthConfig(user);
   const configured = composioConfigured();
 
