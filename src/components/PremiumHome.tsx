@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { BrandMark } from "@/components/BrandMark";
 import { Reveal } from "@/components/Reveal";
+import { WorkflowWalkthrough } from "@/components/WorkflowWalkthrough";
 import { AUDIT_URL, waLink } from "@/lib/site";
 import styles from "./PremiumHome.module.css";
 
@@ -144,7 +145,7 @@ export function PremiumHome() {
       <header className={styles.header}>
         <div className={styles.shell}>
           <a href="#top" aria-label="Tibbe home"><Logo light /></a>
-          <nav className={styles.nav} aria-label="Hoofdnavigatie"><a href="#workflows">Workflows</a><a href="#hoe-het-werkt">Aanpak</a><a href="#vertrouwen">Controle</a></nav>
+          <nav className={styles.nav} aria-label="Hoofdnavigatie"><a href="#walkthrough">Producttour</a><a href="#workflows">Workflows</a><a href="#hoe-het-werkt">Aanpak</a><a href="#vertrouwen">Controle</a></nav>
           <a className={styles.navCta} href={AUDIT_URL} target="_blank" rel="noopener noreferrer">Plan een gratis workflow-audit <ArrowUpRight size={15} /></a>
         </div>
       </header>
@@ -158,7 +159,7 @@ export function PremiumHome() {
               <p className={styles.heroLead}>Tibbe bouwt AI-agents die terugkerend werk uitvoeren over support, sales, administratie en rapportage. Gekoppeld aan je bestaande stack, met approvals waar een mens nodig blijft.</p>
               <div className={styles.heroActions}>
                 <a className={styles.primaryCta} href={AUDIT_URL} target="_blank" rel="noopener noreferrer">Plan een gratis workflow-audit <ArrowUpRight size={17} /></a>
-                <a className={styles.secondaryCta} href="#operatie">Bekijk de controlelaag <ArrowRight size={17} /></a>
+                <a className={styles.secondaryCta} href="#walkthrough">Bekijk één workflow <ArrowRight size={17} /></a>
               </div>
               <div className={styles.heroProof} aria-label="Inhoud van de gratis workflow-audit">
                 <span>30 minuten</span><span>Workflowkaart</span><span>Risico&apos;s</span><span>Build/no-buildadvies</span>
@@ -179,6 +180,8 @@ export function PremiumHome() {
             <div className={styles.marqueeTrack}><IntegrationSet /><IntegrationSet hidden /></div>
           </div>
         </section>
+
+        <WorkflowWalkthrough />
 
         <section className={styles.workflows} id="workflows" aria-labelledby="workflows-title">
           <div className={styles.shell}>
