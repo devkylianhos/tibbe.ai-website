@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal";
 import { Check, Minus } from "lucide-react";
+import { BETA_MONTHLY_PRICE_LABEL } from "@/lib/site";
 
 const rows = [
   {
@@ -85,7 +86,7 @@ export function Compare() {
                 losse rekeningen, per uur en per programma
               </span>
               <span className="font-display text-[17px] text-accent" style={{ fontWeight: 700 }}>
-                vanaf € 250 per maand
+                vanaf {BETA_MONTHLY_PRICE_LABEL} per maand
               </span>
             </div>
           </div>

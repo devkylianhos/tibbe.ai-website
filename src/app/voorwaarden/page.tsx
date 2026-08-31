@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
+import { AGENT_TEAM_MONTHLY_PRICE, BETA_MONTHLY_PRICE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Algemene voorwaarden — Tibbe",
@@ -25,9 +26,9 @@ export default function VoorwaardenPage() {
 
       <h2>2. Abonnement en opzeggen</h2>
       <p>
-        Je gaat een maandabonnement aan. Tijdens de beta is de prijs 250 euro
+        Je gaat een maandabonnement aan. Tijdens de beta is de prijs {BETA_MONTHLY_PRICE} euro
         excl. btw per maand, en die prijs blijft staan zolang je klant blijft. Bij
-        de volledige launch is de instap 500 euro excl. btw per maand. Token usage
+        de volledige launch kost het normale Agent Team {AGENT_TEAM_MONTHLY_PRICE} euro excl. btw per maand. Token usage
         en het Claude-abonnement komen daar nog bij. Je kunt maandelijks opzeggen;
         je opzegging gaat in aan het einde van de lopende maand.
       </p>

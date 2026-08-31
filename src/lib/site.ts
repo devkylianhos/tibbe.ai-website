@@ -27,7 +27,12 @@ export const FOUNDER = {
 export const BETA_SEATS_TOTAL = 10;
 export const BETA_SEATS_TAKEN = 3; // TODO: bijwerken per verkochte plek
 
-/* Launchmoment — de dag dat de instap van 250 naar 500 euro gaat */
+export const BETA_MONTHLY_PRICE = 750;
+export const AGENT_TEAM_MONTHLY_PRICE = 1_250;
+export const BETA_MONTHLY_PRICE_LABEL = "€ 750";
+export const AGENT_TEAM_MONTHLY_PRICE_LABEL = "€ 1.250";
+
+/* Launchmoment — de dag dat de beta overgaat naar het Agent Team-tarief */
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
 
 export const nav = [
@@ -255,7 +260,7 @@ export const faq = [
   },
   {
     q: "Wat kost het?",
-    a: "Tijdens de beta 250 euro per maand (zonder btw), en die prijs blijft, zolang je klant blijft. Later wordt het 500 euro per maand. De kosten van de AI zelf komen daar nog bij. Je zit nergens aan vast: elke maand opzegbaar.",
+    a: `Tijdens de beta ${BETA_MONTHLY_PRICE} euro per maand (zonder btw), en die prijs blijft zolang je klant blijft. Het normale Agent Team kost ${AGENT_TEAM_MONTHLY_PRICE} euro per maand. De kosten van de AI zelf komen daar nog bij. Je zit nergens aan vast: elke maand opzegbaar.`,
   },
   {
     q: "En als het me niks oplevert?",
