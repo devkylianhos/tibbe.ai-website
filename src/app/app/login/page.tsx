@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
 import { currentUser, signIn } from "@/lib/session";
 
@@ -41,9 +42,9 @@ export default async function LoginPage() {
         </form>
         <p className="mt-5 text-center text-[13px] text-muted-fg">
           Nog geen Tibbe?{" "}
-          <a href="/#prijzen" className="font-600 text-accent" style={{ fontWeight: 600 }}>
+          <Link href="/#prijzen" className="font-600 text-accent" style={{ fontWeight: 600 }}>
             Meld je aan voor een betaplek
-          </a>
+          </Link>
         </p>
       </div>
     </main>

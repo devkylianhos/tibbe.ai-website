@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Check } from "lucide-react";
 import { BrandMark } from "@/components/BrandMark";
 import { Countdown } from "@/components/Countdown";
 import {
   BOOKING_URL,
+  AGENT_TEAM_MONTHLY_PRICE,
+  BETA_MONTHLY_PRICE,
+  BETA_MONTHLY_PRICE_LABEL,
   LAUNCH_DATE,
   BETA_SEATS_TOTAL,
   BETA_SEATS_TAKEN,
@@ -12,8 +16,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Tibbe launch — sta vooraan",
-  description:
-    "Bij de launch gaat de instap van 250 naar 500 euro per maand. Wie er in de beta bij is, houdt de betaprijs zolang die blijft.",
+  description: `Bij de launch gaat de instap van ${BETA_MONTHLY_PRICE} naar ${AGENT_TEAM_MONTHLY_PRICE} euro per maand. Wie er in de beta bij is, houdt de betaprijs zolang die blijft.`,
 };
 
 export const dynamic = "force-dynamic";
@@ -48,12 +51,12 @@ export default async function LaunchPage() {
       />
 
       <div className="container-x relative py-10">
-        <a href="/" className="inline-flex items-center gap-2.5">
+        <Link href="/" className="inline-flex items-center gap-2.5">
           <BrandMark />
           <span className="font-display text-[20px]" style={{ fontWeight: 600 }}>
             Tibbe
           </span>
-        </a>
+        </Link>
 
         <div className="mt-14 grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.15fr_1fr] lg:gap-20">
           {/* verhaalkant */}
@@ -89,8 +92,8 @@ export default async function LaunchPage() {
 
             <p className="lead mt-6 max-w-[520px]">
               {betaOpen
-                ? `Tot de launch stap je in voor 250 euro per maand, en die prijs blijft staan zolang je blijft. Vanaf ${launchDay} wordt de instap 500 euro.`
-                : `Op ${launchDay} gaat Tibbe open voor iedereen, voor 500 euro per maand. Stuur een appje en je hoort het als eerste.`}
+                ? `Tot de launch stap je in voor ${BETA_MONTHLY_PRICE} euro per maand, en die prijs blijft staan zolang je blijft. Vanaf ${launchDay} kost het normale Agent Team ${AGENT_TEAM_MONTHLY_PRICE} euro per maand.`
+                : `Op ${launchDay} gaat Tibbe open voor iedereen. Het Agent Team kost dan ${AGENT_TEAM_MONTHLY_PRICE} euro per maand. Stuur een appje en je hoort het als eerste.`}
             </p>
 
             <div className="mt-9">
@@ -121,7 +124,7 @@ export default async function LaunchPage() {
                 </h2>
                 <div className="mt-5 flex items-baseline gap-2">
                   <span className="font-display text-[44px] leading-none" style={{ fontWeight: 700 }}>
-                    € 250
+                    {BETA_MONTHLY_PRICE_LABEL}
                   </span>
                   <span className="text-[14px] text-muted-fg">/ maand · vast zolang je blijft</span>
                 </div>
@@ -145,13 +148,13 @@ export default async function LaunchPage() {
                 <a href={BOOKING_URL} className="btn-primary mt-7 w-full">
                   Plan een kennismaking
                 </a>
-                <a
+                <Link
                   href="/#diensten"
                   className="mt-4 block text-center text-[14px] font-600 text-accent hover:text-accent-dark"
                   style={{ fontWeight: 600 }}
                 >
                   Eerst kijken wat Tibbe doet
-                </a>
+                </Link>
               </>
             ) : (
               <>

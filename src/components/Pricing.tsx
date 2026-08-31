@@ -3,6 +3,8 @@ import { Countdown } from "./Countdown";
 import { BrandMark } from "./BrandMark";
 import {
   BOOKING_URL,
+  AGENT_TEAM_MONTHLY_PRICE_LABEL,
+  BETA_MONTHLY_PRICE_LABEL,
   BETA_SEATS_TOTAL,
   BETA_SEATS_TAKEN,
   LAUNCH_DATE,
@@ -48,7 +50,7 @@ export function Pricing() {
           <h2 className="display-2 mt-3">Binnenkort live.</h2>
           <p className="mt-3 text-[15px] text-muted-fg">
             <span className="font-600 text-foreground" style={{ fontWeight: 600 }}>
-              € 500
+              {AGENT_TEAM_MONTHLY_PRICE_LABEL}
             </span>{" "}
             per maand vanaf {launchDay}. Stap je nu in, dan blijf je de lage prijs betalen.
           </p>
@@ -72,7 +74,7 @@ export function Pricing() {
 
               <div className="mt-5 flex items-baseline gap-2">
                 <span className="font-display text-[56px] leading-none" style={{ fontWeight: 700 }}>
-                  € 250
+                  {BETA_MONTHLY_PRICE_LABEL}
                 </span>
                 <span className="text-[15px] text-muted-fg">/ maand</span>
               </div>
@@ -127,17 +129,17 @@ export function Pricing() {
             <Reveal delay={0.08}>
               <div className="card">
                 <div className="text-[14px] font-600 text-muted-fg" style={{ fontWeight: 600 }}>
-                  Daarna
+                  Normaal tarief · Agent Team
                 </div>
                 <div className="mt-2 flex items-baseline gap-2">
                   <span className="font-display text-[34px] leading-none" style={{ fontWeight: 700 }}>
-                    € 500
+                    {AGENT_TEAM_MONTHLY_PRICE_LABEL}
                   </span>
                   <span className="text-[14px] text-muted-fg">/ maand</span>
                 </div>
                 <p className="mt-3 text-[14px] leading-relaxed text-muted-fg">
-                  Precies hetzelfde. Wie er nu bij komt, blijft de lage prijs
-                  betalen.
+                  Het volledige Agent Team voor je terugkerende werk. Beta-klanten
+                  houden hun lagere instaptarief zolang ze klant blijven.
                 </p>
               </div>
             </Reveal>
