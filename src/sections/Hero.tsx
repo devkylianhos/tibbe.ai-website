@@ -55,8 +55,9 @@ export function Hero() {
               Jij houdt koers.
             </h1>
             <p className="web-hero__lead">
-              Tibbe neemt terugkerend werk uit handen. Van factuurcontrole tot opvolging. Met
-              overzicht voor je team en de belangrijke beslissingen bij jou.
+              Tibbe bouwt en beheert AI-systemen voor marketing en operatie.
+              Van advertenties en video tot klantenservice en automatisering.
+              Jij bepaalt de richting en keurt belangrijke stappen goed.
             </p>
             <div className="web-actions">
               <ActionLink>Plan een kennismaking</ActionLink>

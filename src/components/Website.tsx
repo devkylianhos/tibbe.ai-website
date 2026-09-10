@@ -5,7 +5,9 @@ import { Navigation } from './website/Navigation'
 import { Hero } from '../sections/Hero'
 import { Capabilities } from '../sections/Capabilities'
 import { Experience } from '../sections/Experience'
-import { FAQ, Problem, Process, Trust, UseCases } from '../sections/Story'
+import { FAQ, Problem, Process, Trust } from '../sections/Story'
+import { ServiceCases } from '../sections/ServiceCases'
+import { MotionSurface } from './website/MotionSurface'
 import { Contact } from '../sections/Contact'
 import { Founder } from '../sections/Founder'
 
@@ -38,6 +40,8 @@ export function Website() {
   }, [])
   return (
     <div className="tibbe-web">
+      <MotionSurface />
+      <div className="web-scroll-progress" aria-hidden="true" />
       <a className="web-skip" href="#main-content">
         Naar de inhoud
       </a>
@@ -48,7 +52,7 @@ export function Website() {
         <Capabilities />
         <Process />
         <Experience />
-        <UseCases />
+        <ServiceCases />
         <Trust />
         <Founder />
         <FAQ />

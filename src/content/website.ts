@@ -96,6 +96,10 @@ export const processSteps = [
 
 export const faqs = [
   [
+    'Kan ik met één dienst beginnen?',
+    'Ja. We kunnen starten met bijvoorbeeld advertenties, video, klantenservice of één automatisering. Tijdens de kennismaking bepalen we de inhoud, benodigde bronnen, reviewmomenten en oplevering.',
+  ],
+  [
     'Wat bedoelen jullie met een AI-operator?',
     'Een digitale collega die terugkerend werk volgt, een volgende stap voorbereidt en afgesproken acties uitvoert. Het verschil zit in de uitvoering én de uitleg: je ziet wat er gebeurt, waarom en met welk resultaat.',
   ],

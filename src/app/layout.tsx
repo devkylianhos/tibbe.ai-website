@@ -7,12 +7,13 @@ import "@/styles/tokens.css";
 import "@/styles/website.css";
 import "@/styles/founder.css";
 import "@/styles/logo-motion.css";
+import "@/styles/services-motion.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tibbe.app"),
   title: "Tibbe — AI-operators voor werk dat verdergaat",
   description:
-    "Tibbe bouwt betrouwbare AI-operators die terugkerend werk uitvoeren binnen duidelijke grenzen. Jij houdt overzicht en keurt belangrijke acties goed.",
+    "Tibbe bouwt en beheert AI-systemen voor marketing en operatie: advertenties, video, klantenservice, campagnes en automatisering. Met jouw team aan het stuur.",
   icons: { icon: "/tibbe-loop.svg" },
   openGraph: {
     title: "Tibbe — AI-operators voor werk dat verdergaat",

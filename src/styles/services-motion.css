@@ -1,0 +1,48 @@
+.service-cases { background: var(--color-paper); border-top: 1px solid var(--color-line); }
+.web-scroll-progress { display: none; }
+@supports (animation-timeline: scroll()) {
+  .web-scroll-progress { display: block; position: fixed; inset: 0 0 auto; height: 3px; z-index: 100; background: var(--color-lightwater); transform-origin: left; animation: reading-progress linear both; animation-timeline: scroll(); pointer-events: none; }
+  @keyframes reading-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+.service-case { position: relative; border-top: 1px solid var(--color-line); isolation: isolate; }
+.service-case:last-child { border-bottom: 1px solid var(--color-line); }
+.tibbe-web .service-case h3 { font-size: clamp(21px, 2.6vw, 36px); }
+.service-case h3 button { display: grid; grid-template-columns: 48px 1fr 28px; align-items: center; gap: 24px; padding: 30px 20px; width: 100%; border: 0; background: transparent; color: var(--color-ink); text-align: left; cursor: pointer; }
+.service-case h3 .web-mono { color: var(--color-muted); }
+.service-case h3 svg { transition: rotate 240ms, color 200ms; }
+.service-case[data-open="true"] h3 svg { rotate: -180deg; color: var(--color-deepwater); }
+.service-case__body { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 72px 36px 92px; animation: service-open 320ms cubic-bezier(.22,1,.36,1); }
+.service-case__body p { color: var(--color-muted); margin: 0 0 22px; font-size: 16px; }
+.service-case__body .service-case__problem { color: var(--color-ink); font-size: clamp(23px, 2.8vw, 34px); line-height: 1.3; letter-spacing: -.03em; }
+.service-case__body a { color: var(--color-deepwater); }
+.service-cases__note { font-size: 12px; color: var(--color-muted); margin: 28px 20px 0; }
+.capability-panel { align-self: start; position: sticky; top: 110px; }
+.capability-tabs > button { min-height: 67px; transition: background 180ms, color 180ms, padding 240ms; }
+.web-action { transition: translate 180ms ease-out, background-color 120ms, transform 120ms; }
+.service-case::before, .web-trust__grid article::before, .web-contact-form::before { content: ''; position: absolute; inset: 0; z-index: -1; border-radius: inherit; opacity: 0; pointer-events: none; background: radial-gradient(380px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), #4fa3c421, transparent 75%); transition: opacity 240ms; }
+.web-trust__grid article, .web-contact-form { position: relative; isolation: isolate; }
+@media (hover: hover) and (pointer: fine) {
+  .service-case:hover::before, .web-trust__grid article:hover::before, .web-contact-form:hover::before { opacity: 1; }
+  .service-case h3 button > span:nth-child(2) { transition: translate 240ms; }
+  .service-case h3 button:hover > span:nth-child(2) { translate: 8px 0; }
+  .capability-tabs > button:hover { padding-left: 25px; background: var(--color-info-bg); }
+  .web-trust__grid article > svg { transition: transform 260ms; }
+  .web-trust__grid article:hover > svg { transform: translateY(-5px) rotate(-8deg); }
+  .web-founder__portrait img { transition: transform 650ms cubic-bezier(.22,1,.36,1); }
+  .web-founder__portrait:hover img { transform: translateY(-6px); }
+}
+@keyframes service-open { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (max-width: 960px) { .capability-panel { position: static; } .service-case__body { gap: 32px; padding-left: 40px; padding-right: 20px; } }
+@media (max-width: 600px) {
+  .service-case h3 button { grid-template-columns: 26px 1fr 22px; gap: 12px; padding: 24px 0; }
+  .service-case__body { grid-template-columns: 1fr; gap: 0; padding: 0 0 25px 38px; }
+  .service-case__body p { font-size: 14px; }
+  .service-cases__note { margin-inline: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .web-scroll-progress { display: none; }
+  .service-case__body { animation: none; }
+  .service-case::before, .web-trust__grid article::before, .web-contact-form::before { display: none; }
+  .service-case h3 button:hover > span:nth-child(2), .web-action { translate: none !important; }
+  .web-founder__portrait:hover img, .web-trust__grid article:hover > svg { transform: none; }
+}

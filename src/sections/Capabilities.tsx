@@ -9,7 +9,7 @@ import {
   Check,
   CornerDownRight,
 } from 'lucide-react'
-import { capabilities } from '../content/website'
+import { capabilities } from '../content/services'
 import { ActionLink, SectionLabel } from '../components/website/Primitives'
 
 const icons = { file: FileText, mail: Mail, chart: ChartNoAxesCombined, shield: ShieldCheck }
@@ -40,15 +40,15 @@ export function Capabilities() {
           <div>
             <SectionLabel number="02">Wat Tibbe doet</SectionLabel>
             <h2>
-              Eén operator.
+              Van creatie
               <br />
-              Meerdere taken.
+              tot uitvoering.
             </h2>
           </div>
           <p>
-            Begin bij werk dat telkens terugkomt.
+            Zeven diensten voor marketing en operatie.
             <br />
-            Maak de uitvoering voorspelbaar.
+            Kies waar jouw team hulp kan gebruiken.
           </p>
         </div>
         <div className="capability-layout" data-reveal>
@@ -70,11 +70,11 @@ export function Capabilities() {
                     event.key === 'Home'
                       ? 0
                       : event.key === 'End'
-                        ? 3
+                        ? capabilities.length - 1
                         : ['ArrowRight', 'ArrowDown'].includes(event.key)
-                          ? (index + 1) % 4
+                          ? (index + 1) % capabilities.length
                           : ['ArrowLeft', 'ArrowUp'].includes(event.key)
-                            ? (index + 3) % 4
+                            ? (index + capabilities.length - 1) % capabilities.length
                             : null
                   if (next !== null) {
                     event.preventDefault()
@@ -139,7 +139,7 @@ export function Capabilities() {
                   </div>
                 ))}
               </dl>
-              <div className={`capability-preview__result ${selected === 0 ? 'is-warning' : ''}`}>
+              <div className="capability-preview__result">
                 <Check size={16} />
                 {capability.result}
               </div>

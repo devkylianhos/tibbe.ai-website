@@ -17,11 +17,11 @@ export function Problem() {
         </div>
         <div className="web-problem__body">
           <p className="web-large-copy">
-            De factuur is binnen.
+            De campagne wacht op beeld.
             <br />
-            De opvolging staat open.
+            De klant wacht op antwoord.
             <br />
-            En iemand moet het uitzoeken.
+            Je team wacht op de volgende stap.
           </p>
           <p>
             Het zijn de kleine overdrachten die je dag versnipperen. Informatie verzamelen. Gegevens
