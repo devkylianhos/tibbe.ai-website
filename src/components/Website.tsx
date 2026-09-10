@@ -10,6 +10,7 @@ import { ServiceCases } from '../sections/ServiceCases'
 import { MotionSurface } from './website/MotionSurface'
 import { Contact } from '../sections/Contact'
 import { Founder } from '../sections/Founder'
+import { Integrations } from '../sections/Integrations'
 
 export function Website() {
   useEffect(() => {
@@ -48,6 +49,7 @@ export function Website() {
       <Navigation />
       <main id="main-content">
         <Hero />
+        <Integrations />
         <Problem />
         <Capabilities />
         <Process />
