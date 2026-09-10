@@ -42,8 +42,8 @@ export default async function LoginPage() {
         </form>
         <p className="mt-5 text-center text-[13px] text-muted-fg">
           Nog geen Tibbe?{" "}
-          <Link href="/#prijzen" className="font-600 text-accent" style={{ fontWeight: 600 }}>
-            Meld je aan voor een betaplek
+          <Link href="/#contact" className="font-600 text-accent" style={{ fontWeight: 600 }}>
+            Plan een kennismaking
           </Link>
         </p>
       </div>
