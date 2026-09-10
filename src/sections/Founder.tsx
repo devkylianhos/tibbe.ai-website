@@ -18,7 +18,7 @@ export function Founder() {
         <div className="web-founder__copy" data-reveal>
           <SectionLabel>De ondernemer achter Tibbe</SectionLabel>
           <h2 id="founder-title">Goed werk begint<br />met een gesprek.</h2>
-          <p className="web-founder__lead">Achter Tibbe staat Kylian. Ondernemer, partner van Kitchen Royal en oprichter van Tibbe.</p>
+          <p className="web-founder__lead">Maak kennis met Kylian, ondernemer en oprichter van Tibbe.</p>
           <p>Een AI-operator begint bij het begrijpen van jouw werk. Wat komt steeds terug? Waar blijven dingen liggen? En welke beslissingen wil je zelf blijven nemen?</p>
           <p>Daar begint de kennismaking. Bij jouw bedrijf, je team en één concreet proces.</p>
           <ActionLink href="#contact">Maak kennis met Kylian</ActionLink>

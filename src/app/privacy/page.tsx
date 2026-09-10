@@ -10,7 +10,7 @@ export default function PrivacyPage() {
   return (
     <LegalShell title="Privacyverklaring" updated="12 juli 2026">
       <div className="legal-note">
-        Tibbe is een dienst van <strong>Tibbe, partner van Kitchen Royal</strong>,
+        Tibbe is een dienst van <strong>Tibbe</strong>,
         Parelweg 11, 1812 RS Alkmaar, KvK 80015298. Vragen over je gegevens? Mail{" "}
         <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20mijn%20gegevens%20bij%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a>.
       </div>

@@ -6,7 +6,7 @@ import { Reveal } from "./Reveal";
 const facts = [
   {
     title: "Een echt bedrijf, geen anonieme tool",
-    body: "Gemaakt door het team achter Kitchen Royal, in Alkmaar. Met een naam, een adres en een KvK-nummer. Je weet gewoon met wie je te maken hebt.",
+    body: "Achter Tibbe staat Kylian, ondernemer en oprichter. Je weet met wie je samenwerkt en begint met een persoonlijke kennismaking.",
   },
   {
     title: "Jij keurt goed wat telt",

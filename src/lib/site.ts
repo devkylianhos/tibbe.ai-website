@@ -19,7 +19,7 @@ export const BOOKING_URL = waLink();
    Foto komt later; zolang photo leeg is tonen we een initialen-avatar. */
 export const FOUNDER = {
   name: "Kylian",
-  role: "Oprichter van Tibbe, partner van Kitchen Royal",
+  role: "Oprichter van Tibbe",
   photo: "", // TODO: pad naar foto, bv. "/images/oprichter.jpg"
 };
 

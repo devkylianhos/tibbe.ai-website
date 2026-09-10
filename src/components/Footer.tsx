@@ -80,7 +80,7 @@ export function Footer() {
               Bedrijf
             </div>
             <address className="mt-4 space-y-1 text-[15px] not-italic leading-relaxed text-muted-fg">
-              <div className="text-foreground/90">Tibbe, partner van Kitchen Royal</div>
+              <div className="text-foreground/90">Tibbe</div>
               <div>Parelweg 11</div>
               <div>1812 RS Alkmaar, NL</div>
               <div>KvK 80015298</div>
