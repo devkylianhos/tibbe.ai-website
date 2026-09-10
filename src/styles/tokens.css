@@ -1,0 +1,44 @@
+:root {
+  --font-brand: 'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+  --font-instrument-sans: var(--font-brand);
+  --font-source-serif: var(--font-brand);
+
+  --color-ink: #23211d;
+  --color-paper: #f2efe9;
+  --color-white: #ffffff;
+  --color-muted: #6b665d;
+  --color-line: #dcd8cf;
+  --color-deepwater: #14657f;
+  --color-lightwater: #4fa3c4;
+
+  --color-action: #14657f;
+  --color-action-hover: #10546a;
+  --color-action-pressed: #0c4254;
+  --color-success: #246747;
+  --color-success-bg: #edf5ef;
+  --color-success-border: #a7cbb5;
+  --color-warning: #855600;
+  --color-warning-bg: #fbf4e5;
+  --color-warning-border: #d9bc7b;
+  --color-danger: #ad3434;
+  --color-danger-hover: #902b2b;
+  --color-danger-bg: #fbefef;
+  --color-danger-border: #dfadad;
+  --color-info-bg: #ecf4f7;
+  --color-info-border: #a4c9d6;
+  --color-control-border: #8b867e;
+  --color-disabled-bg: #e7e4de;
+  --color-disabled-text: #706b63;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-control: 4px;
+  --focus-ring: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-action);
+}

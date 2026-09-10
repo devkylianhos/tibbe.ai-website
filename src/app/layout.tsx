@@ -1,36 +1,25 @@
 import type { Metadata } from "next";
-import { Source_Serif_4, Instrument_Sans } from "next/font/google";
 import { Providers } from "@/components/Providers";
-import { CookieBanner } from "@/components/CookieBanner";
+import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/schibsted-grotesk";
 import "./globals.css";
-
-const sourceSerif = Source_Serif_4({
-  variable: "--font-source-serif",
-  subsets: ["latin"],
-  weight: ["600"],
-});
-
-const instrumentSans = Instrument_Sans({
-  variable: "--font-instrument-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
+import "@/styles/tokens.css";
+import "@/styles/website.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tibbe.nl"),
-  title: "Tibbe — de AI-medewerker die 24/7 doorwerkt",
+  metadataBase: new URL("https://tibbe.app"),
+  title: "Tibbe — AI-operators voor werk dat verdergaat",
   description:
-    "Tibbe is een AI-operator voor het Nederlandse MKB. Neemt het terugkerende werk over: klantcontact, planning, facturen, offertes en administratie. Binnen een week aan het werk. Jij keurt goed wat telt.",
-  icons: { icon: "/brand/favicon.svg" },
+    "Tibbe bouwt betrouwbare AI-operators die terugkerend werk uitvoeren binnen duidelijke grenzen. Jij houdt overzicht en keurt belangrijke acties goed.",
+  icons: { icon: "/tibbe-loop.svg" },
   openGraph: {
-    title: "Tibbe — de AI-medewerker die 24/7 doorwerkt",
+    title: "Tibbe — AI-operators voor werk dat verdergaat",
     description:
-      "Een betrouwbare AI-medewerker voor je bedrijf. Binnen een week aan het werk. Jij keurt goed wat telt.",
-    url: "https://tibbe.nl",
+      "AI-operators die zelfstandig werk uitvoeren. Met duidelijke grenzen, menselijke goedkeuring en volledig inzicht.",
+    url: "https://tibbe.app",
     siteName: "Tibbe",
     locale: "nl_NL",
     type: "website",
-    images: ["/brand/tibbe-mark-512.png"],
   },
 };
 
@@ -38,10 +27,9 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="nl" className={`${sourceSerif.variable} ${instrumentSans.variable}`}>
+    <html lang="nl">
       <body className="min-h-screen antialiased">
         <Providers>{children}</Providers>
-        <CookieBanner />
       </body>
     </html>
   );
