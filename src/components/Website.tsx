@@ -7,6 +7,7 @@ import { Capabilities } from '../sections/Capabilities'
 import { Experience } from '../sections/Experience'
 import { FAQ, Problem, Process, Trust, UseCases } from '../sections/Story'
 import { Contact } from '../sections/Contact'
+import { Founder } from '../sections/Founder'
 
 export function Website() {
   useEffect(() => {
@@ -49,6 +50,7 @@ export function Website() {
         <Experience />
         <UseCases />
         <Trust />
+        <Founder />
         <FAQ />
         <Contact />
       </main>

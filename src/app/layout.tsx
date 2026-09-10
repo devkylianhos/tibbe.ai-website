@@ -5,6 +5,7 @@ import "@fontsource-variable/schibsted-grotesk";
 import "./globals.css";
 import "@/styles/tokens.css";
 import "@/styles/website.css";
+import "@/styles/founder.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tibbe.app"),
