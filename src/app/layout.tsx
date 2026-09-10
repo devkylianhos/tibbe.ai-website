@@ -6,6 +6,7 @@ import "./globals.css";
 import "@/styles/tokens.css";
 import "@/styles/website.css";
 import "@/styles/founder.css";
+import "@/styles/logo-motion.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tibbe.app"),

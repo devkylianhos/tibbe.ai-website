@@ -1,0 +1,16 @@
+/* Original Loop geometry; motion follows the brand's continuous line. */
+.logo--animated { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-brand); font-weight: 600; letter-spacing: -.045em; line-height: 1; }
+.logo--animated > svg { width: 40px; height: 40px; flex-shrink: 0; overflow: visible; }
+.logo--compact > svg { width: 100%; height: 100%; }
+.logo__guide { opacity: .12; }
+.operator-core > .operator-core__mark { width: 58px; height: 58px; position: relative; z-index: 3; }
+@media (max-width: 1100px) { .operator-core > .operator-core__mark { width: 45px; height: 45px; } }
+@media (max-width: 600px) { .operator-core > .operator-core__mark { width: 37px; height: 37px; } }
+.logo__draw { stroke-dasharray: 100; stroke-dashoffset: 0; animation: tibbe-logo-draw 1600ms cubic-bezier(.22,1,.36,1) both; }
+.logo__light { stroke-dasharray: 7 93; stroke-dashoffset: 0; opacity: 0; animation: tibbe-logo-light 2200ms cubic-bezier(.4,0,.2,1) 900ms both; }
+@keyframes tibbe-logo-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@keyframes tibbe-logo-light { 0% { opacity: 0; stroke-dashoffset: 7; } 20% { opacity: .9; } 80% { opacity: .9; } 100% { opacity: 0; stroke-dashoffset: -100; } }
+@media (prefers-reduced-motion: reduce) {
+  .logo__draw { animation: none !important; stroke-dashoffset: 0; }
+  .logo__light { display: none; animation: none !important; }
+}

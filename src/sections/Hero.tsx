@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Image from 'next/image'
+import { Logo } from '../components/Logo'
 import { ArrowDown, ArrowUpRight, Check, FileText, GitBranch, ShieldCheck } from 'lucide-react'
 import { ActionLink, SectionLabel } from '../components/website/Primitives'
 
@@ -105,7 +105,7 @@ export function Hero() {
               <div className="operator-orbit operator-orbit--two" aria-hidden="true">
                 <i />
               </div>
-              <Image src="/tibbe-loop-light.svg" width={58} height={58} alt="" priority />
+              <Logo inverse compact className="operator-core__mark" />
               <span>tibbe</span>
               <small>CONTEXT → ACTIE</small>
             </div>
