@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "@/components/Providers";
+import { CookieBanner } from "@/components/CookieBanner";
 import "@fontsource-variable/jetbrains-mono";
 import "@fontsource-variable/schibsted-grotesk";
 import "./globals.css";
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="nl">
       <body className="min-h-screen antialiased">
         <Providers>{children}</Providers>
+        <CookieBanner />
       </body>
     </html>
   );

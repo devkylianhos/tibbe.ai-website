@@ -144,6 +144,7 @@ export function Contact() {
             <span>© {new Date().getFullYear()} Tibbe.ai</span>
             <div>
               <a href="/privacy">Privacy</a>
+              <a href="/cookies">Cookies</a>
               <a href="/voorwaarden">
                 Voorwaarden <ArrowUpRight size={12} />
               </a>

@@ -1,76 +1,54 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
+import styles from "./CookieBanner.module.css";
 
-import { useEffect, useState } from "react";
-
-const KEY = "tibbe-cookie-consent"; // "essential" | "all"
-
-function readConsent(): string | null {
-  if (typeof window === "undefined") return null;
-  try {
-    return window.localStorage.getItem(KEY);
-  } catch {
-    return null;
-  }
-}
-
-function setConsent(value: "essential" | "all") {
-  try {
-    window.localStorage.setItem(KEY, value);
-  } catch {
-    /* localStorage geblokkeerd: dan tonen we de banner elke keer, geen tracking */
-  }
-  window.dispatchEvent(new Event("tibbe-consent-change"));
-}
+const KEY = "tibbe-cookie-notice-v1";
+const OPEN = "tibbe-cookie-notice-open";
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
-
+  const closeButton = useRef<HTMLButtonElement>(null);
+  const returnFocus = useRef<HTMLElement | null>(null);
   useEffect(() => {
-    const sync = () => setVisible(readConsent() === null);
-    sync();
-    window.addEventListener("tibbe-consent-change", sync);
-    return () => window.removeEventListener("tibbe-consent-change", sync);
+    const timer = window.setTimeout(() => {
+      try { setVisible(localStorage.getItem(KEY) !== "dismissed"); }
+      catch { setVisible(true); }
+    }, 300);
+    const open = () => {
+      returnFocus.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      setVisible(true);
+      window.requestAnimationFrame(() => closeButton.current?.focus());
+    };
+    const sync = (event: StorageEvent) => {
+      if (event.key === KEY) setVisible(event.newValue !== "dismissed");
+    };
+    window.addEventListener(OPEN, open);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener(OPEN, open);
+      window.removeEventListener("storage", sync);
+    };
   }, []);
-
+  const dismiss = () => {
+    try { localStorage.setItem(KEY, "dismissed"); } catch { /* Close even when storage is unavailable. */ }
+    setVisible(false);
+    returnFocus.current?.focus();
+    returnFocus.current = null;
+  };
   if (!visible) return null;
-
   return (
-    <div className="fixed inset-x-0 bottom-0 z-[60] px-3 pb-3 sm:px-4 sm:pb-4">
-      <div className="mx-auto flex max-w-[720px] flex-col gap-4 rounded-[3px] border border-border bg-white p-5 shadow-[var(--shadow-floating)] sm:flex-row sm:items-center sm:gap-6">
-        <p className="flex-1 text-[14px] leading-relaxed text-muted-fg">
-          We gebruiken alleen noodzakelijke cookies, plus optioneel een cookie om
-          te meten hoe de site gebruikt wordt. Jij kiest.{" "}
-          <a href="/cookies" className="font-600 text-accent underline" style={{ fontWeight: 600 }}>
-            Meer lezen
-          </a>
-        </p>
-        <div className="flex flex-none gap-2.5">
-          <button onClick={() => setConsent("essential")} className="btn-secondary sm">
-            Noodzakelijk
-          </button>
-          <button onClick={() => setConsent("all")} className="btn-primary sm">
-            Accepteren
-          </button>
-        </div>
+    <section className={styles.banner} aria-labelledby="cookie-notice-title" onKeyDown={(event) => { if (event.key === "Escape") dismiss(); }}>
+      <span className={styles.label}>COOKIES & PRIVACY</span>
+      <h2 id="cookie-notice-title">Alleen wat nodig is.</h2>
+      <p>We gebruiken functionele opslag voor je sessie en om deze melding te onthouden. Geen analytics- of marketingcookies.</p>
+      <div className={styles.actions}>
+        <a href="/cookies">Meer informatie</a>
+        <button ref={closeButton} onClick={dismiss}>Begrepen</button>
       </div>
-    </div>
+    </section>
   );
 }
-
 export function CookieSettingsButton() {
-  return (
-    <button
-      onClick={() => {
-        try {
-          window.localStorage.removeItem(KEY);
-        } catch {
-          /* ignore */
-        }
-        window.dispatchEvent(new Event("tibbe-consent-change"));
-      }}
-      className="btn-secondary sm"
-    >
-      Cookievoorkeur opnieuw instellen
-    </button>
-  );
+  return <button className="btn-secondary sm" onClick={() => window.dispatchEvent(new Event(OPEN))}>Cookiemelding bekijken</button>;
 }

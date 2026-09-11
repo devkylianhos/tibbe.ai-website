@@ -187,7 +187,7 @@ export default async function LaunchPage() {
         </div>
 
         <p className="mt-16 text-[13px] text-muted-fg">
-          Geen tracking, geen cookiebanner. Zo doen we dat hier.
+          Geen analytics- of marketingcookies. Zo doen we dat hier.
         </p>
       </div>
     </main>
