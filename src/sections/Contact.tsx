@@ -14,7 +14,7 @@ export function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    const body = `Hoi Tibbe,\n\nIk ben ${data.get('name')} van ${data.get('company')}.\n\nIk wil graag het volgende proces bespreken:\n${data.get('process')}\n\nJe kunt mij bereiken op ${data.get('email')}.\n\nGroet,\n${data.get('name')}`
+    const body = `Hoi Tibbe,\n\nIk ben ${data.get('name')} van ${data.get('company')}.\n\nIk wil graag het volgende bespreken:\n${data.get('process')}\n\nJe kunt mij bereiken op ${data.get('email')}.\n\nGroet,\n${data.get('name')}`
     setDraft(
       `mailto:${siteConfig.email}?subject=${encodeURIComponent('Kennismaking — ' + data.get('company'))}&body=${encodeURIComponent(body)}`,
     )
@@ -24,16 +24,14 @@ export function Contact() {
       <section id="contact" className="web-section web-contact">
         <div className="web-container web-contact__grid">
           <div data-reveal>
-            <SectionLabel>Begin met één proces</SectionLabel>
+            <SectionLabel>Vertel ons over je bedrijf</SectionLabel>
             <h2>
-              Geef terugkerend
+              Wat wil jij
               <br />
-              werk een
-              <br />
-              vaste plek.
+              beter regelen?
             </h2>
             <p>
-              Vertel ons wat er steeds op je bord belandt.
+              Een nieuwe website, een webshop of minder handmatig werk.
               <br />
               We kijken samen waar Tibbe kan helpen.
             </p>
@@ -86,10 +84,10 @@ export function Contact() {
               />
             </label>
             <label>
-              Welk werk wil je uit handen geven?
+              Wat wil je laten bouwen of verbeteren?
               <textarea
                 name="process"
-                placeholder="Bijvoorbeeld: facturen controleren en afwijkingen opvolgen."
+                placeholder="Bijvoorbeeld: een nieuwe website en een betere opvolging van aanvragen."
                 rows={3}
                 required
                 maxLength={1800}
@@ -125,9 +123,9 @@ export function Contact() {
               <Logo />
             </Link>
             <p>
-              Calm intelligence.
+              Sterk online.
               <br />
-              Werk dat verdergaat.
+              Goed georganiseerd.
             </p>
             <nav aria-label="Footernavigatie">
               <a href="#mogelijkheden">Mogelijkheden</a>

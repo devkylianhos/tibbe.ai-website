@@ -72,51 +72,18 @@ export const capabilities = [
 ] as const
 
 export const processSteps = [
-  {
-    title: 'Begrijpt de context.',
-    label: 'Observe · Analyze',
-    copy: 'Tibbe verzamelt signalen, leest de context en brengt impact en risico in beeld.',
-  },
-  {
-    title: 'Maakt een voorstel.',
-    label: 'Recommend · Approve',
-    copy: 'Je ziet wat er moet gebeuren en waarom. Waar jouw besluit nodig is, wacht Tibbe.',
-  },
-  {
-    title: 'Voert het werk uit.',
-    label: 'Execute',
-    copy: 'De afgesproken actie wordt uitgevoerd binnen de grenzen die je hebt bepaald.',
-  },
-  {
-    title: 'Laat het resultaat zien.',
-    label: 'Verify',
-    copy: 'Het resultaat en het bewijs komen samen in een navolgbaar controlelog.',
-  },
+  { title: 'We luisteren.', label: 'JOUW BEDRIJF', copy: 'Waar komen klanten binnen? Wat kost je team tijd? We bekijken wat er nu gebeurt en wat beter kan.' },
+  { title: 'Je krijgt een helder plan.', label: 'AFSPRAKEN VOORAF', copy: 'We spreken af wat we bouwen, wat het kost en wanneer het klaar is. Je weet wat bij de opdracht hoort.' },
+  { title: 'We bouwen en testen.', label: 'SAMEN BEKIJKEN', copy: 'Je bekijkt het ontwerp en probeert de oplossing. We testen ook wat er gebeurt als informatie ontbreekt of iets misgaat.' },
+  { title: 'Je team kan ermee werken.', label: 'OPLEVERING & VERVOLG', copy: 'Je krijgt uitleg en we spreken af hoe beheer, ondersteuning en eventuele verbeteringen worden geregeld.' },
 ]
 
 export const faqs = [
-  [
-    'Kan ik met één dienst beginnen?',
-    'Ja. We kunnen starten met bijvoorbeeld advertenties, video, klantenservice of één automatisering. Tijdens de kennismaking bepalen we de inhoud, benodigde bronnen, reviewmomenten en oplevering.',
-  ],
-  [
-    'Wat bedoelen jullie met een AI-operator?',
-    'Een digitale collega die terugkerend werk volgt, een volgende stap voorbereidt en afgesproken acties uitvoert. Het verschil zit in de uitvoering én de uitleg: je ziet wat er gebeurt, waarom en met welk resultaat.',
-  ],
-  [
-    'Wat blijft er bij mijn team?',
-    'Jullie bepalen de opdracht, de grenzen en de beslissingen die menselijke goedkeuring vragen. Tibbe maakt die beslismomenten zichtbaar met de context die nodig is om verder te kunnen.',
-  ],
-  [
-    'Kan Tibbe met onze huidige tools werken?',
-    'Dat bekijken we aan de hand van jullie proces en de beschikbare toegang. We spreken vooraf af welke bronnen nodig zijn, wat technisch mogelijk is en welke acties toegestaan zijn.',
-  ],
-  [
-    'Hoe beginnen we?',
-    'Met één terugkerend proces. In een kennismaking brengen we het werk, de uitzonderingen en de gewenste uitkomst in kaart. Op basis daarvan bepalen we een passende eerste stap.',
-  ],
-  [
-    'Zijn de voorbeelden op deze website echte klantdata?',
-    'Nee. De factuur, werkstromen en activiteit op deze pagina zijn illustratieve voorbeelden van het merkconcept. Er worden geen echte facturen verwerkt, berichten verstuurd of betalingen uitgevoerd.',
-  ],
+  ['Moet ik iets van AI of automatisering weten?', 'Nee. Vertel ons hoe je bedrijf werkt en wat je wilt verbeteren. Wij leggen de mogelijkheden uit in gewone taal en laten zien wat een oplossing voor jouw team betekent.'],
+  ['Kan ik ook alleen een website of webshop laten bouwen?', 'Ja. Je kunt met een website of webshop beginnen. Koppelingen en AI voegen we alleen toe als die passen bij je vraag en budget.'],
+  ['Wat is het verschil tussen automatisering en AI?', 'Automatisering voert vaste stappen uit, zoals een aanvraag doorgeven aan je klantensysteem. AI kan helpen om een bericht te begrijpen, samen te vatten of een antwoord voor te bereiden. We bekijken per taak wat nodig is.'],
+  ['Kunnen we onze huidige software blijven gebruiken?', 'Dat onderzoeken we eerst. We bekijken welke koppelingen mogelijk zijn, welke toegang nodig is en of je huidige abonnementen dat ondersteunen. Je hoeft dus niet vooraf alles te vervangen.'],
+  ['Wat kost het en hoe lang duurt het?', 'Dat hangt af van wat we bouwen, de inhoud en de benodigde koppelingen. Na de kennismaking maken we een voorstel met de werkzaamheden, prijs en planning.'],
+  ['Blijft mijn team in controle?', 'Ja. We spreken af wat vanzelf mag gebeuren en wat eerst goedkeuring nodig heeft. Belangrijke beslissingen en uitzonderingen leggen we bij je team.'],
+  ['Is het voorbeeld op deze pagina een echte klantcase?', 'Nee. Het is een fictieve klantaanvraag die laat zien hoe een website, koppelingen en AI kunnen samenwerken. De demo verstuurt geen berichten en verwerkt geen echte klantgegevens.'],
 ]

@@ -1,155 +1,34 @@
-import { useRef, useState } from 'react'
-import { useWebsiteMotion } from '../components/website/MotionProvider'
-import Image from 'next/image'
-import {
-  ArrowRight,
-  FileText,
-  Mail,
-  ChartNoAxesCombined,
-  ShieldCheck,
-  Check,
-  CornerDownRight,
-} from 'lucide-react'
-import { capabilities } from '../content/services'
-import { ActionLink, SectionLabel } from '../components/website/Primitives'
+import { Globe, Workflow, Sparkles, ArrowDown } from 'lucide-react'
+import { SectionLabel } from '../components/website/Primitives'
 
-const icons = { file: FileText, mail: Mail, chart: ChartNoAxesCombined, shield: ShieldCheck }
+const services = [
+  { Icon: Globe, title: 'Je website of webshop.', label: 'EEN GOEDE EERSTE INDRUK',
+    copy: 'Een heldere website waarop klanten begrijpen wat je doet. Of een webshop waarin ze gemakkelijk hun producten vinden en bestellen.',
+    items: ['Ontwerp dat bij je bedrijf past', 'Prettig te gebruiken op mobiel', 'Een duidelijke weg naar contact of bestellen'] },
+  { Icon: Workflow, title: 'Het werk erachter.', label: 'MINDER HANDMATIG OVERZETTEN',
+    copy: 'We verbinden je website en de software die je gebruikt. Een aanvraag of bestelling komt op de juiste plek, met een duidelijke volgende stap.',
+    items: ['Aanvragen en orders bij elkaar', 'Klantgegevens doorgeven aan je software', 'Herinneringen en opvolging volgens afspraak'] },
+  { Icon: Sparkles, title: 'AI die je team helpt.', label: 'HULP BIJ LEZEN EN VOORBEREIDEN',
+    copy: 'AI kan een klantvraag samenvatten, ontbrekende informatie signaleren of een antwoord voorbereiden. Je team houdt de belangrijke beslissingen in handen.',
+    items: ['Lange berichten kort samengevat', 'Antwoordvoorstellen met de juiste informatie', 'Goedkeuring voordat een belangrijke actie volgt'] },
+]
 
 export function Capabilities() {
-  const [selected, setSelected] = useState(0)
-  const { enabled } = useWebsiteMotion()
-  const tabs = useRef<(HTMLButtonElement | null)[]>([])
-  const capability = capabilities[selected]
-  const Icon = icons[capability.icon]
-  const movePreview = (event: React.PointerEvent<HTMLDivElement>) => {
-    if (!enabled || event.pointerType === 'touch') return
-    const bounds = event.currentTarget.getBoundingClientRect()
-    const x = (event.clientX - bounds.left) / bounds.width - 0.5
-    const y = (event.clientY - bounds.top) / bounds.height - 0.5
-    event.currentTarget.style.setProperty('--preview-rx', `${-y * 3.5}deg`)
-    event.currentTarget.style.setProperty('--preview-ry', `${x * 4.5}deg`)
-    event.currentTarget.style.setProperty('--preview-light-x', `${(x + 0.5) * 100}%`)
-    event.currentTarget.style.setProperty('--preview-light-y', `${(y + 0.5) * 100}%`)
-  }
-  const resetPreview = (event: React.PointerEvent<HTMLDivElement>) => {
-    event.currentTarget.style.setProperty('--preview-rx', '0deg')
-    event.currentTarget.style.setProperty('--preview-ry', '0deg')
-  }
-  return (
-    <section id="mogelijkheden" className="web-section web-capabilities">
-      <div className="web-container">
-        <div className="web-section-intro" data-reveal>
-          <div>
-            <SectionLabel number="02">Wat Tibbe doet</SectionLabel>
-            <h2>
-              Van creatie
-              <br />
-              tot uitvoering.
-            </h2>
-          </div>
-          <p>
-            Zeven diensten voor marketing en operatie.
-            <br />
-            Kies waar jouw team hulp kan gebruiken.
-          </p>
-        </div>
-        <div className="capability-layout" data-reveal>
-          <div className="capability-tabs" role="tablist" aria-label="Mogelijkheden">
-            {capabilities.map((item, index) => (
-              <button
-                key={item.id}
-                ref={(el) => {
-                  tabs.current[index] = el
-                }}
-                role="tab"
-                id={`capability-tab-${index}`}
-                aria-selected={selected === index}
-                aria-controls="capability-panel"
-                tabIndex={selected === index ? 0 : -1}
-                onClick={() => setSelected(index)}
-                onKeyDown={(event) => {
-                  const next =
-                    event.key === 'Home'
-                      ? 0
-                      : event.key === 'End'
-                        ? capabilities.length - 1
-                        : ['ArrowRight', 'ArrowDown'].includes(event.key)
-                          ? (index + 1) % capabilities.length
-                          : ['ArrowLeft', 'ArrowUp'].includes(event.key)
-                            ? (index + capabilities.length - 1) % capabilities.length
-                            : null
-                  if (next !== null) {
-                    event.preventDefault()
-                    setSelected(next)
-                    tabs.current[next]?.focus()
-                  }
-                }}
-              >
-                <span>0{index + 1}</span>
-                {item.name}
-                <ArrowRight size={18} aria-hidden="true" />
-              </button>
-            ))}
-            <p className="capability-tabs__note">
-              De inzet wordt afgestemd op jouw proces, bronnen en afspraken.
-            </p>
-          </div>
-          <div
-            id="capability-panel"
-            className="capability-panel"
-            role="tabpanel"
-            aria-labelledby={`capability-tab-${selected}`}
-            tabIndex={0}
-          >
-            <div className="capability-panel__copy" key={`${selected}-copy`}>
-              <SectionLabel>Voorbeeld / 0{selected + 1}</SectionLabel>
-              <h3>{capability.title}</h3>
-              <p>{capability.description}</p>
-              <ActionLink secondary href="#contact">
-                Bespreek jouw proces
-              </ActionLink>
-            </div>
-            <div
-              className="capability-preview"
-              key={selected}
-              onPointerMove={movePreview}
-              onPointerLeave={resetPreview}
-            >
-              <div className="capability-preview__top">
-                <span>WERKSTROOM</span>
-                <span>ILLUSTRATIE</span>
-              </div>
-              <div className="capability-preview__source">
-                <Icon size={23} />
-                <div>
-                  <small>INPUT</small>
-                  <strong>{capability.source}</strong>
-                </div>
-                <CornerDownRight size={18} />
-              </div>
-              <div className="capability-preview__task">
-                <span className="tiny-loop">
-                  <Image src="/tibbe-loop.svg" alt="" width={26} height={26} />
-                </span>
-                {capability.task}
-              </div>
-              <dl>
-                {capability.lines.map(([label, value]) => (
-                  <div key={label}>
-                    <dt>{label}</dt>
-                    <dd>{value}</dd>
-                  </div>
-                ))}
-              </dl>
-              <div className="capability-preview__result">
-                <Check size={16} />
-                {capability.result}
-              </div>
-              <p>{capability.outcome}</p>
-            </div>
-          </div>
-        </div>
+  return <section id="mogelijkheden" className="web-section web-capabilities">
+    <div className="web-container">
+      <div className="web-section-intro" data-reveal>
+        <div><SectionLabel number="02">Wat we voor je bouwen</SectionLabel><h2>Van je website<br />tot het werk erachter.</h2></div>
+        <p>Drie onderdelen die samenwerken. Je kunt beginnen met één website, webshop of terugkerende taak. We bepalen samen wat je nodig hebt.</p>
       </div>
-    </section>
-  )
+      <div className="agency-services" data-motion-stagger>
+        {services.map(({ Icon, title, label, copy, items }, index) => <article key={title}>
+          <div className="agency-services__top"><span>0{index + 1}</span><Icon size={30} strokeWidth={1.3} aria-hidden="true" /></div>
+          <p className="agency-services__label">{label}</p>
+          <h3>{title}</h3><p>{copy}</p>
+          <ul>{items.map(item => <li key={item}>{item}</li>)}</ul>
+        </article>)}
+      </div>
+      <div className="agency-services__foot"><p>Automatiseren betekent simpelweg: afgesproken stappen vanzelf laten uitvoeren. AI helpt waar informatie eerst begrepen moet worden.</p><a className="web-text-link" href="#ervaring">Bekijk een voorbeeld <ArrowDown size={17} aria-hidden="true" /></a></div>
+    </div>
+  </section>
 }

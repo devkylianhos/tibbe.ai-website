@@ -5,11 +5,11 @@ import { Hero } from '../sections/Hero'
 import { Capabilities } from '../sections/Capabilities'
 import { Experience } from '../sections/Experience'
 import { FAQ, Problem, Process, Trust } from '../sections/Story'
-import { ServiceCases } from '../sections/ServiceCases'
 import { MotionSurface } from './website/MotionSurface'
 import { WebsiteMotionProvider } from './website/MotionProvider'
 import '@/styles/premium-motion.css'
 import '@/styles/particle-visuals.css'
+import '@/styles/agency.css'
 import { Contact } from '../sections/Contact'
 import { Founder } from '../sections/Founder'
 import { Integrations } from '../sections/Integrations'
@@ -25,12 +25,11 @@ export function Website() {
       <Navigation />
       <main id="main-content">
         <Hero />
-        <Integrations />
         <Problem />
         <Capabilities />
-        <Process />
         <Experience />
-        <ServiceCases />
+        <Process />
+        <Integrations />
         <Trust />
         <Founder />
         <FAQ />

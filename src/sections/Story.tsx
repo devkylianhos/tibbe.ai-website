@@ -7,32 +7,32 @@ export function Problem() {
     <section className="web-section web-problem">
       <div className="web-container web-problem__grid" data-reveal>
         <div>
-          <SectionLabel number="01">Waar werk blijft liggen</SectionLabel>
+          <SectionLabel number="01">Herkenbaar?</SectionLabel>
           <h2>
-            Het werk
+            Een nieuwe klant.
             <br />
-            tussen je tools.
+            En dan?
           </h2>
           <ArrowDownRight className="web-editorial-arrow" size={76} strokeWidth={1} />
         </div>
         <div className="web-problem__body">
           <p className="web-large-copy">
-            De campagne wacht op beeld.
+            Een aanvraag in je mailbox.
             <br />
-            De klant wacht op antwoord.
+            Een bestelling in je webshop.
             <br />
-            Je team wacht op de volgende stap.
+            En de rest gebeurt met de hand.
           </p>
           <p>
-            Het zijn de kleine overdrachten die je dag versnipperen. Informatie verzamelen. Gegevens
-            vergelijken. Weer een bericht sturen.
+            Gegevens overtypen. Uitzoeken wie antwoord geeft. Onthouden welke offerte nog openstaat.
+            Het kost je team aandacht, elke dag opnieuw.
           </p>
           <p>
-            Tibbe verbindt die stappen tot één werkstroom. Je team krijgt de context en de
-            beslissingen die ertoe doen.
+            Tibbe bouwt de verbinding tussen je online bedrijf en je dagelijkse werk.
+            Van een heldere website tot een aanvraag die bij de juiste collega terechtkomt.
           </p>
           <a className="web-text-link" href="#mogelijkheden">
-            Geef het werk een vervolg <ArrowRight size={17} />
+            Bekijk wat we bouwen <ArrowRight size={17} />
           </a>
         </div>
       </div>
@@ -45,17 +45,15 @@ export function Process() {
       <div className="web-container">
         <div className="web-section-intro" data-reveal>
           <div>
-            <SectionLabel number="03">Eén doorlopend systeem</SectionLabel>
+            <SectionLabel number="04">Zo werken we samen</SectionLabel>
             <h2>
-              Van eerste signaal tot
+              Eerst begrijpen.
               <br />
-              aantoonbaar resultaat.
+              Dan bouwen.
             </h2>
           </div>
           <p>
-            Een vaste manier van werken.
-            <br />
-            Een helder antwoord bij elke stap.
+            Je hoeft zelf geen technische kennis te hebben. We maken samen duidelijk wat er nodig is, wat je krijgt en hoe je ermee werkt.
           </p>
         </div>
         <ol className="web-process__steps" data-reveal>
@@ -159,33 +157,33 @@ export function Trust() {
     <section id="over" className="web-section web-trust">
       <div className="web-container">
         <div className="web-trust__intro" data-reveal>
-          <SectionLabel number="06">De manier van Tibbe</SectionLabel>
+          <SectionLabel number="05">AI met duidelijke afspraken</SectionLabel>
           <h2>
             Veel systeem.
             <br />
             Weinig ruis.
           </h2>
           <p>
-            Autonomie werkt als de grenzen helder zijn. Daarom horen uitleg, goedkeuring en controle
-            bij dezelfde ervaring.
+            AI helpt bij het voorbereiden van werk. We spreken af welke informatie gebruikt mag worden,
+            wat vanzelf mag gaan en waar je team eerst naar kijkt.
           </p>
         </div>
         <div className="web-trust__grid" data-reveal>
           {[
             {
               Icon: ScanLine,
-              title: 'Altijd navolgbaar.',
-              copy: 'Elke belangrijke actie heeft context. Je kunt terug naar de bron en ziet waarom een voorstel is gedaan.',
+              title: 'Je begrijpt wat er gebeurt.',
+              copy: 'We laten zien hoe de oplossing werkt en waar de informatie vandaan komt. Je krijgt uitleg in gewone taal.',
             },
             {
               Icon: Fingerprint,
-              title: 'Jouw grenzen gelden.',
-              copy: 'Welke bronnen Tibbe gebruikt en welke acties toestemming vragen, leg je vooraf vast.',
+              title: 'Jij bepaalt de grenzen.',
+              copy: 'We spreken af welke gegevens gebruikt worden en welke stappen je eerst wilt goedkeuren. Bij twijfel gaat een vraag naar je team.',
             },
             {
               Icon: ListChecks,
-              title: 'Collega, geen tool.',
-              copy: 'Een concrete terugkoppeling over het werk. Met aandacht voor de uitzonderingen die jouw besluit nodig hebben.',
+              title: 'Hulp op de juiste plek.',
+              copy: 'Een vaste regel is soms genoeg. We zetten AI in waar het helpt om informatie te begrijpen of een voorstel te maken.',
             },
           ].map(({ Icon, title, copy }) => (
             <article key={title}>
@@ -216,7 +214,7 @@ export function FAQ() {
     <section id="vragen" className="web-section web-faq">
       <div className="web-container web-faq__grid">
         <div data-reveal>
-          <SectionLabel number="07">Heldere antwoorden</SectionLabel>
+          <SectionLabel number="06">Heldere antwoorden</SectionLabel>
           <h2>
             Goed om
             <br />

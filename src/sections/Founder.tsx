@@ -19,8 +19,8 @@ export function Founder() {
           <SectionLabel>De ondernemer achter Tibbe</SectionLabel>
           <h2 id="founder-title">Goed werk begint<br />met een gesprek.</h2>
           <p className="web-founder__lead">Maak kennis met Kylian, ondernemer en oprichter van Tibbe.</p>
-          <p>Een AI-operator begint bij het begrijpen van jouw werk. Wat komt steeds terug? Waar blijven dingen liggen? En welke beslissingen wil je zelf blijven nemen?</p>
-          <p>Daar begint de kennismaking. Bij jouw bedrijf, je team en één concreet proces.</p>
+          <p>Een goede website of slimme koppeling begint bij het begrijpen van jouw bedrijf. Hoe vinden klanten je? Wat gebeurt er na een aanvraag? En waar is je team onnodig veel tijd aan kwijt?</p>
+          <p>Daar begint de kennismaking. Bij jouw bedrijf, je team en een concrete eerste stap.</p>
           <ActionLink href="#contact">Maak kennis met Kylian</ActionLink>
         </div>
       </div>
