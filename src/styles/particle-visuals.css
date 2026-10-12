@@ -112,3 +112,79 @@
   .web-footer__scene { height: 280px; }
   .web-footer__motion { justify-content: flex-start; padding-bottom: 12px; }
 }
+
+/* Velorah composition, adapted to Tibbe: one visual, one message, one action. */
+.tibbe-web .web-hero--cinema {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 96px;
+  background: #17292d;
+}
+.tibbe-web .web-hero--cinema .web-hero__grid {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-height: 660px;
+  padding-block: clamp(70px, 10vh, 140px) 100px;
+}
+.web-hero--cinema .web-hero__copy { width: 100%; text-align: center; }
+.web-hero--cinema .web-label { justify-content: center; margin-bottom: 32px; }
+.tibbe-web .web-hero--cinema h1 {
+  font-size: clamp(60px, 8.7vw, 126px);
+  line-height: 1.02;
+  letter-spacing: -.065em;
+  font-weight: 500;
+  margin: 0 auto 32px;
+}
+.tibbe-web .web-hero--cinema .web-hero__lead {
+  max-width: 660px;
+  margin: 0 auto 36px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #d4dddc;
+  text-wrap: pretty;
+}
+.web-hero--cinema .web-actions { justify-content: center; }
+.tibbe-web .web-hero--cinema .web-action {
+  border-radius: 999px;
+  min-height: 56px;
+  padding-inline: 28px;
+  background: #14657fe8;
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 #d8f7ff55, 0 8px 30px #00181f33;
+}
+.tibbe-web .web-hero--cinema .web-hero__note { margin: 20px 0 0; color: #c1cecc; font-size: 12px; }
+.web-hero--cinema .tibbe-particle-visual {
+  inset: 0;
+  opacity: .3;
+  mask-image: linear-gradient(transparent 4%, #000 45%, #000 85%, transparent);
+}
+.web-hero--cinema .tibbe-particle-visual video { object-position: center 65%; mask-image: none; }
+.tibbe-web .web-hero--cinema .web-hero__bottom {
+  position: relative;
+  min-height: 76px;
+  color: #c1cecc;
+  border-color: #c2ded52b;
+  padding-block: 16px;
+}
+.web-hero--cinema .web-hero__bottom .web-motion-toggle { color: #c1cecc; letter-spacing: 0; }
+.tibbe-web .web-nav:not(.web-nav--scrolled) { background: #17292d80; backdrop-filter: blur(16px); }
+@media (min-width: 1800px) { .tibbe-web .web-hero--cinema h1 { font-size: 148px; } }
+@media (max-width: 760px) {
+  .tibbe-web .web-hero--cinema { padding-top: 80px; }
+  .tibbe-web .web-hero--cinema .web-hero__grid { min-height: 600px; padding-block: 80px 70px; }
+  .tibbe-web .web-hero--cinema h1 { font-size: clamp(40px, 8.8vw, 64px); letter-spacing: -.055em; margin-bottom: 26px; }
+  .tibbe-web .web-hero--cinema .web-hero__lead { max-width: 510px; font-size: 16px; line-height: 1.7; }
+  .tibbe-web .web-hero--cinema .web-actions { flex-direction: row; }
+  .tibbe-web .web-hero--cinema .web-action { width: auto; }
+  .web-hero--cinema .tibbe-particle-visual { inset: 0; height: auto; opacity: .22; }
+  .web-hero--cinema .web-hero__bottom > span { display: none; }
+  .tibbe-web .web-hero--cinema .web-hero__bottom { flex-direction: row; gap: 10px; }
+  .tibbe-web .web-hero--cinema .web-hero__bottom > a { font-size: 9px; gap: 8px; }
+}
+@media (max-width: 360px) {
+  .tibbe-web .web-hero--cinema h1 { font-size: 35px; }
+  .tibbe-web .web-hero--cinema .web-hero__lead { font-size: 15px; }
+  .web-hero--cinema .web-hero__bottom .web-motion-toggle { font-size: 10px; }
+}

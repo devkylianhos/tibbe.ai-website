@@ -49,3 +49,9 @@ Hero and footer share ViewportVideo: deferred download on entry, background/offs
 ## Calmer hero revision
 
 User feedback: the hero feels too busy. Lowered the particle-wave opacity to 18–22%, removed animated pixel accents, orbital rings, travelling signal and progress timer, and removed pointer tilt. The workflow now changes only when a visitor selects Signaal/Besluit/Bewijs. Headline entrance, branding, layout, copy and footer remain intact. This supersedes the earlier automatic hero sequencing decision. Verified stable initial stage, manual selection, desktop/mobile rendering, lint and production build.
+
+## Cinematic composition revision
+
+Following the supplied Velorah reference and the user's request to develop a stronger overall direction, the hero now uses a centered, full-height composition: one large two-line headline, one primary action, a restrained full-bleed particle visual and a translucent navigation surface. Retained Tibbe logo, Schibsted type, existing hero wording and deepwater color family. The abstract visual remains the supplied particle wave; the unrelated starry/flowers video is not used. Removed the redundant workflow illustration from the hero; existing capabilities and interactive experience sections continue to explain the product. Other sections, routes and the horses footer are unchanged.
+
+This supersedes the previous two-column/manual workflow hero decisions. Validated desktop 1440px and 320/390/768px widths, CTA anchor, mobile menu, video pause, no browser errors, lint and production build. Preview only. Existing accessibility findings from the earlier audit remain separate outstanding items.
