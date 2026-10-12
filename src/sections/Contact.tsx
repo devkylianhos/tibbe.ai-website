@@ -2,6 +2,8 @@ import { useRef, useState } from 'react'
 import Link from 'next/link'
 import type { FormEvent } from 'react'
 import { ArrowUpRight, Check, X } from 'lucide-react'
+import { ViewportVideo } from '../components/website/ViewportVideo'
+import { MotionToggle } from '../components/website/MotionProvider'
 import { Logo } from '../components/Logo'
 import { SectionLabel } from '../components/website/Primitives'
 import { siteConfig } from '../content/website'
@@ -116,11 +118,11 @@ export function Contact() {
           </form>
         </div>
       </section>
-      <footer className="web-footer">
+      <footer className="web-footer web-footer--scenic">
         <div className="web-container">
           <div className="web-footer__top">
             <Link href="/" aria-label="Tibbe — homepage">
-              <Logo inverse />
+              <Logo />
             </Link>
             <p>
               Calm intelligence.
@@ -151,6 +153,10 @@ export function Contact() {
             </div>
             <span>VEEL SYSTEEM. WEINIG RUIS.</span>
           </div>
+        </div>
+        <div className="web-container web-footer__motion"><MotionToggle /></div>
+        <div className="web-footer__scene" aria-hidden="true">
+          <ViewportVideo src="/visuals/tibbe-horses.mp4" poster="/visuals/tibbe-horses.jpg" />
         </div>
       </footer>
       <dialog ref={privacy} className="web-dialog" aria-labelledby="privacy-title">

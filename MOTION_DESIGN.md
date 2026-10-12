@@ -37,3 +37,11 @@ Media source: user-supplied CloudFront MP4, `https://d8j0ntlcm91z4.cloudfront.ne
 | Media lifecycle | Existing Tibbe motion controls | Download only when enabled and visible; pause offscreen, in background tabs and on manual/system pause |
 
 Visual QA: desktop 1440px, mobile 390px and 320px; no horizontal overflow, no browser errors. Video playback, pause/resume, offscreen pause and reduced-motion (zero MP4 requests) checked in the browser. Lint, six tests and production build pass. All changes remain in the feature branch/local preview; no production deployment.
+
+## Supplied Meridian horses reference
+
+Added the user's engraved horses-and-coach video below the existing footer links. The footer uses Tibbe paper, ink, logo and fonts, with the original navigation and legal links intact. Multiply blending removes the white media background; grayscale keeps the engraving within Tibbe's ink palette. Extra empty sky is cropped from the locally hosted video, while responsive framing keeps the coach visible below the text. The page retains its normal scrolling layout.
+
+Source: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260928_144832_2b6b23aa-4416-4fcb-9df4-132349c59edc.mp4
+
+Hero and footer share ViewportVideo: deferred download on entry, background/offscreen pause, system reduced-motion poster and global manual pause. A second control in the footer makes pausing available next to the horses. Browser checks cover lazy download, scroll playback, pause/resume, reduced-motion and 320/390/768/1440/2560px without horizontal overflow. Lint and production build pass. Preview only.
