@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { Logo } from '../Logo'
@@ -18,11 +20,19 @@ export function Navigation({ homeLinks = false }: { homeLinks?: boolean }) {
     window.addEventListener('scroll', update, { passive: true })
     return () => window.removeEventListener('scroll', update)
   }, [])
+  useEffect(() => {
+    const desktop = window.matchMedia('(min-width: 961px)')
+    const closeOnDesktop = () => {
+      if (desktop.matches) setOpen(false)
+    }
+    desktop.addEventListener('change', closeOnDesktop)
+    return () => desktop.removeEventListener('change', closeOnDesktop)
+  }, [])
   return (
     <header
       className={`web-nav ${scrolled ? 'web-nav--scrolled' : ''}`}
       onKeyDown={(event) => {
-        if (event.key === 'Escape') {
+        if (open && event.key === 'Escape') {
           setOpen(false)
           trigger.current?.focus()
         }
@@ -52,7 +62,7 @@ export function Navigation({ homeLinks = false }: { homeLinks?: boolean }) {
           aria-controls="mobile-navigation"
           onClick={() => setOpen(!open)}
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
       </div>
       <nav

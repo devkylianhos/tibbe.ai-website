@@ -30,7 +30,7 @@ export function Capabilities() {
           <h3>{title}</h3><p>{copy}</p>
           <ul>{items.map(item => <li key={item}>{item}</li>)}</ul>
           <p className="agency-services__example">{example}</p>
-          <div className="agency-services__links"><a href={href}>{link} <ArrowUpRight size={14} /></a></div>
+          <div className="agency-services__links"><a href={href}>{link} <ArrowUpRight aria-hidden="true" size={14} /></a></div>
         </article>)}
       </div>
       <div className="agency-services__foot"><p>Automatiseren betekent simpelweg: afgesproken stappen vanzelf laten uitvoeren. AI helpt waar informatie eerst begrepen moet worden.</p><a className="web-text-link" href="#ervaring">Bekijk een voorbeeld <ArrowDown size={17} aria-hidden="true" /></a></div>

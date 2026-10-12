@@ -35,7 +35,7 @@ Fonts worden lokaal geladen en de 3D-effecten bestaan uit GPU-vriendelijke CSS-t
 
 ## Grenzen vóór livegang
 
-- `hello@tibbe.ai` is overgenomen uit de bestaande starter en moet bevestigd worden.
+- Contactadres: `kylian@tibbe.app`, bevestigd door Kylian op 12 oktober 2026. Websiteverwijzingen gecontroleerd; mailboxbezorging niet getest.
 - Formulier levert een e-mailconcept, geen server-side leadopslag of agenda-afspraak.
 - `/app` is het bestaande klantportaal en blijft afhankelijk van de bestaande authenticatie en backendconfiguratie.
 - Klantbewijs, sociale profielen, juridische bedrijfsgegevens en definitieve voorwaarden zijn niet aangeleverd. Er zijn geen fictieve klanten, certificaten of prestatiecijfers toegevoegd.

@@ -52,7 +52,7 @@
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
-  font: 500 12px/1.4 var(--font-brand);
+  font: 500 13px/1.4 var(--font-brand);
   transition: background-color 160ms ease;
 }
 .actions button:hover { background: var(--color-action-hover); }

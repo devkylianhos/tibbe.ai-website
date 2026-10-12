@@ -20,8 +20,8 @@ export function MotionSurface() {
       active.add(animation)
       void animation.finished.then(() => { active.delete(animation); animation.cancel() }).catch(() => {})
     }
-    const rise = (element: Element, index = 0, distance = 24) => animate(element,
-      [{ opacity: .12, transform: `translateY(${distance}px)` }, { opacity: 1, transform: 'none' }], 700, index * 85)
+    const rise = (element: Element, index = 0, distance = 12) => animate(element,
+      [{ transform: `translateY(${distance}px)` }, { transform: 'none' }], 440, index * 60)
 
     const hero = root.querySelector('.web-hero')
     if (hero && !seen.current.has(hero)) {
@@ -43,8 +43,7 @@ export function MotionSurface() {
           ? target.children
           : target.matches('.web-section-intro, .web-problem__grid') ? target.children : [target]
         Array.from(children).forEach((child, i) => rise(child, i))
-        target.querySelectorAll('h2').forEach((heading) => animate(heading,
-          [{ clipPath: 'inset(0 0 100% 0)', transform: 'translateY(18px)' }, { clipPath: 'inset(0 0 0% 0)', transform: 'none' }], 850, 80))
+
       })
     }, { threshold: .12, rootMargin: '0px 0px -35px 0px' })
     root.querySelectorAll('[data-reveal], [data-motion-stagger]').forEach(el => reveal.observe(el))
@@ -88,32 +87,6 @@ export function MotionSurface() {
       arrow?.style.removeProperty('rotate')
     })
 
-    if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      root.querySelectorAll<HTMLElement>('.service-case, .web-trust__grid article, .web-contact-form, .web-action').forEach((element) => {
-        let frame = 0
-        const move = (event: PointerEvent) => {
-          cancelAnimationFrame(frame)
-          frame = requestAnimationFrame(() => {
-            const rect = element.getBoundingClientRect()
-            element.style.setProperty('--pointer-x', `${event.clientX - rect.left}px`)
-            element.style.setProperty('--pointer-y', `${event.clientY - rect.top}px`)
-            if (element.classList.contains('web-action')) {
-              element.style.translate = `${(event.clientX - rect.left - rect.width / 2) * .075}px ${(event.clientY - rect.top - rect.height / 2) * .12}px`
-            }
-          })
-        }
-        const leave = () => { cancelAnimationFrame(frame); element.style.translate = '' }
-        element.addEventListener('pointermove', move)
-        element.addEventListener('pointerleave', leave)
-        cleanups.push(() => {
-          leave()
-          element.removeEventListener('pointermove', move)
-          element.removeEventListener('pointerleave', leave)
-          element.style.removeProperty('--pointer-x')
-          element.style.removeProperty('--pointer-y')
-        })
-      })
-    }
     const visibility = () => active.forEach(animation => document.hidden ? animation.pause() : animation.play())
     document.addEventListener('visibilitychange', visibility)
     return () => {

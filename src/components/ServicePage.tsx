@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { Navigation } from './website/Navigation'
 import { WebsiteMotionProvider, MotionToggle } from './website/MotionProvider'
@@ -21,8 +19,8 @@ export type ServicePageContent = {
 
 export function ServicePage({ content }: { content: ServicePageContent }) {
   return <WebsiteMotionProvider>
-    <MotionSurface /><Navigation homeLinks />
-    <main id="main-content">
+    <MotionSurface /><a className="web-skip" href="#main-content">Naar de inhoud</a><Navigation homeLinks />
+    <main id="main-content" tabIndex={-1}>
       <section className="web-hero web-hero--cinema service-page-hero">
         <ParticleVisual />
         <div className="web-container web-hero__grid"><div className="web-hero__copy">
@@ -30,7 +28,7 @@ export function ServicePage({ content }: { content: ServicePageContent }) {
           <p className="web-hero__lead">{content.intro}</p>
           <div className="web-actions"><ActionLink href="/#contact">Bespreek je project</ActionLink></div>
         </div></div>
-        <div className="web-container web-hero__bottom"><Link href="/#mogelijkheden">Bekijk wat Tibbe bouwt <ArrowRight size={14} /></Link><MotionToggle /></div>
+        <div className="web-container web-hero__bottom"><Link href="/#mogelijkheden">Bekijk wat Tibbe bouwt <ArrowRight aria-hidden="true" size={14} /></Link><MotionToggle /></div>
       </section>
       <section className="web-section web-capabilities"><div className="web-container">
         <div className="web-section-intro" data-reveal><div><SectionLabel>Wat we samen regelen</SectionLabel><h2>Een helder plan.<br />Een passende oplossing.</h2></div><p>{content.audience || "We beginnen bij je bedrijf en je klanten. Je krijgt vooraf duidelijkheid over de werkzaamheden, prijs en planning."}</p></div>

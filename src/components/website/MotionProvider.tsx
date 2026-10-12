@@ -26,7 +26,7 @@ export function MotionToggle() {
   const { enabled, reduced, paused, toggle } = useWebsiteMotion()
   return <button className="web-motion-toggle" type="button" onClick={toggle} disabled={reduced}
     aria-pressed={paused || reduced} aria-label={reduced ? 'Animaties uit volgens je systeemvoorkeur' : enabled ? 'Animaties pauzeren' : 'Animaties hervatten'}>
-    {enabled ? <Pause size={12} /> : <Play size={12} />}
+    {enabled ? <Pause aria-hidden="true" size={12} /> : <Play aria-hidden="true" size={12} />}
     <span>{reduced ? 'Verminderde beweging' : enabled ? 'Animaties pauzeren' : 'Animaties hervatten'}</span>
   </button>
 }

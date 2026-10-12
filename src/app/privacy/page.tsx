@@ -1,3 +1,4 @@
+import { siteConfig } from "@/content/website";
 import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
 
@@ -12,7 +13,7 @@ export default function PrivacyPage() {
       <div className="legal-note">
         Tibbe is een dienst van <strong>Tibbe</strong>,
         Parelweg 11, 1812 RS Alkmaar, KvK 80015298. Vragen over je gegevens? Neem contact op met{" "}
-        <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20mijn%20gegevens%20bij%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a>.
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
       </div>
 
       <p>
@@ -99,7 +100,7 @@ export default function PrivacyPage() {
       <h2>Jouw rechten</h2>
       <p>
         Je hebt het recht om je gegevens in te zien, te corrigeren of te laten
-        verwijderen, en om bezwaar te maken tegen de verwerking. Neem contact op met <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20mijn%20gegevens%20bij%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a> en we regelen
+        verwijderen, en om bezwaar te maken tegen de verwerking. Neem contact op met <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> en we regelen
         het. Ben je het ergens niet mee eens, dan kun je een klacht indienen bij
         de Autoriteit Persoonsgegevens.
       </p>

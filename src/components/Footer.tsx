@@ -1,3 +1,4 @@
+import { siteConfig } from "@/content/website";
 import { BrandMark } from "./BrandMark";
 import { nav, BOOKING_URL, waLink } from "@/lib/site";
 
@@ -88,6 +89,7 @@ export function Footer() {
               <div>Parelweg 11</div>
               <div>1812 RS Alkmaar, NL</div>
               <div>KvK 80015298</div>
+              <a href={`mailto:${siteConfig.email}`} className="block hover:text-accent">{siteConfig.email}</a>
             </address>
           </div>
         </div>

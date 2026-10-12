@@ -13,7 +13,7 @@ export function Problem() {
             <br />
             En dan?
           </h2>
-          <ArrowDownRight className="web-editorial-arrow" size={76} strokeWidth={1} />
+          <ArrowDownRight aria-hidden="true" className="web-editorial-arrow" size={76} strokeWidth={1} />
         </div>
         <div className="web-problem__body">
           <p className="web-large-copy">
@@ -32,7 +32,7 @@ export function Problem() {
             Van een heldere website tot een aanvraag die bij de juiste collega terechtkomt.
           </p>
           <a className="web-text-link" href="#mogelijkheden">
-            Bekijk wat we bouwen <ArrowRight size={17} />
+            Bekijk wat we bouwen <ArrowRight aria-hidden="true" size={17} />
           </a>
         </div>
       </div>
@@ -61,7 +61,7 @@ export function Process() {
             <li key={step.title}>
               <div className="web-process__marker">
                 <span>0{index + 1}</span>
-                <ArrowRight size={16} />
+                <ArrowRight aria-hidden="true" size={16} />
               </div>
               <h3>{step.title}</h3>
               <p>{step.copy}</p>
@@ -110,7 +110,7 @@ export function UseCases() {
               <span className="web-mono">0{index + 1}</span>
               <h3>{title}</h3>
               <p>{before}</p>
-              <ArrowRight size={20} />
+              <ArrowRight aria-hidden="true" size={20} />
               <strong>{after}</strong>
             </article>
           ))}
@@ -186,7 +186,7 @@ export function Trust() {
             },
           ].map(({ Icon, title, copy }) => (
             <article key={title}>
-              <Icon size={28} strokeWidth={1.4} />
+              <Icon aria-hidden="true" size={28} strokeWidth={1.4} />
               <h3>{title}</h3>
               <p>{copy}</p>
             </article>
@@ -195,13 +195,13 @@ export function Trust() {
         <div className="web-control-strip">
           <span>AFSPRAKEN VOORDAT WE BOUWEN.</span>
           <span>
-            <Check size={15} /> Omvang
+            <Check aria-hidden="true" size={15} /> Omvang
           </span>
           <span>
-            <Check size={15} /> Budget
+            <Check aria-hidden="true" size={15} /> Budget
           </span>
           <span>
-            <Check size={15} /> Planning
+            <Check aria-hidden="true" size={15} /> Planning
           </span>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { siteConfig } from "@/content/website";
 import Link from 'next/link';
 import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
@@ -15,7 +16,7 @@ export default function VoorwaardenPage() {
         Deze voorwaarden beschrijven het AI-abonnement van Tibbe, geleverd door{" "}
         <strong>Tibbe</strong>, Parelweg 11,
         1812 RS Alkmaar, KvK 80015298. Vragen? Neem contact op met{" "}
-        <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20de%20voorwaarden%20van%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a>.
+        <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
       </div>
 
       <p>Zoek je informatie over een website, webshop of automatiseringsproject? De werkzaamheden, prijs en planning daarvan bespreken we in een afzonderlijk voorstel. <Link href="/#contact">Bespreek je project</Link>.</p>

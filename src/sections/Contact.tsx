@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { ArrowUpRight, Check, X } from 'lucide-react'
@@ -9,6 +11,7 @@ import { siteConfig } from '../content/website'
 
 export function Contact() {
   const [draft, setDraft] = useState('')
+  const [errors, setErrors] = useState<Record<string, string>>({})
   const privacy = useRef<HTMLDialogElement>(null)
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -34,13 +37,25 @@ export function Contact() {
             </p>
             <a className="web-text-link" href={`mailto:${siteConfig.email}`}>
               {siteConfig.email}
-              <ArrowUpRight size={18} />
+              <ArrowUpRight aria-hidden="true" size={18} />
             </a>
           </div>
           <form
             className="web-contact-form"
             onSubmit={handleSubmit}
-            onChange={() => setDraft('')}
+            onInvalid={(event) => {
+              const field = event.target
+              if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return
+              const message = field.name === 'email' ? 'Vul een geldig e-mailadres in, zoals naam@bedrijf.nl.'
+                : field.name === 'name' ? 'Vul je naam in.' : 'Vertel kort wat je wilt bouwen of verbeteren.'
+              setErrors(previous => ({ ...previous, [field.name]: message }))
+            }}
+            onChange={(event) => {
+              setDraft('')
+              const field = event.target
+              if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement)) return
+              setErrors(previous => ({ ...previous, [field.name]: '' }))
+            }}
             data-reveal
           >
             <div className="web-form-title">
@@ -52,11 +67,14 @@ export function Contact() {
                 Je naam
                 <input
                   name="name"
+                  aria-invalid={Boolean(errors.name)}
+                  aria-describedby={errors.name ? 'contact-name-error' : undefined}
                   autoComplete="name"
                   placeholder="Voor- en achternaam"
                   required
                   maxLength={100}
                 />
+                {errors.name && <span id="contact-name-error" className="web-field-error">{errors.name}</span>}
               </label>
               <label>
                 Je organisatie (optioneel)
@@ -72,24 +90,31 @@ export function Contact() {
               Je e-mailadres (optioneel)
               <input
                 name="email"
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={errors.email ? 'contact-email-error' : undefined}
                 type="email"
+                spellCheck={false}
                 autoComplete="email"
                 placeholder="jij@organisatie.nl"
                 maxLength={200}
               />
+              {errors.email && <span id="contact-email-error" className="web-field-error">{errors.email}</span>}
             </label>
             <label>
               Wat wil je laten bouwen of verbeteren?
               <textarea
                 name="process"
+                aria-invalid={Boolean(errors.process)}
+                aria-describedby={errors.process ? 'contact-process-error' : undefined}
                 placeholder="Bijvoorbeeld: een nieuwe website en een betere opvolging van aanvragen."
                 rows={3}
                 required
                 maxLength={1800}
               />
+              {errors.process && <span id="contact-process-error" className="web-field-error">{errors.process}</span>}
             </label>
             <button className="web-action" type="submit">
-              Maak mijn e-mail klaar <ArrowUpRight size={18} />
+              Maak mijn e-mail klaar <ArrowUpRight aria-hidden="true" size={18} />
             </button>
             <p className="web-form-note">
               Dit formulier maakt een e-mailconcept voor je kennismaking. Je verstuurt het zelf via je e-mailprogramma; er is nog geen afspraak geboekt.
@@ -97,10 +122,10 @@ export function Contact() {
             {draft && (
               <div className="web-form-result" role="status">
                 <p>
-                  <Check size={17} /> Je e-mailconcept staat klaar.
+                  <Check aria-hidden="true" size={17} /> Je e-mailconcept staat klaar.
                 </p>
                 <a href={draft}>
-                  Open in je e-mailprogramma <ArrowUpRight size={16} />
+                  Open in je e-mailprogramma <ArrowUpRight aria-hidden="true" size={16} />
                 </a>
                 <small>
                   Er is nog niets verstuurd. Controleer je bericht en verstuur het vanuit je eigen
@@ -135,7 +160,7 @@ export function Contact() {
               <a href="#over">Over Tibbe</a>
               <a href="#vragen">Veelgestelde vragen</a>
               <a href="/app">
-                Open de Tibbe-app <ArrowUpRight size={12} />
+                Open de Tibbe-app <ArrowUpRight aria-hidden="true" size={12} />
               </a>
             </nav>
           </div>
@@ -145,7 +170,7 @@ export function Contact() {
               <a href="/privacy">Privacy</a>
               <a href="/cookies">Cookies</a>
               <a href="/voorwaarden">
-                Voorwaarden <ArrowUpRight size={12} />
+                Voorwaarden <ArrowUpRight aria-hidden="true" size={12} />
               </a>
             </div>
             <span>VEEL SYSTEEM. WEINIG RUIS.</span>
@@ -160,7 +185,7 @@ export function Contact() {
         <div className="web-dialog__header">
           <SectionLabel>Over deze website</SectionLabel>
           <button aria-label="Privacy sluiten" onClick={() => privacy.current?.close()}>
-            <X />
+            <X aria-hidden="true" />
           </button>
         </div>
         <h2 id="privacy-title">Jouw gegevens.</h2>
@@ -178,7 +203,7 @@ export function Contact() {
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
         </p>
         <button className="web-action" onClick={() => privacy.current?.close()}>
-          Begrepen <Check size={17} />
+          Begrepen <Check aria-hidden="true" size={17} />
         </button>
       </dialog>
     </>

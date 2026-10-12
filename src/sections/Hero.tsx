@@ -37,13 +37,13 @@ export function Hero() {
         <div className="web-container">
           <span>Van eerste contact tot opvolging.</span>
           <span>
-            <Check size={16} /> Passend bij jouw bedrijf
+            <Check aria-hidden="true" size={16} /> Passend bij jouw bedrijf
           </span>
           <span>
-            <Check size={16} /> Aangesloten op je software
+            <Check aria-hidden="true" size={16} /> Aangesloten op je software
           </span>
           <span>
-            <Check size={16} /> Je team houdt de regie
+            <Check aria-hidden="true" size={16} /> Je team houdt de regie
           </span>
         </div>
       </div>

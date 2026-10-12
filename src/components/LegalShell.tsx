@@ -12,16 +12,17 @@ export function LegalShell({
   children: React.ReactNode;
 }) {
   return (
-    <main>
+    <>
+      <a className="web-skip" href="#main-content">Naar de inhoud</a>
       <Navbar />
-      <section className="container-x pt-32 pb-24 sm:pt-36">
+      <main id="main-content" tabIndex={-1} className="container-x pt-32 pb-24 sm:pt-36">
         <div className="mx-auto max-w-[760px]">
           <h1 className="display-2">{title}</h1>
           <p className="mt-3 text-[14px] text-muted-fg">Laatst bijgewerkt: {updated}</p>
           <div className="legal-prose mt-10">{children}</div>
         </div>
-      </section>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

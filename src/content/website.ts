@@ -1,4 +1,4 @@
-export const siteConfig = { email: 'hello@tibbe.ai', name: 'Tibbe.ai' }
+export const siteConfig = { email: 'kylian@tibbe.app', name: 'Tibbe.ai' }
 
 export const capabilities = [
   {

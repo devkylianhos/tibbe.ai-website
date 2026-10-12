@@ -31,12 +31,10 @@
 .web-process__steps { position: relative; }
 .web-process__steps::after { content: ''; position: absolute; left: 0; top: 19px; width: 100%; height: 2px; background: var(--color-deepwater); transform: scaleX(var(--process-progress,0)); transform-origin: left; pointer-events: none; }
 .web-process__steps li { transition: opacity .4s var(--motion-ease); }
-[data-motion="running"] .web-process__steps [data-step-lit="false"] { opacity: .48; }
+/* Keep process text at full contrast while its progress marker animates. */
 .web-process__steps [data-step-lit="true"] .web-process__marker span { color: var(--color-deepwater); box-shadow: 0 9px 24px #14657f22; }
 [data-motion="running"] .service-case[data-open="true"] .service-case__body { animation: preview-reveal .5s var(--motion-ease); }
 .service-case h3 button { position: relative; isolation: isolate; }
-.service-case h3 button::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(90deg,#4fa3c40c 1px,transparent 1px),linear-gradient(#4fa3c40c 1px,transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(180px circle at var(--pointer-x,50%) var(--pointer-y,50%),black,transparent); opacity: 0; transition: opacity .35s; }
-[data-motion="running"] .service-case h3 button:hover::before { opacity: 1; }
 [data-motion="running"] .experience-console .is-complete svg { animation: decision-check .45s var(--motion-ease) both; }
 [data-motion="running"] .web-text-link svg, [data-motion="running"] .web-action svg { transition: transform .4s var(--motion-ease); }
 [data-motion="running"] .web-text-link:hover svg, [data-motion="running"] .web-action:hover svg { transform: translate(3px,-2px); }

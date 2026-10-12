@@ -1,5 +1,3 @@
-'use client'
-
 import { Navigation } from './website/Navigation'
 import { Hero } from '../sections/Hero'
 import { Capabilities } from '../sections/Capabilities'
@@ -22,7 +20,7 @@ export function Website() {
         Naar de inhoud
       </a>
       <Navigation />
-      <main id="main-content">
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <Capabilities />
         <Trust />

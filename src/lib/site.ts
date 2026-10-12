@@ -2,7 +2,7 @@
    Positionering: websites, webshops en gekoppeld klantwerk, met AI als ondersteuning.
    Placeholders flagged with TODO are the "nog invullen met echte gegevens" items. */
 
-/* Contact loopt via WhatsApp (nog geen mail).
+/* WhatsApp is een aanvullend contactkanaal naast de e-mail in siteConfig.
    Nummer in internationaal formaat zonder + of spaties. */
 export const WHATSAPP_NUMBER = "31683127504";
 

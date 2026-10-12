@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import {
@@ -61,28 +63,28 @@ export function Experience() {
               <SectionLabel>Klantaanvraag / voorbeeld</SectionLabel>
               <ol>
                 <li className="is-complete">
-                  <Check size={14} />
+                  <Check aria-hidden="true" size={14} />
                   <div>
                     Aanvraag via je website<small>Offerte voor een laadpaal</small>
                   </div>
                   <time>09:41</time>
                 </li>
                 <li className="is-complete">
-                  <Check size={14} />
+                  <Check aria-hidden="true" size={14} />
                   <div>
                     Bij je team binnengekomen<small>AI bereidt een vervolgvraag voor</small>
                   </div>
                   <time>09:41</time>
                 </li>
                 <li className={decided ? 'is-complete' : 'is-current'}>
-                  {decided ? <Check size={14} /> : <span className="log-dot" />}
+                  {decided ? <Check aria-hidden="true" size={14} /> : <span className="log-dot" />}
                   <div>
                     {decided ? 'Beslissing vastgelegd' : 'Wacht op jouw besluit'}
                     <small>{decided ? 'Jouw keuze is bewaard' : 'Er is nog niets verstuurd'}</small>
                   </div>
                 </li>
                 <li className={decision === 'approved' ? 'is-complete' : ''}>
-                  {decision === 'approved' ? <Check size={14} /> : <span className="log-dot" />}
+                  {decision === 'approved' ? <Check aria-hidden="true" size={14} /> : <span className="log-dot" />}
                   <div>
                     {decision === 'rejected' ? 'Actie gestopt' : 'Vervolgactie'}
                     <small>
@@ -96,7 +98,7 @@ export function Experience() {
                 </li>
               </ol>
               <div className="experience-log__note">
-                <ShieldCheck size={18} />
+                <ShieldCheck aria-hidden="true" size={18} />
                 <p>
                   De grens is helder.
                   <br />
@@ -109,7 +111,7 @@ export function Experience() {
                 <span
                   className={`web-status ${decision === 'approved' ? 'web-status--success' : decision === 'rejected' ? 'web-status--neutral' : 'web-status--warning'}`}
                 >
-                  {decided ? <Check size={13} /> : <span />}
+                  {decided ? <Check aria-hidden="true" size={13} /> : <span />}
                   {decision === 'approved'
                     ? 'Goedgekeurd'
                     : decision === 'rejected'
@@ -134,9 +136,9 @@ export function Experience() {
                 aria-controls="source-evidence"
                 onClick={() => setEvidence(!evidence)}
               >
-                <FileText size={18} />
+                <FileText aria-hidden="true" size={18} />
                 <span>Bekijk de aanvraag en het conceptbericht</span>
-                <ChevronRight size={18} className={evidence ? 'is-open' : ''} />
+                <ChevronRight aria-hidden="true" size={18} className={evidence ? 'is-open' : ''} />
               </button>
               <div id="source-evidence" hidden={!evidence} className="experience-evidence">
                 <dl>
@@ -159,12 +161,12 @@ export function Experience() {
               <div className="experience-outcome" role="status" aria-live="polite">
                 {decision === 'approved' ? (
                   <p>
-                    <Check size={19} /> Goedgekeurd. De vervolgstap is gesimuleerd en je besluit
+                    <Check aria-hidden="true" size={19} /> Goedgekeurd. De vervolgstap is gesimuleerd en je besluit
                     staat in het overzicht.
                   </p>
                 ) : decision === 'rejected' ? (
                   <p>
-                    <X size={19} /> Afgewezen. Het voorstel is gestopt; er is niets uitgevoerd.
+                    <X aria-hidden="true" size={19} /> Afgewezen. Het voorstel is gestopt; er is niets uitgevoerd.
                   </p>
                 ) : (
                   <p>Jouw besluit geldt alleen voor deze voorgestelde actie.</p>
@@ -174,10 +176,10 @@ export function Experience() {
                 {!decided ? (
                   <>
                     <button className="web-action" onClick={() => choose('approved')}>
-                      Voorstel goedkeuren <Check size={17} />
+                      Voorstel goedkeuren <Check aria-hidden="true" size={17} />
                     </button>
                     <button className="web-quiet-button" onClick={() => choose('rejected')}>
-                      Afwijzen <X size={16} />
+                      Afwijzen <X aria-hidden="true" size={16} />
                     </button>
                   </>
                 ) : (
@@ -188,7 +190,7 @@ export function Experience() {
                       setEvidence(false)
                     }}
                   >
-                    <RotateCcw size={16} /> Demo opnieuw
+                    <RotateCcw aria-hidden="true" size={16} /> Demo opnieuw
                   </button>
                 )}
               </div>
@@ -199,7 +201,7 @@ export function Experience() {
         <div className="experience-caption">
           <span>Website → je team → AI-voorstel → jouw akkoord.</span>
           <a href="#contact">
-            Bespreek jouw situatie <ArrowUpRight size={15} />
+            Bespreek jouw situatie <ArrowUpRight aria-hidden="true" size={15} />
           </a>
         </div>
       </div>

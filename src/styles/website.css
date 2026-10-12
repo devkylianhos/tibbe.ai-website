@@ -44,9 +44,9 @@
   font: inherit;
 }
 .tibbe-web :is(a, button, input, textarea, summary, [tabindex]):focus-visible {
-  outline: 2px solid var(--color-lightwater);
-  outline-offset: 5px;
-  box-shadow: none;
+  outline: 2px solid var(--color-action);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px var(--color-paper);
 }
 .tibbe-web section[id] {
   scroll-margin-top: 100px;
@@ -2570,3 +2570,9 @@
     display: none;
   }
 }
+
+/* UI/UX pass: keep focused controls clear of fixed navigation. */
+.tibbe-web :is(a, button, input, textarea, summary) { scroll-margin-block: 110px 28px; touch-action: manipulation; }
+.web-nav__mobile { max-height: calc(100dvh - 76px); overflow-y: auto; overscroll-behavior: contain; }
+.web-field-error { color: var(--color-danger); font-size: 13px; line-height: 1.5; }
+.web-contact-form :is(input, textarea)[aria-invalid="true"] { border-color: var(--color-danger); }

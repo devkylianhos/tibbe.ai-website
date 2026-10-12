@@ -67,3 +67,24 @@
   .agency-services__links { margin-top: 0; }
   .web-founder__portrait { max-width: 300px; }
 }
+
+/* Impeccable refinement: consistent service rows and legible supporting copy. */
+.tibbe-web .agency-hero h1,
+.tibbe-web .service-page-hero h1 { letter-spacing: -.04em; }
+.tibbe-web .web-hero__note { font-size: 13px; }
+.agency-services__links a { min-height: 44px; font-size: 14px; text-underline-offset: 4px; }
+.agency-services__links a:is(:hover, :focus-visible) { text-decoration: underline; }
+.agency-services__links a svg { transition: transform 160ms ease-out; }
+.agency-services__links a:hover svg { transform: translate(2px, -2px); }
+.tibbe-web .web-form-note,
+.tibbe-web .web-form-result small { font-size: 13px; line-height: 1.65; }
+.tibbe-web .web-contact-form label { font-size: 14px; }
+.tibbe-web .web-motion-toggle { min-height: 44px; font-size: 12px; }
+@media (min-width: 761px) {
+  .agency-services article { display: grid; grid-template-rows: subgrid; grid-row: span 7; }
+  .agency-services article > :last-child { align-self: end; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .agency-services__links a svg { transition: none; }
+  .agency-services__links a:hover svg { transform: none; }
+}

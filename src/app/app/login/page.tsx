@@ -34,10 +34,11 @@ export default async function LoginPage() {
             id="login-email"
             autoComplete="email"
             type="email"
+            spellCheck={false}
             name="email"
             required
             placeholder="jij@jouwbedrijf.nl"
-            className="w-full rounded-full border border-border bg-background px-5 py-3.5 text-[15px] outline-none transition-colors focus:border-accent"
+            className="w-full rounded-full border border-border bg-background px-5 py-3.5 text-[16px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           />
           <button type="submit" className="btn-primary w-full">
             Verder
