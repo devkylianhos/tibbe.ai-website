@@ -45,3 +45,7 @@ Added the user's engraved horses-and-coach video below the existing footer links
 Source: https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260928_144832_2b6b23aa-4416-4fcb-9df4-132349c59edc.mp4
 
 Hero and footer share ViewportVideo: deferred download on entry, background/offscreen pause, system reduced-motion poster and global manual pause. A second control in the footer makes pausing available next to the horses. Browser checks cover lazy download, scroll playback, pause/resume, reduced-motion and 320/390/768/1440/2560px without horizontal overflow. Lint and production build pass. Preview only.
+
+## Calmer hero revision
+
+User feedback: the hero feels too busy. Lowered the particle-wave opacity to 18–22%, removed animated pixel accents, orbital rings, travelling signal and progress timer, and removed pointer tilt. The workflow now changes only when a visitor selects Signaal/Besluit/Bewijs. Headline entrance, branding, layout, copy and footer remain intact. This supersedes the earlier automatic hero sequencing decision. Verified stable initial stage, manual selection, desktop/mobile rendering, lint and production build.
