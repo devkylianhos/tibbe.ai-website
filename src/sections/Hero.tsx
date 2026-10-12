@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { MotionToggle, useWebsiteMotion } from '../components/website/MotionProvider'
+import { ParticleVisual } from '../components/website/ParticleVisual'
 import { Logo } from '../components/Logo'
 import { ArrowDown, ArrowUpRight, Check, FileText, GitBranch, ShieldCheck } from 'lucide-react'
 import { ActionLink, SectionLabel } from '../components/website/Primitives'
@@ -78,6 +79,7 @@ export function Hero() {
   return (
     <>
       <section className="web-hero" aria-labelledby="hero-title">
+        <ParticleVisual />
         <div className="web-container web-hero__grid">
           <div className="web-hero__copy">
             <SectionLabel>Jouw AI-operator</SectionLabel>
