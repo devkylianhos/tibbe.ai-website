@@ -5,6 +5,7 @@ import type { FormEvent } from 'react'
 import { ArrowUpRight, Check, X } from 'lucide-react'
 import { SectionLabel } from '../components/website/Primitives'
 import { siteConfig } from '../content/website'
+import { waLink } from '@/lib/site'
 
 export function Contact() {
   const [draft, setDraft] = useState('')
@@ -30,12 +31,13 @@ export function Contact() {
               met Kylian.
             </h2>
             <p>
-              We bekijken wat je wilt bouwen of verbeteren, waar je nu staat en welke eerste stap daarbij past. Je hoeft nog geen technische oplossing te hebben.
+              Vertel wat je wilt bouwen of waar het werk vastloopt. Samen bepalen we een passende eerste stap. Daarna ontvang je een voorstel met de werkzaamheden, prijs en planning.
             </p>
             <a className="web-text-link" href={`mailto:${siteConfig.email}`}>
               {siteConfig.email}
               <ArrowUpRight aria-hidden="true" size={18} />
             </a>
+            <p className="web-form-note">Je kunt je vraag ook <a href={waLink()}>via WhatsApp bespreken</a>.</p>
           </div>
           <form
             className="web-contact-form"
@@ -59,6 +61,7 @@ export function Contact() {
               <span>KENNISMAKEN</span>
               <span>01 / EERSTE STAP</span>
             </div>
+            <p className="web-form-note">Vul je naam en vraag in. Je krijgt een e-mailconcept dat je zelf controleert en verstuurt.</p>
             <div className="web-form-row">
               <label>
                 Je naam

@@ -2,15 +2,15 @@ import { Globe, Workflow, ShoppingBag, ArrowDown, ArrowUpRight } from 'lucide-re
 import { SectionLabel } from '../components/website/Primitives'
 
 const services = [
-  { Icon: Globe, title: 'Ik wil een betere website.', label: 'WEBSITES', href: '/websites', link: 'Bekijk websites',
+  { Icon: Globe, title: 'Ik wil een betere website.', label: 'WEBSITES', href: '/websites', link: 'Website laten maken',
     copy: 'Voor bedrijven die hun aanbod helder willen laten zien en bezoekers naar een aanvraag of afspraak willen helpen.',
     items: ['Inhoud en indeling voor jouw aanbod', 'Ontwerp en bouw, ook voor mobiel', 'Een duidelijke contactroute'],
     example: 'Bijvoorbeeld: een dienstverlener met een verouderde site en een onduidelijk aanbod.' },
-  { Icon: ShoppingBag, title: 'Ik wil een sterke webshop.', label: 'WEBSHOPS', href: '/webshops', link: 'Bekijk webshops',
+  { Icon: ShoppingBag, title: 'Ik wil een sterke webshop.', label: 'WEBSHOPS', href: '/webshops', link: 'Webshop laten maken',
     copy: 'Voor ondernemers die online willen verkopen of hun bestaande winkel prettiger willen laten werken.',
     items: ['Overzichtelijke product- en winkelpagina’s', 'Een passende bestel- en betaalroute', 'Afspraken over voorraad en orderverwerking'],
     example: 'Bijvoorbeeld: een winkel die online wil verkopen zonder orders steeds over te typen.' },
-  { Icon: Workflow, title: 'Ik wil minder handmatig werk.', label: 'AUTOMATISERING & AI', href: '/automatisering', link: 'Bekijk automatisering',
+  { Icon: Workflow, title: 'Ik wil minder handmatig werk.', label: 'AUTOMATISERING & AI', href: '/automatisering', link: 'Bekijk wat je kunt automatiseren',
     copy: 'Voor teams die aanvragen, gegevens en klantvragen nu met veel losse handelingen verwerken.',
     items: ['Eén terugkerende taak in kaart', 'Koppelingen tussen je bestaande systemen', 'AI waar het helpt, met controle door je team'],
     example: 'Bijvoorbeeld: een aanvraag vastleggen en een antwoord klaarzetten voor controle.' },

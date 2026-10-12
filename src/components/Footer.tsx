@@ -29,7 +29,7 @@ export function Footer() {
             </nav>
             <nav aria-label="Over Tibbe">
               <h2>Over Tibbe</h2>
-              <a href="/#over">Maak kennis met Kylian</a>
+              <a href="/#oprichter">Maak kennis met Kylian</a>
               <a href="/#werkwijze">Onze werkwijze</a>
               <a href="/#ervaring">In de praktijk</a>
               <a href="/#vragen">Veelgestelde vragen</a>

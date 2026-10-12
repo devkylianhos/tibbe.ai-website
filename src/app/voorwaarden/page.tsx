@@ -5,8 +5,9 @@ import { LegalShell } from "@/components/LegalShell";
 import { AGENT_TEAM_MONTHLY_PRICE, BETA_MONTHLY_PRICE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Algemene voorwaarden — Tibbe",
-  robots: { index: true, follow: true },
+  title: "Algemene voorwaarden — Tibbe", description: "Lees de voorwaarden van Tibbe over dienstverlening, afspraken en verantwoordelijkheden.",
+  alternates: { canonical: "/voorwaarden" },
+  openGraph: { title: "Algemene voorwaarden — Tibbe", description: "Lees de voorwaarden van Tibbe over dienstverlening, afspraken en verantwoordelijkheden.", url: "/voorwaarden" },
 };
 
 export default function VoorwaardenPage() {

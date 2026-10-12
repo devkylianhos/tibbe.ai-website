@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
 
 export const metadata: Metadata = {
-  title: "Privacyverklaring — Tibbe",
-  robots: { index: true, follow: true },
+  title: "Privacyverklaring — Tibbe", description: "Lees hoe Tibbe omgaat met persoonsgegevens, contact via e-mail en analytische cookies. Neem bij vragen contact op met Kylian.",
+  alternates: { canonical: "/privacy" },
+  openGraph: { title: "Privacyverklaring — Tibbe", description: "Lees hoe Tibbe omgaat met persoonsgegevens, contact via e-mail en analytische cookies. Neem bij vragen contact op met Kylian.", url: "/privacy" },
 };
 
 export default function PrivacyPage() {

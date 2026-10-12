@@ -11,7 +11,7 @@ async function login(formData: FormData) {
   redirect("/app");
 }
 
-export const metadata = { title: "Inloggen — Tibbe" };
+export const metadata = { robots: { index: false, follow: false }, title: "Inloggen — Tibbe" };
 
 export default async function LoginPage() {
   const user = await currentUser();

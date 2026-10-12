@@ -14,7 +14,7 @@ async function logout() {
   redirect("/app/login");
 }
 
-export const metadata = { title: "Dashboard — Tibbe" };
+export const metadata = { robots: { index: false, follow: false }, title: "Dashboard — Tibbe" };
 
 export default async function PortalLayout({
   children,

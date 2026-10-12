@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
 import { CookieSettingsButton } from "@/components/CookieBanner";
-export const metadata: Metadata = { title: "Cookiebeleid — Tibbe" };
+export const metadata: Metadata = {
+  title: "Cookiebeleid — Tibbe", description: "Bekijk welke cookies Tibbe gebruikt en pas je toestemming voor Google Analytics aan.",
+  alternates: { canonical: "/cookies" },
+  openGraph: { title: "Cookiebeleid — Tibbe", description: "Bekijk welke cookies Tibbe gebruikt en pas je toestemming voor Google Analytics aan.", url: "/cookies" },
+};
 export default function CookiesPage() {
   return (
     <LegalShell title="Cookiebeleid" updated="5 oktober 2026">

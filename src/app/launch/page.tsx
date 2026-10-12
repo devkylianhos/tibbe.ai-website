@@ -3,9 +3,10 @@ import { ServicePage } from '@/components/ServicePage'
 import { startPage } from '@/content/service-pages'
 
 export const metadata: Metadata = {
-  title: 'Start met Tibbe — Tibbe',
-  description: 'Bespreek je website, webshop of automatisering. Een concrete eerste stap met duidelijke afspraken over prijs en planning.',
-  openGraph: { title: 'Start met Tibbe — Tibbe', description: 'Bespreek je website, webshop of automatisering. Een concrete eerste stap met duidelijke afspraken over prijs en planning.', url: '/launch' },
+  title: 'Bespreek je website, webshop of automatisering | Tibbe',
+  description: 'Maak kennis met Kylian van Tibbe. Bespreek wat je wilt bouwen of verbeteren en ontvang een voorstel met de werkzaamheden, prijs en planning.',
+  alternates: { canonical: '/launch' },
+  openGraph: { title: 'Bespreek je website, webshop of automatisering | Tibbe', description: 'Maak kennis met Kylian van Tibbe. Bespreek wat je wilt bouwen of verbeteren en ontvang een voorstel met de werkzaamheden, prijs en planning.', url: '/launch', locale: 'nl_NL', siteName: 'Tibbe', type: 'website' },
 }
 
 export default function Page() { return <ServicePage content={startPage} /> }
