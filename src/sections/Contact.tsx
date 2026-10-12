@@ -3,9 +3,6 @@
 import { useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { ArrowUpRight, Check, X } from 'lucide-react'
-import { ViewportVideo } from '../components/website/ViewportVideo'
-import { MotionToggle } from '../components/website/MotionProvider'
-import { Logo } from '../components/Logo'
 import { SectionLabel } from '../components/website/Primitives'
 import { siteConfig } from '../content/website'
 
@@ -136,51 +133,7 @@ export function Contact() {
           </form>
         </div>
       </section>
-      <footer className="web-footer web-footer--scenic">
-        <div className="web-container">
-          <div className="web-footer__top">
-            {/* Native anchor intentionally restores top on repeated same-page clicks. */}
-            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-            <a href="/#top" aria-label="Tibbe — homepage">
-              <Logo />
-            </a>
-            <p>
-              Sterk online.
-              <br />
-              Goed georganiseerd.
-            </p>
-            <nav aria-label="Footernavigatie">
-              <a href="/websites">Websites</a>
-              <a href="/webshops">Webshops</a>
-              <a href="/automatisering">Automatisering &amp; AI</a>
-              <a href="#ervaring">Ervaar Tibbe</a>
-              <a href="#contact">Contact</a>
-            </nav>
-            <nav aria-label="Informatie">
-              <a href="#over">Over Tibbe</a>
-              <a href="#vragen">Veelgestelde vragen</a>
-              <a href="/app">
-                Open de Tibbe-app <ArrowUpRight aria-hidden="true" size={12} />
-              </a>
-            </nav>
-          </div>
-          <div className="web-footer__bottom">
-            <span>© {new Date().getFullYear()} Tibbe.ai</span>
-            <div>
-              <a href="/privacy">Privacy</a>
-              <a href="/cookies">Cookies</a>
-              <a href="/voorwaarden">
-                Voorwaarden <ArrowUpRight aria-hidden="true" size={12} />
-              </a>
-            </div>
-            <span>VEEL SYSTEEM. WEINIG RUIS.</span>
-          </div>
-        </div>
-        <div className="web-container web-footer__motion"><MotionToggle /></div>
-        <div className="web-footer__scene" aria-hidden="true">
-          <ViewportVideo src="/visuals/tibbe-horses.mp4" poster="/visuals/tibbe-horses.jpg" />
-        </div>
-      </footer>
+
       <dialog ref={privacy} className="web-dialog" aria-labelledby="privacy-title">
         <div className="web-dialog__header">
           <SectionLabel>Over deze website</SectionLabel>

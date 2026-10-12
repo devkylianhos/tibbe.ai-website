@@ -1,33 +1,9 @@
-/* Tibbe-merkteken: drie b-lettervormen om één as (0/120/240 graden).
-   Nooit vervormen, kantelen, van schaduw/glans voorzien of hertekenen.
-   Kleur via `color`-prop: kobalt op licht, kobalt-licht op donker. */
-export function BrandMark({
-  size = 28,
-  color = "#2B5FD9",
-}: {
-  size?: number;
-  color?: string;
-}) {
+/** Compact version of the current Tibbe loop, also used in the customer portal. */
+export function BrandMark({ size = 28, color = '#14657F' }: { size?: number; color?: string }) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 96 96"
-      fill="none"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g fill={color}>
-        <g id="tibbe-b">
-          <rect x="43" y="4" width="9" height="36" />
-          <path
-            fillRule="evenodd"
-            d="M52 16h8a12 12 0 0 1 0 24h-8zM52 23h8a5 5 0 0 1 0 10h-8z"
-          />
-        </g>
-        <use href="#tibbe-b" transform="rotate(120 48 48)" />
-        <use href="#tibbe-b" transform="rotate(240 48 48)" />
-      </g>
+    <svg width={size} height={size} viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path d="M22 8V46C22 53 28 56 35 56C47 56 55 48 55 38C55 28 48 22 38 22H12"
+        stroke={color} strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-  );
+  )
 }

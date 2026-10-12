@@ -29,10 +29,9 @@
 [data-motion="running"] .capability-preview__result { animation-delay: .28s; }
 [data-motion="running"] .capability-preview > p { animation-delay: .36s; }
 .web-process__steps { position: relative; }
-.web-process__steps::after { content: ''; position: absolute; left: 0; top: 19px; width: 100%; height: 2px; background: var(--color-deepwater); transform: scaleX(var(--process-progress,0)); transform-origin: left; pointer-events: none; }
 .web-process__steps li { transition: opacity .4s var(--motion-ease); }
 /* Keep process text at full contrast while its progress marker animates. */
-.web-process__steps [data-step-lit="true"] .web-process__marker span { color: var(--color-deepwater); box-shadow: 0 9px 24px #14657f22; }
+.web-process__steps [data-step-lit="true"] .web-process__marker::before { background: var(--color-deepwater); }
 [data-motion="running"] .service-case[data-open="true"] .service-case__body { animation: preview-reveal .5s var(--motion-ease); }
 .service-case h3 button { position: relative; isolation: isolate; }
 [data-motion="running"] .experience-console .is-complete svg { animation: decision-check .45s var(--motion-ease) both; }
@@ -55,4 +54,3 @@
 
 .web-process__marker span, .web-process__marker svg { z-index: 1; }
 .operator-stage[data-manual="true"] .operator-card__timer { display: none; }
-@media (max-width: 760px) { .web-process__steps::after { display: none; } }

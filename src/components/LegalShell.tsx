@@ -1,4 +1,6 @@
-import { Navbar } from "./Navbar";
+import { Navigation } from "./website/Navigation";
+import { WebsiteMotionProvider } from "./website/MotionProvider";
+import "@/styles/premium-motion.css";
 import { Footer } from "./Footer";
 
 /* Gedeelde opmaak voor de juridische pagina's. */
@@ -12,9 +14,9 @@ export function LegalShell({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <WebsiteMotionProvider>
       <a className="web-skip" href="#main-content">Naar de inhoud</a>
-      <Navbar />
+      <Navigation homeLinks surface="solid" />
       <main id="main-content" tabIndex={-1} className="container-x pt-32 pb-24 sm:pt-36">
         <div className="mx-auto max-w-[760px]">
           <h1 className="display-2">{title}</h1>
@@ -23,6 +25,6 @@ export function LegalShell({
         </div>
       </main>
       <Footer />
-    </>
+    </WebsiteMotionProvider>
   );
 }

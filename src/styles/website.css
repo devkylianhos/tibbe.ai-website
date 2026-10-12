@@ -729,13 +729,13 @@
 .web-process__marker::before {
   content: '';
   position: absolute;
-  left: 0;
-  right: -32px;
+  left: 48px;
+  right: -24px;
   height: 1px;
   background: var(--color-line);
 }
 .web-process__steps li:last-child .web-process__marker::before {
-  right: 0;
+  display: none;
 }
 .web-process__marker span {
   position: relative;
@@ -1372,20 +1372,57 @@
 }
 .web-footer__top {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: minmax(0, 1.8fr) repeat(3, minmax(0, 1fr));
   gap: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 56px;
 }
-.web-footer__top > p {
-  color: var(--web-dark-muted);
+.web-footer__brand > a { display: inline-flex; }
+.web-footer__brand .logo { gap: 12px; }
+.web-footer__brand .logo > span { font-size: 28px; font-weight: 600; }
+.web-footer__brand p {
+  max-width: 34ch;
+  margin: 24px 0;
+  color: var(--color-muted);
   font-size: 16px;
-  margin: 0;
+  line-height: 1.75;
+}
+.web-footer__channels { display: flex; gap: 12px; }
+.web-footer__channels a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  color: var(--color-deepwater);
 }
 .web-footer__top > nav {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  font-size: 12px;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 14px;
+}
+.tibbe-web .web-footer__top h2 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.web-footer__top nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding-block: 8px;
+  color: var(--color-muted);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1000px) {
+  .web-footer__top { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+  .web-footer__brand { grid-column: 1 / -1; }
+  .web-footer__brand p { max-width: 52ch; }
 }
 .web-footer a:hover {
   color: var(--color-lightwater);
@@ -1398,9 +1435,10 @@
   gap: 20px;
   padding-block: 24px;
   border-top: 1px solid var(--web-dark-line);
-  font-size: 10px;
+  font-size: 12px;
   color: var(--web-dark-muted);
 }
+.web-footer__bottom a { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; }
 .web-footer__bottom > div {
   display: flex;
   align-items: center;
@@ -1993,8 +2031,8 @@
   .web-process__steps li:nth-child(2) .web-process__marker::before {
     width: 1px;
     left: 19px;
-    top: 40px;
-    bottom: 0;
+    top: 48px;
+    bottom: 8px;
     height: auto;
     right: auto;
   }
@@ -2187,9 +2225,8 @@
     gap: 35px 22px;
     padding-bottom: 35px;
   }
-  .web-footer__top > p {
-    font-size: 13px;
-  }
+  .web-footer__top > nav:last-child { grid-column: 1 / -1; }
+
   .web-footer__bottom {
     align-items: flex-start;
     gap: 15px;
@@ -2482,24 +2519,10 @@
     0 1px 0 #ffffff inset;
 }
 
-.web-process__steps {
-  perspective: 1000px;
-}
-.web-process__steps li {
-  transform-style: preserve-3d;
-}
+/* Flat, opaque markers keep the connecting line clear of the step numbers. */
 .web-process__marker span {
-  transform: rotateX(9deg) translateZ(8px);
-  box-shadow:
-    0 9px 20px #14657f12,
-    inset 0 1px 0 #ffffff;
-  transition:
-    transform 200ms var(--web-ease),
-    box-shadow 200ms var(--web-ease);
-}
-.web-process__steps li:hover .web-process__marker span {
-  transform: rotateX(0deg) rotateY(-12deg) translateZ(18px);
-  box-shadow: 12px 14px 28px #14657f20;
+  flex-shrink: 0;
+  z-index: 1;
 }
 
 .experience-console {

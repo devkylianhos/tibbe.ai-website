@@ -1,3 +1,4 @@
+import { Footer } from './Footer'
 import { Navigation } from './website/Navigation'
 import { Hero } from '../sections/Hero'
 import { Capabilities } from '../sections/Capabilities'
@@ -30,6 +31,7 @@ export function Website() {
         <FAQ />
         <Contact />
       </main>
+      <Footer />
     </WebsiteMotionProvider>
   )
 }

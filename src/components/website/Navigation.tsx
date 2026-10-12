@@ -10,7 +10,7 @@ const links = [
   ['In de praktijk', '#praktijk'],
 ]
 
-export function Navigation({ homeLinks = false }: { homeLinks?: boolean }) {
+export function Navigation({ homeLinks = false, surface = 'overlay' }: { homeLinks?: boolean; surface?: 'overlay' | 'solid' }) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const trigger = useRef<HTMLButtonElement>(null)
@@ -30,7 +30,7 @@ export function Navigation({ homeLinks = false }: { homeLinks?: boolean }) {
   }, [])
   return (
     <header
-      className={`web-nav ${scrolled ? 'web-nav--scrolled' : ''}`}
+      className={`web-nav ${scrolled || surface === 'solid' ? 'web-nav--scrolled' : ''}`}
       onKeyDown={(event) => {
         if (open && event.key === 'Escape') {
           setOpen(false)
