@@ -46,12 +46,12 @@ export function CookieBanner() {
     <section className={styles.banner} aria-labelledby="cookie-notice-title">
       <span className={styles.label}>COOKIES & PRIVACY</span>
       <h2 id="cookie-notice-title">Jij kiest wat je deelt.</h2>
-      <p>We gebruiken functionele opslag voor je sessie en je cookievoorkeur. Met jouw toestemming gebruiken we Google Analytics om te begrijpen hoe onze website wordt bezocht. We gebruiken geen advertentiecookies.</p>
+      <p>We onthouden je sessie en cookievoorkeur. Met jouw toestemming meten we ook websitebezoek met Google Analytics. Geen advertentiecookies.</p>
       <div className={styles.actions}>
-        <a href="/cookies">Meer informatie</a>
-        <button ref={closeButton} onClick={() => choose("denied")}>Alleen noodzakelijk</button>
-        <button onClick={() => choose("granted")}>Analytics toestaan</button>
+        <button type="button" ref={closeButton} onClick={() => choose("denied")}>Alleen noodzakelijk</button>
+        <button type="button" onClick={() => choose("granted")}>Analytics toestaan</button>
       </div>
+      <a className={styles.details} href="/cookies">Lees ons cookiebeleid <span aria-hidden="true">↗</span></a>
     </section>
   );
 }

@@ -4,7 +4,7 @@ import { Navigation } from './website/Navigation'
 import { Hero } from '../sections/Hero'
 import { Capabilities } from '../sections/Capabilities'
 import { Experience } from '../sections/Experience'
-import { FAQ, Problem, Process, Trust } from '../sections/Story'
+import { FAQ, Process, Trust } from '../sections/Story'
 import { MotionSurface } from './website/MotionSurface'
 import { WebsiteMotionProvider } from './website/MotionProvider'
 import '@/styles/premium-motion.css'
@@ -12,7 +12,6 @@ import '@/styles/particle-visuals.css'
 import '@/styles/agency.css'
 import { Contact } from '../sections/Contact'
 import { Founder } from '../sections/Founder'
-import { Integrations } from '../sections/Integrations'
 
 export function Website() {
   return (
@@ -25,12 +24,10 @@ export function Website() {
       <Navigation />
       <main id="main-content">
         <Hero />
-        <Problem />
         <Capabilities />
-        <Experience />
-        <Process />
-        <Integrations />
         <Trust />
+        <Process />
+        <Experience />
         <Founder />
         <FAQ />
         <Contact />

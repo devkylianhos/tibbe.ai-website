@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { BrandMark } from "./BrandMark";
 import { nav, BOOKING_URL } from "@/lib/site";
 
@@ -25,12 +24,14 @@ export function Navbar() {
       }}
     >
       <div className="container-x flex h-[72px] items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
+        {/* Native anchor intentionally restores top on repeated same-page clicks. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a href="/#top" aria-label="Tibbe — homepage" className="flex items-center gap-2.5">
           <BrandMark />
           <span className="font-display text-[21px]" style={{ fontWeight: 600 }}>
             Tibbe
           </span>
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-7 md:flex">
           {nav.map((item) => (

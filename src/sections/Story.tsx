@@ -45,7 +45,7 @@ export function Process() {
       <div className="web-container">
         <div className="web-section-intro" data-reveal>
           <div>
-            <SectionLabel number="04">Zo werken we samen</SectionLabel>
+            <SectionLabel number="03">Zo werken we samen</SectionLabel>
             <h2>
               Eerst begrijpen.
               <br />
@@ -157,32 +157,31 @@ export function Trust() {
     <section id="over" className="web-section web-trust">
       <div className="web-container">
         <div className="web-trust__intro" data-reveal>
-          <SectionLabel number="05">AI met duidelijke afspraken</SectionLabel>
+          <SectionLabel number="02">Waarom Tibbe</SectionLabel>
           <h2>
-            Veel systeem.
+            Goed gebouwd.
             <br />
-            Weinig ruis.
+            Goed doordacht.
           </h2>
           <p>
-            AI helpt bij het voorbereiden van werk. We spreken af welke informatie gebruikt mag worden,
-            wat vanzelf mag gaan en waar je team eerst naar kijkt.
+            We kijken naar wat je klanten online nodig hebben én wat je team daarna moet doen. Zo sluiten ontwerp, techniek en het dagelijkse werk op elkaar aan.
           </p>
         </div>
         <div className="web-trust__grid" data-reveal>
           {[
             {
               Icon: ScanLine,
-              title: 'Je begrijpt wat er gebeurt.',
-              copy: 'We laten zien hoe de oplossing werkt en waar de informatie vandaan komt. Je krijgt uitleg in gewone taal.',
+              title: 'Je weet wat je krijgt.',
+              copy: 'Je beoordeelt vooraf de inhoud van de opdracht, prijs en planning. Tijdens de bouw bekijk je het ontwerp en probeer je de oplossing.',
             },
             {
               Icon: Fingerprint,
-              title: 'Jij bepaalt de grenzen.',
-              copy: 'We spreken af welke gegevens gebruikt worden en welke stappen je eerst wilt goedkeuren. Bij twijfel gaat een vraag naar je team.',
+              title: 'Ook de volgende stap klopt.',
+              copy: 'Een aanvraag of bestelling stopt niet bij je website. We bespreken waar die terechtkomt, wie opvolgt en welke koppelingen nodig zijn.',
             },
             {
               Icon: ListChecks,
-              title: 'Hulp op de juiste plek.',
+              title: 'AI heeft een duidelijke taak.',
               copy: 'Een vaste regel is soms genoeg. We zetten AI in waar het helpt om informatie te begrijpen of een voorstel te maken.',
             },
           ].map(({ Icon, title, copy }) => (
@@ -194,15 +193,15 @@ export function Trust() {
           ))}
         </div>
         <div className="web-control-strip">
-          <span>CONTROLE IS ONDERDEEL VAN HET WERK.</span>
+          <span>AFSPRAKEN VOORDAT WE BOUWEN.</span>
           <span>
-            <Check size={15} /> Bron
+            <Check size={15} /> Omvang
           </span>
           <span>
-            <Check size={15} /> Besluit
+            <Check size={15} /> Budget
           </span>
           <span>
-            <Check size={15} /> Resultaat
+            <Check size={15} /> Planning
           </span>
         </div>
       </div>
@@ -216,9 +215,9 @@ export function FAQ() {
         <div data-reveal>
           <SectionLabel number="06">Heldere antwoorden</SectionLabel>
           <h2>
-            Goed om
+            Prijs, planning
             <br />
-            te weten.
+            en praktische vragen.
           </h2>
         </div>
         <div data-reveal>

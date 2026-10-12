@@ -6,23 +6,23 @@ import { ActionLink, SectionLabel } from '../components/website/Primitives'
 export function Hero() {
   return (
     <>
-      <section className="web-hero web-hero--cinema" aria-labelledby="hero-title">
+      <section id="top" className="web-hero web-hero--cinema agency-hero" aria-labelledby="hero-title">
         <ParticleVisual />
         <div className="web-container web-hero__grid">
           <div className="web-hero__copy">
-            <SectionLabel>Websites, webshops & AI voor het MKB</SectionLabel>
+            <SectionLabel>Jouw digitale partner voor het MKB</SectionLabel>
             <h1 id="hero-title">
-              <span className="motion-line"><span>Van klantvraag</span></span>
-              <span className="motion-line"><span>naar actie.</span></span>
+              <span className="motion-line"><span>Websites en webshops</span></span>
+              <span className="motion-line"><span>die werken.</span></span>
+              <span className="agency-hero__second">Ook achter de schermen.</span>
             </h1>
             <p className="web-hero__lead">
-              We bouwen websites en webshops en verbinden ze met het werk erachter.
-              Slimme koppelingen en AI helpen je team om aanvragen, bestellingen en klantvragen op te volgen.
+              We ontwerpen en bouwen je website of webshop. En koppelen aanvragen, bestellingen en klantvragen aan je dagelijkse werk. Met automatisering en AI waar dat echt helpt.
             </p>
             <div className="web-actions">
-              <ActionLink>Bespreek jouw plannen</ActionLink>
+              <ActionLink>Bespreek je project</ActionLink>
             </div>
-            <p className="web-hero__note">Begin met wat jouw bedrijf nu nodig heeft.</p>
+            <p className="web-hero__note">Met Kylian. Over jouw plannen en een passende eerste stap.</p>
           </div>
         </div>
         <div className="web-container web-hero__bottom">

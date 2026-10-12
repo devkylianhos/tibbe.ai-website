@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
-import Link from 'next/link'
 import { Logo } from '../Logo'
 
 const links = [
@@ -30,9 +29,11 @@ export function Navigation({ homeLinks = false }: { homeLinks?: boolean }) {
       }}
     >
       <div className="web-container web-nav__inner">
-        <Link href="/" aria-label="Tibbe — homepage" className="web-brand">
+        {/* Native anchor intentionally restores top on repeated same-page clicks. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+        <a href="/#top" aria-label="Tibbe — homepage" className="web-brand" onClick={() => setOpen(false)}>
           <Logo inverse />
-        </Link>
+        </a>
         <nav aria-label="Hoofdnavigatie" className="web-nav__desktop">
           {links.map(([label, href]) => (
             <a key={href} href={homeLinks ? `/${href}` : href}>

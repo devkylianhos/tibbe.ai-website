@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { BrandMark } from "./BrandMark";
 import { nav, BOOKING_URL, waLink } from "@/lib/site";
 
@@ -8,7 +7,9 @@ export function Footer() {
       <div className="container-x py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-3">
+            {/* Native anchor intentionally restores top on repeated same-page clicks. */}
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a href="/#top" aria-label="Tibbe — homepage" className="flex items-center gap-3">
               {/* Geanimeerd merkteken uit het pakket: de tik-draai loader (rustige 4.8s-variant) */}
               <span className="tibbe-loader slow inline-flex" aria-hidden>
                 <BrandMark size={40} />
@@ -16,7 +17,7 @@ export function Footer() {
               <span className="font-display text-[22px]" style={{ fontWeight: 600 }}>
                 Tibbe
               </span>
-            </Link>
+            </a>
             <p className="mt-4 max-w-[240px] text-[14px] leading-[1.55] text-muted-fg">
               Websites en webshops, verbonden met je dagelijkse werk.
               Met AI als ondersteuning en je team aan het stuur.

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tibbe — Websites, webshops en AI voor het MKB",
     description:
-      "Van klantvraag naar actie. Websites, webshops en automatiseringen die samenwerken, met AI als ondersteuning en jouw team aan het stuur.",
+      "Websites en webshops die werken. Ook achter de schermen. Ontwerp, bouw en passende koppelingen, met AI waar dat helpt.",
     url: "https://tibbe.app",
     siteName: "Tibbe",
     locale: "nl_NL",

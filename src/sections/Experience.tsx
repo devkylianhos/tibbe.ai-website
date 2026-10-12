@@ -31,7 +31,7 @@ export function Experience() {
       <div className="web-container">
         <div className="web-section-intro" data-reveal>
           <div>
-            <SectionLabel number="03">Zo werkt het in de praktijk</SectionLabel>
+            <SectionLabel number="04">Probeer een voorbeeld</SectionLabel>
             <h2>
               Een aanvraag binnen.
               <br />
@@ -41,12 +41,13 @@ export function Experience() {
           <div>
             <p>
               Stel: je hebt een installatiebedrijf. Een klant vraagt via je website een offerte aan.
-              De aanvraag komt bij je team en AI helpt een antwoord voor te bereiden. Probeer hieronder wat er gebeurt.
+              De aanvraag komt bij je team en AI helpt een antwoord voor te bereiden. Dit is een fictief voorbeeld, geen opgeleverd klantproject.
             </p>
             <span className="web-demo-label">Interactieve demo · geen echte acties</span>
           </div>
         </div>
-        <div className="experience-console" data-reveal>
+        <details className="agency-demo"><summary>Bekijk hoe een aanvraag wordt opgevolgd <ChevronRight size={18} aria-hidden="true" /></summary>
+        <div className="experience-console">
           <div className="experience-console__bar">
             <span>
               <Image src="/tibbe-loop.svg" width={25} height={25} alt="" /> VAN WEBSITE NAAR OPVOLGING
@@ -194,6 +195,7 @@ export function Experience() {
             </div>
           </div>
         </div>
+        </details>
         <div className="experience-caption">
           <span>Website → je team → AI-voorstel → jouw akkoord.</span>
           <a href="#contact">

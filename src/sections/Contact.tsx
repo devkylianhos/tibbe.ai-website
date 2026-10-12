@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react'
-import Link from 'next/link'
 import type { FormEvent } from 'react'
 import { ArrowUpRight, Check, X } from 'lucide-react'
 import { ViewportVideo } from '../components/website/ViewportVideo'
@@ -14,9 +13,9 @@ export function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    const body = `Hoi Tibbe,\n\nIk ben ${data.get('name')} van ${data.get('company')}.\n\nIk wil graag het volgende bespreken:\n${data.get('process')}\n\nJe kunt mij bereiken op ${data.get('email')}.\n\nGroet,\n${data.get('name')}`
+    const body = `Hoi Tibbe,\n\nIk ben ${data.get('name')}${data.get('company') ? ' van ' + data.get('company') : ''}.\n\nIk wil graag het volgende bespreken:\n${data.get('process')}\n\nJe kunt mij bereiken op ${data.get('email') || 'dit e-mailadres'}.\n\nGroet,\n${data.get('name')}`
     setDraft(
-      `mailto:${siteConfig.email}?subject=${encodeURIComponent('Kennismaking — ' + data.get('company'))}&body=${encodeURIComponent(body)}`,
+      `mailto:${siteConfig.email}?subject=${encodeURIComponent('Kennismaking — ' + (data.get('company') || data.get('name')))}&body=${encodeURIComponent(body)}`,
     )
   }
   return (
@@ -24,16 +23,14 @@ export function Contact() {
       <section id="contact" className="web-section web-contact">
         <div className="web-container web-contact__grid">
           <div data-reveal>
-            <SectionLabel>Vertel ons over je bedrijf</SectionLabel>
+            <SectionLabel>Een gesprek over jouw project</SectionLabel>
             <h2>
-              Wat wil jij
+              Bespreek je project
               <br />
-              beter regelen?
+              met Kylian.
             </h2>
             <p>
-              Een nieuwe website, een webshop of minder handmatig werk.
-              <br />
-              We kijken samen waar Tibbe kan helpen.
+              We bekijken wat je wilt bouwen of verbeteren, waar je nu staat en welke eerste stap daarbij past. Je hoeft nog geen technische oplossing te hebben.
             </p>
             <a className="web-text-link" href={`mailto:${siteConfig.email}`}>
               {siteConfig.email}
@@ -62,24 +59,22 @@ export function Contact() {
                 />
               </label>
               <label>
-                Je organisatie
+                Je organisatie (optioneel)
                 <input
                   name="company"
                   autoComplete="organization"
                   placeholder="Bedrijfsnaam"
-                  required
                   maxLength={120}
                 />
               </label>
             </div>
             <label>
-              Je e-mailadres
+              Je e-mailadres (optioneel)
               <input
                 name="email"
                 type="email"
                 autoComplete="email"
                 placeholder="jij@organisatie.nl"
-                required
                 maxLength={200}
               />
             </label>
@@ -97,7 +92,7 @@ export function Contact() {
               Maak mijn e-mail klaar <ArrowUpRight size={18} />
             </button>
             <p className="web-form-note">
-              Je gegevens blijven in dit formulier tot je zelf de e-mail verstuurt.
+              Dit formulier maakt een e-mailconcept voor je kennismaking. Je verstuurt het zelf via je e-mailprogramma; er is nog geen afspraak geboekt.
             </p>
             {draft && (
               <div className="web-form-result" role="status">
@@ -119,9 +114,11 @@ export function Contact() {
       <footer className="web-footer web-footer--scenic">
         <div className="web-container">
           <div className="web-footer__top">
-            <Link href="/" aria-label="Tibbe — homepage">
+            {/* Native anchor intentionally restores top on repeated same-page clicks. */}
+            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+            <a href="/#top" aria-label="Tibbe — homepage">
               <Logo />
-            </Link>
+            </a>
             <p>
               Sterk online.
               <br />
