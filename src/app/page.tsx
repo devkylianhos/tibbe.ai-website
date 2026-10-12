@@ -1,5 +1,5 @@
-import { CinematicHome } from '@/components/cinematic/CinematicHome'
+import { Website } from "@/components/Website";
 
 export default function Home() {
-  return <CinematicHome />
+  return <Website />;
 }
