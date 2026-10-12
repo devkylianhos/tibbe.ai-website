@@ -1,5 +1,5 @@
 /* Tibbe site content — single source of truth.
-   Positionering: een AI-werknemer voor elk bedrijf, 24/7.
+   Positionering: websites, webshops en gekoppeld klantwerk, met AI als ondersteuning.
    Placeholders flagged with TODO are the "nog invullen met echte gegevens" items. */
 
 /* Contact loopt via WhatsApp (nog geen mail).
@@ -36,10 +36,10 @@ export const AGENT_TEAM_MONTHLY_PRICE_LABEL = "€ 1.250";
 export const LAUNCH_DATE = "2026-09-01T10:00:00+02:00"; // TODO: echte launchdatum
 
 export const nav = [
-  { label: "Wat hij doet", href: "/#diensten" },
-  { label: "Hoe het werkt", href: "/#hoe-het-werkt" },
-  { label: "Vertrouwen", href: "/#vertrouwen" },
-  { label: "Prijzen", href: "/#prijzen" },
+  { label: "Wat we bouwen", href: "/#mogelijkheden" },
+  { label: "Werkwijze", href: "/#werkwijze" },
+  { label: "In de praktijk", href: "/#praktijk" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 /* Zeven taken van je AI-werknemer */

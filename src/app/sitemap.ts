@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    { url: "https://tibbe.app/websites", changeFrequency: "monthly", priority: 0.8 },
+    { url: "https://tibbe.app/automatisering", changeFrequency: "monthly", priority: 0.8 },
     { url: "https://tibbe.app/privacy", changeFrequency: "yearly", priority: 0.3 },
     { url: "https://tibbe.app/voorwaarden", changeFrequency: "yearly", priority: 0.3 },
     { url: "https://tibbe.app/cookies", changeFrequency: "yearly", priority: 0.3 },

@@ -12,14 +12,14 @@ import "@/styles/services-motion.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tibbe.app"),
-  title: "Tibbe — AI-operators voor werk dat verdergaat",
+  title: "Tibbe — Websites, webshops en AI voor het MKB",
   description:
-    "Tibbe bouwt en beheert AI-systemen voor marketing en operatie: advertenties, video, klantenservice, campagnes en automatisering. Met jouw team aan het stuur.",
+    "Tibbe bouwt websites en webshops en verbindt ze met je dagelijkse werk. Slimme koppelingen en AI helpen je team bij aanvragen, bestellingen en klantvragen.",
   icons: { icon: "/tibbe-loop.svg" },
   openGraph: {
-    title: "Tibbe — AI-operators voor werk dat verdergaat",
+    title: "Tibbe — Websites, webshops en AI voor het MKB",
     description:
-      "AI-operators die zelfstandig werk uitvoeren. Met duidelijke grenzen, menselijke goedkeuring en volledig inzicht.",
+      "Van klantvraag naar actie. Websites, webshops en automatiseringen die samenwerken, met AI als ondersteuning en jouw team aan het stuur.",
     url: "https://tibbe.app",
     siteName: "Tibbe",
     locale: "nl_NL",

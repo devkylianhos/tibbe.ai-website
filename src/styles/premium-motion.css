@@ -1,0 +1,60 @@
+/* Source lock: existing Tibbe. Motion mechanics adapted from MotionSites
+   Nexora Automation + Pixel Grid Hover; no imported branding/layout/media. */
+.tibbe-web { --motion-ease: cubic-bezier(.22,1,.36,1); }
+.tibbe-web .motion-line { display: block; overflow: clip; padding-bottom: .1em; margin-bottom: -.1em; }
+.tibbe-web .motion-line > span { display: block; }
+.web-hero__motion-note { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: 24px; }
+.web-hero__motion-note .web-hero__note { margin: 0; }
+.tibbe-web .web-motion-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 8px 0; min-height: 36px; border: 0; background: transparent; font: inherit; font-size: 11px; color: var(--web-dark-muted); cursor: pointer; }
+.tibbe-web .web-motion-toggle:hover { color: var(--color-deepwater); }
+.web-motion-toggle:disabled { cursor: default; }
+.operator-signal-grid { position: absolute; inset: 14% 4% 12%; display: grid; grid-template-columns: repeat(6,1fr); grid-template-rows: repeat(4,1fr); pointer-events: none; z-index: 0; opacity: .35; }
+.operator-signal-grid i { width: 4px; height: 4px; background: var(--color-lightwater); opacity: .2; align-self: center; justify-self: center; }
+[data-motion="running"] .operator-signal-grid i { animation: signal-pixel 6s var(--motion-ease) var(--pixel-delay) infinite; }
+.operator-path .operator-packet { fill: none; stroke: #c3f1fc; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 3 97; stroke-dashoffset: 100; filter: drop-shadow(0 0 5px #4fa3c4); opacity: 0; }
+[data-motion="running"] .operator-packet { opacity: .9; animation: signal-travel 5.2s cubic-bezier(.4,0,.2,1) infinite; }
+.operator-card { overflow: hidden; }
+.operator-card__timer { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--color-lightwater); transform: scaleX(0); transform-origin: left; }
+[data-motion="running"] .operator-card__timer { animation: signal-timer 5.2s linear both; }
+[data-motion="running"] .operator-card > :not(.operator-card__timer) { animation: signal-copy .65s var(--motion-ease) both; }
+.operator-stage:is(:hover,:focus-within) .operator-card__timer { animation-play-state: paused; }
+[data-stage="0"] .operator-node { border-color: var(--color-lightwater); }
+[data-stage="1"] .operator-core { box-shadow: 0 28px 65px #0005, 0 0 48px #4fa3c447; }
+[data-stage="2"] .operator-card { box-shadow: 0 34px 75px #0005, 0 1px 0 #fff inset, 0 0 0 1px #4fa3c450; }
+.operator-stage__selector button { position: relative; overflow: hidden; transition: color .25s, background .25s, border-color .25s; }
+[data-motion="running"] .capability-panel__copy { animation: signal-copy .6s var(--motion-ease); }
+[data-motion="running"] .capability-preview > :not(.capability-preview__top) { animation: preview-reveal .6s var(--motion-ease) both; }
+[data-motion="running"] .capability-preview__task { animation-delay: .10s; }
+[data-motion="running"] .capability-preview dl { animation-delay: .18s; }
+[data-motion="running"] .capability-preview__result { animation-delay: .28s; }
+[data-motion="running"] .capability-preview > p { animation-delay: .36s; }
+.web-process__steps { position: relative; }
+.web-process__steps::after { content: ''; position: absolute; left: 0; top: 19px; width: 100%; height: 2px; background: var(--color-deepwater); transform: scaleX(var(--process-progress,0)); transform-origin: left; pointer-events: none; }
+.web-process__steps li { transition: opacity .4s var(--motion-ease); }
+[data-motion="running"] .web-process__steps [data-step-lit="false"] { opacity: .48; }
+.web-process__steps [data-step-lit="true"] .web-process__marker span { color: var(--color-deepwater); box-shadow: 0 9px 24px #14657f22; }
+[data-motion="running"] .service-case[data-open="true"] .service-case__body { animation: preview-reveal .5s var(--motion-ease); }
+.service-case h3 button { position: relative; isolation: isolate; }
+.service-case h3 button::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: linear-gradient(90deg,#4fa3c40c 1px,transparent 1px),linear-gradient(#4fa3c40c 1px,transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(180px circle at var(--pointer-x,50%) var(--pointer-y,50%),black,transparent); opacity: 0; transition: opacity .35s; }
+[data-motion="running"] .service-case h3 button:hover::before { opacity: 1; }
+[data-motion="running"] .experience-console .is-complete svg { animation: decision-check .45s var(--motion-ease) both; }
+[data-motion="running"] .web-text-link svg, [data-motion="running"] .web-action svg { transition: transform .4s var(--motion-ease); }
+[data-motion="running"] .web-text-link:hover svg, [data-motion="running"] .web-action:hover svg { transform: translate(3px,-2px); }
+/* Stop decorative work outside the viewport and honor manual and system pause. */
+[data-motion-visible="false"] *, [data-motion-visible="false"] *::before, [data-motion-visible="false"] *::after { animation-play-state: paused !important; }
+[data-motion="paused"] *, [data-motion="paused"] *::before, [data-motion="paused"] *::after { animation: none !important; transition: none !important; }
+[data-motion="paused"] .operator-packet, [data-motion="paused"] .operator-card__timer { opacity: 0; }
+[data-motion="paused"] .operator-path, [data-motion="paused"] .operator-node, [data-motion="paused"] .operator-card, [data-motion="paused"] .operator-core, [data-motion="paused"] .capability-preview, [data-motion="paused"] .experience-console { transform: none !important; }
+[data-motion="paused"] .web-action { translate: none !important; }
+@keyframes signal-pixel { 0%,65%,100% { opacity: .12; transform: scale(1); } 18%,28% { opacity: .8; transform: scale(1.8); } }
+@keyframes signal-travel { 0% { stroke-dashoffset: 100; opacity: 0; } 8%,85% { opacity: .9; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes signal-timer { to { transform: scaleX(1); } }
+@keyframes signal-copy { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: 0 0; } }
+@keyframes preview-reveal { from { opacity: .2; translate: 0 16px; } to { opacity: 1; translate: 0 0; } }
+@keyframes decision-check { from { opacity: .3; scale: .7; } to { opacity: 1; scale: 1; } }
+@media (max-width: 960px) { .operator-signal-grid { opacity: .22; } .web-hero__motion-note { gap: 6px 16px; } }
+@media (prefers-reduced-motion: reduce) { .tibbe-web *, .tibbe-web *::before, .tibbe-web *::after { animation: none !important; transition: none !important; } .operator-packet, .operator-card__timer { display: none; } }
+
+.web-process__marker span, .web-process__marker svg { z-index: 1; }
+.operator-stage[data-manual="true"] .operator-card__timer { display: none; }
+@media (max-width: 760px) { .web-process__steps::after { display: none; } }

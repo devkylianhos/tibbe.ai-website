@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { Metadata } from "next";
 import { LegalShell } from "@/components/LegalShell";
 import { AGENT_TEAM_MONTHLY_PRICE, BETA_MONTHLY_PRICE } from "@/lib/site";
@@ -9,17 +10,19 @@ export const metadata: Metadata = {
 
 export default function VoorwaardenPage() {
   return (
-    <LegalShell title="Algemene voorwaarden" updated="12 juli 2026">
+    <LegalShell title="Algemene voorwaarden" updated="12 oktober 2026">
       <div className="legal-note">
-        Deze voorwaarden gelden voor de dienst Tibbe, geleverd door{" "}
+        Deze voorwaarden beschrijven het AI-abonnement van Tibbe, geleverd door{" "}
         <strong>Tibbe</strong>, Parelweg 11,
-        1812 RS Alkmaar, KvK 80015298. Vragen? Mail{" "}
+        1812 RS Alkmaar, KvK 80015298. Vragen? Neem contact op met{" "}
         <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20de%20voorwaarden%20van%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a>.
       </div>
 
-      <h2>1. De dienst</h2>
+      <p>Zoek je informatie over een website, webshop of automatiseringsproject? De werkzaamheden, prijs en planning daarvan bespreken we in een afzonderlijk voorstel. <Link href="/#contact">Bespreek je project</Link>.</p>
+
+      <h2>1. De AI-dienst</h2>
       <p>
-        Tibbe is een AI-werknemer die terugkerend werk voor je bedrijf overneemt.
+        Het AI-abonnement van Tibbe ondersteunt terugkerend werk voor je bedrijf.
         Je krijgt een eigen agent in een afgeschermde omgeving die wij hosten. Wat
         naar buiten gaat of zwaar telt, gebeurt met jouw goedkeuring.
       </p>

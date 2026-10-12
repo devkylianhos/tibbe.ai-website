@@ -2,6 +2,8 @@ import { useRef, useState } from 'react'
 import Link from 'next/link'
 import type { FormEvent } from 'react'
 import { ArrowUpRight, Check, X } from 'lucide-react'
+import { ViewportVideo } from '../components/website/ViewportVideo'
+import { MotionToggle } from '../components/website/MotionProvider'
 import { Logo } from '../components/Logo'
 import { SectionLabel } from '../components/website/Primitives'
 import { siteConfig } from '../content/website'
@@ -12,7 +14,7 @@ export function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    const body = `Hoi Tibbe,\n\nIk ben ${data.get('name')} van ${data.get('company')}.\n\nIk wil graag het volgende proces bespreken:\n${data.get('process')}\n\nJe kunt mij bereiken op ${data.get('email')}.\n\nGroet,\n${data.get('name')}`
+    const body = `Hoi Tibbe,\n\nIk ben ${data.get('name')} van ${data.get('company')}.\n\nIk wil graag het volgende bespreken:\n${data.get('process')}\n\nJe kunt mij bereiken op ${data.get('email')}.\n\nGroet,\n${data.get('name')}`
     setDraft(
       `mailto:${siteConfig.email}?subject=${encodeURIComponent('Kennismaking — ' + data.get('company'))}&body=${encodeURIComponent(body)}`,
     )
@@ -22,16 +24,14 @@ export function Contact() {
       <section id="contact" className="web-section web-contact">
         <div className="web-container web-contact__grid">
           <div data-reveal>
-            <SectionLabel>Begin met één proces</SectionLabel>
+            <SectionLabel>Vertel ons over je bedrijf</SectionLabel>
             <h2>
-              Geef terugkerend
+              Wat wil jij
               <br />
-              werk een
-              <br />
-              vaste plek.
+              beter regelen?
             </h2>
             <p>
-              Vertel ons wat er steeds op je bord belandt.
+              Een nieuwe website, een webshop of minder handmatig werk.
               <br />
               We kijken samen waar Tibbe kan helpen.
             </p>
@@ -84,10 +84,10 @@ export function Contact() {
               />
             </label>
             <label>
-              Welk werk wil je uit handen geven?
+              Wat wil je laten bouwen of verbeteren?
               <textarea
                 name="process"
-                placeholder="Bijvoorbeeld: facturen controleren en afwijkingen opvolgen."
+                placeholder="Bijvoorbeeld: een nieuwe website en een betere opvolging van aanvragen."
                 rows={3}
                 required
                 maxLength={1800}
@@ -116,19 +116,21 @@ export function Contact() {
           </form>
         </div>
       </section>
-      <footer className="web-footer">
+      <footer className="web-footer web-footer--scenic">
         <div className="web-container">
           <div className="web-footer__top">
             <Link href="/" aria-label="Tibbe — homepage">
-              <Logo inverse />
+              <Logo />
             </Link>
             <p>
-              Calm intelligence.
+              Sterk online.
               <br />
-              Werk dat verdergaat.
+              Goed georganiseerd.
             </p>
             <nav aria-label="Footernavigatie">
-              <a href="#mogelijkheden">Mogelijkheden</a>
+              <a href="/websites">Websites</a>
+              <a href="/webshops">Webshops</a>
+              <a href="/automatisering">Automatisering &amp; AI</a>
               <a href="#ervaring">Ervaar Tibbe</a>
               <a href="#contact">Contact</a>
             </nav>
@@ -151,6 +153,10 @@ export function Contact() {
             </div>
             <span>VEEL SYSTEEM. WEINIG RUIS.</span>
           </div>
+        </div>
+        <div className="web-container web-footer__motion"><MotionToggle /></div>
+        <div className="web-footer__scene" aria-hidden="true">
+          <ViewportVideo src="/visuals/tibbe-horses.mp4" poster="/visuals/tibbe-horses.jpg" />
         </div>
       </footer>
       <dialog ref={privacy} className="web-dialog" aria-labelledby="privacy-title">

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { BrandMark } from "./BrandMark";
 import { nav, BOOKING_URL, waLink } from "@/lib/site";
 
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="container-x py-16">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <a href="#top" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               {/* Geanimeerd merkteken uit het pakket: de tik-draai loader (rustige 4.8s-variant) */}
               <span className="tibbe-loader slow inline-flex" aria-hidden>
                 <BrandMark size={40} />
@@ -15,16 +16,16 @@ export function Footer() {
               <span className="font-display text-[22px]" style={{ fontWeight: 600 }}>
                 Tibbe
               </span>
-            </a>
+            </Link>
             <p className="mt-4 max-w-[240px] text-[14px] leading-[1.55] text-muted-fg">
-              De medewerker die nooit stopt. Hij doet je mail, je facturen en
-              het geregel, terwijl jij het echte werk doet.
+              Websites en webshops, verbonden met je dagelijkse werk.
+              Met AI als ondersteuning en je team aan het stuur.
             </p>
           </div>
 
           <div>
-            <div className="text-[13px] font-600 uppercase tracking-[0.12em] text-muted-fg/70">
-              Product
+            <div className="text-[13px] font-600 uppercase tracking-[0.12em] text-muted-fg">
+              Ontdek Tibbe
             </div>
             <ul className="mt-4 space-y-2.5">
               {nav.map((item) => (
@@ -34,6 +35,8 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+              <li><a href="/websites" className="text-[15px] text-foreground/80 hover:text-accent">Websites</a></li>
+              <li><a href="/automatisering" className="text-[15px] text-foreground/80 hover:text-accent">Automatisering &amp; AI</a></li>
               <li>
                 <a href="/webshops" className="text-[15px] text-foreground/80 hover:text-accent">
                   Voor webshops
@@ -43,7 +46,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="text-[13px] font-600 uppercase tracking-[0.12em] text-muted-fg/70">
+            <div className="text-[13px] font-600 uppercase tracking-[0.12em] text-muted-fg">
               Aan de slag
             </div>
             <ul className="mt-4 space-y-2.5">
@@ -64,7 +67,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="/launch" className="text-[15px] text-foreground/80 hover:text-accent">
-                  Launch
+                  Start met Tibbe
                 </a>
               </li>
               <li>
@@ -76,7 +79,7 @@ export function Footer() {
           </div>
 
           <div>
-            <div className="text-[13px] font-600 uppercase tracking-[0.12em] text-muted-fg/70">
+            <div className="text-[13px] font-600 uppercase tracking-[0.12em] text-muted-fg">
               Bedrijf
             </div>
             <address className="mt-4 space-y-1 text-[15px] not-italic leading-relaxed text-muted-fg">
