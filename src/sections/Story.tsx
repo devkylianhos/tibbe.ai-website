@@ -45,7 +45,6 @@ export function Process() {
       <div className="web-container">
         <div className="web-section-intro" data-reveal>
           <div>
-            <SectionLabel number="03">Zo werken we samen</SectionLabel>
             <h2>
               Eerst begrijpen.
               <br />
@@ -53,7 +52,7 @@ export function Process() {
             </h2>
           </div>
           <p>
-            Je hoeft zelf geen technische kennis te hebben. We maken samen duidelijk wat er nodig is, wat je krijgt en hoe je ermee werkt.
+            Van eerste gesprek tot oplevering weet je wat de volgende stap is.
           </p>
         </div>
         <ol className="web-process__steps" data-reveal>
@@ -65,7 +64,6 @@ export function Process() {
               </div>
               <h3>{step.title}</h3>
               <p>{step.copy}</p>
-              <small>{step.label}</small>
             </li>
           ))}
         </ol>
@@ -213,7 +211,6 @@ export function FAQ() {
     <section id="vragen" className="web-section web-faq">
       <div className="web-container web-faq__grid">
         <div data-reveal>
-          <SectionLabel number="06">Heldere antwoorden</SectionLabel>
           <h2>
             Prijs, planning
             <br />
@@ -221,7 +218,7 @@ export function FAQ() {
           </h2>
         </div>
         <div data-reveal>
-          {faqs.map(([question, answer]) => (
+          {faqs.filter((_, index) => [1, 4, 5, 7, 8].includes(index)).map(([question, answer]) => (
             <details key={question}>
               <summary>
                 {question}

@@ -88,3 +88,23 @@
   .agency-services__links a svg { transition: none; }
   .agency-services__links a:hover svg { transform: none; }
 }
+
+/* Editorial service choices give the concept work the main visual space. */
+.compact-services__links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
+.compact-services__links > a { display: flex; gap: 20px; justify-content: space-between; padding-block: 28px; border-block: 1px solid var(--color-line); }
+.compact-services__links > a > svg { flex-shrink: 0; color: var(--color-deepwater); }
+.compact-services__links h3 { font-size: clamp(23px, 2.2vw, 32px); line-height: 1.2; letter-spacing: -.03em; margin: 0 0 16px; }
+.compact-services__links p { margin: 0; font-size: 15px; color: var(--color-muted); line-height: 1.65; max-width: 30ch; }
+.compact-services__links a:hover h3 { color: var(--color-deepwater); }
+.compact-services__note { margin: 24px 0 0; font-size: 13px; color: var(--color-muted); }
+.web-founder { position: relative; }
+.service-start-steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 40px; }
+.service-start-steps h3 { font-size: 25px; margin-bottom: 16px; }
+.service-start-steps p { color: var(--color-muted); line-height: 1.7; }
+@media (max-width: 760px) {
+  .compact-services__links, .service-start-steps { grid-template-columns: 1fr; gap: 0; }
+  .compact-services__links > a + a { border-top: 0; }
+  .compact-services__links h3 { font-size: 26px; }
+  .compact-services__links p { max-width: 36ch; }
+  .service-start-steps article { padding-block: 24px; border-bottom: 1px solid var(--color-line); }
+}

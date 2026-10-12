@@ -72,10 +72,10 @@ export const capabilities = [
 ] as const
 
 export const processSteps = [
-  { title: 'We luisteren.', label: 'JOUW BEDRIJF', copy: 'Waar komen klanten binnen? Wat kost je team tijd? We bekijken wat er nu gebeurt en wat beter kan.' },
-  { title: 'Je krijgt een helder plan.', label: 'AFSPRAKEN VOORAF', copy: 'We spreken af wat we bouwen, wat het kost en wanneer het klaar is. Je weet wat bij de opdracht hoort.' },
-  { title: 'We bouwen en testen.', label: 'SAMEN BEKIJKEN', copy: 'Je bekijkt het ontwerp en probeert de oplossing. We testen ook wat er gebeurt als informatie ontbreekt of iets misgaat.' },
-  { title: 'Je team kan ermee werken.', label: 'OPLEVERING & VERVOLG', copy: 'Je krijgt uitleg en we spreken af hoe beheer, ondersteuning en eventuele verbeteringen worden geregeld.' },
+  { title: 'We luisteren.', label: 'JOUW BEDRIJF', copy: 'Je laat zien wat je nodig hebt en waar het werk vastloopt.' },
+  { title: 'Je krijgt een helder plan.', label: 'AFSPRAKEN VOORAF', copy: 'Je ontvangt een voorstel met de werkzaamheden, prijs en planning.' },
+  { title: 'We bouwen en testen.', label: 'SAMEN BEKIJKEN', copy: 'Je bekijkt het ontwerp en probeert de oplossing voordat die live gaat.' },
+  { title: 'Je team kan ermee werken.', label: 'OPLEVERING & VERVOLG', copy: 'Je krijgt uitleg en afspraken over beheer en ondersteuning.' },
 ]
 
 export const faqs = [

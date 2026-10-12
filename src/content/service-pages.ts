@@ -1,6 +1,7 @@
 import type { ServicePageContent } from '../components/ServicePage'
 
 export const websitePage: ServicePageContent = {
+  visual: 'website',
   audience: 'Voor dienstverleners en MKB-bedrijven die beter willen uitleggen wat ze doen, of toe zijn aan een nieuwe website.',
   deliverables: ['Een pagina-indeling en afspraken over teksten en beelden', 'Een ontwerp dat je vooraf beoordeelt', 'Bouw voor desktop en mobiel, met de afgesproken contactroute', 'Testen van de belangrijkste routes en uitleg bij oplevering'],
   scope: 'Het aantal pagina’s, nieuwe teksten of fotografie en koppelingen bepalen de omvang. Hosting, beheer en extra functies leggen we apart vast.',
@@ -21,6 +22,7 @@ export const websitePage: ServicePageContent = {
   steps: ['De bezoeker vindt de dienst en vult een duidelijk formulier in.', 'De aanvraag komt met de ingevulde gegevens bij de juiste collega.', 'Als dat helpt, vat AI de aanvraag samen. Je team bepaalt het antwoord.'],
 }
 export const webshopPage: ServicePageContent = {
+  visual: 'shop',
   audience: 'Voor winkels en merken die online willen starten of een bestaande webshop willen verbeteren.',
   deliverables: ['Een passende winkelstructuur en productpresentatie', 'Ontwerp en bouw van de afgesproken winkelpagina’s', 'Inrichting en controle van de afgesproken bestelroute', 'Uitleg over producten, bestellingen en dagelijks gebruik'],
   scope: 'We kiezen het platform op basis van je assortiment en manier van werken. Betalingen, verzending, voorraadkoppelingen en migratie onderzoeken we vooraf. Platform- en transactiekosten hangen af van de gekozen aanbieders.',
@@ -41,6 +43,7 @@ export const webshopPage: ServicePageContent = {
   steps: ['De klant bekijkt het product en rondt de bestelling af.', 'Een koppeling geeft de benodigde gegevens door aan de afgesproken software.', 'Bij een klantvraag kan AI een antwoord voorbereiden. Je team behandelt wat extra aandacht vraagt.'],
 }
 export const automationPage: ServicePageContent = {
+  visual: 'workflow',
   audience: 'Voor teams die steeds dezelfde gegevens overnemen, aanvragen verdelen of achter opvolging aan moeten.',
   deliverables: ['Een uitgewerkte werkstroom met begin, einde en verantwoordelijke', 'De afgesproken koppelingen en eventuele AI-ondersteuning', 'Tests met normale aanvragen, ontbrekende gegevens en fouten', 'Uitleg over goedkeuren, uitzonderingen en dagelijks gebruik'],
   scope: 'Beschikbare koppelingen, toegangsrechten en de kwaliteit van gegevens bepalen wat mogelijk is. We benoemen software- en gebruikskosten apart en spreken af wie storingen en wijzigingen oppakt.',
