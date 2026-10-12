@@ -13,8 +13,8 @@ export function Hero() {
             <SectionLabel>Jouw digitale partner voor het MKB</SectionLabel>
             <h1 id="hero-title">
               <span className="motion-line"><span>Websites en webshops</span></span>
-              <span className="motion-line"><span>die werken.</span></span>
-              <span className="agency-hero__second">Ook achter de schermen.</span>
+              <span className="motion-line"><span>die werken</span></span>
+              <span className="agency-hero__second">Ook achter de schermen</span>
             </h1>
             <p className="web-hero__lead">
               We ontwerpen en bouwen je website of webshop. En koppelen aanvragen, bestellingen en klantvragen aan je dagelijkse werk. Met automatisering en AI waar dat echt helpt.
