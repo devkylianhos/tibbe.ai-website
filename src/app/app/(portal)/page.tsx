@@ -23,7 +23,7 @@ export default async function PortalOverview() {
         Goedendag, <span className="text-accent">{name}</span>
       </h1>
       <p className="mt-2 text-[15px] text-muted-fg">
-        Dit is de status van jouw Tibbe.
+        Bekijk je klantomgeving en de software die je aan Tibbe koppelt.
       </p>
 
       {/* volgende stap */}

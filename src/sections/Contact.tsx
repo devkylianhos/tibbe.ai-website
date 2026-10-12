@@ -128,7 +128,9 @@ export function Contact() {
               Goed georganiseerd.
             </p>
             <nav aria-label="Footernavigatie">
-              <a href="#mogelijkheden">Mogelijkheden</a>
+              <a href="/websites">Websites</a>
+              <a href="/webshops">Webshops</a>
+              <a href="/automatisering">Automatisering &amp; AI</a>
               <a href="#ervaring">Ervaar Tibbe</a>
               <a href="#contact">Contact</a>
             </nav>

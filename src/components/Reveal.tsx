@@ -21,8 +21,8 @@ export function Reveal({
   if (reduced) return <div className={className}>{children}</div>;
   return (
     <motion.div
-      initial={{ opacity: 0.72, y }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ y }}
+      whileInView={{ y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay, ease: [0.16, 1, 0.3, 1] }}
       className={className}

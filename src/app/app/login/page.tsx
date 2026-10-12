@@ -23,13 +23,16 @@ export default async function LoginPage() {
         <BrandMark size={34} />
         <p className="eyebrow mt-6">Inloggen</p>
         <h1 className="mt-3 font-display text-[28px] leading-[1.1]" style={{ fontWeight: 700 }}>
-          Open je Tibbe-dashboard
+          Open je klantomgeving
         </h1>
         <p className="mt-3 text-[15px] leading-relaxed text-muted-fg">
           Vul je e-mailadres in om verder te gaan.
         </p>
         <form action={login} className="mt-6 flex flex-col gap-3">
+          <label htmlFor="login-email" className="text-[14px] text-muted-fg">Je e-mailadres</label>
           <input
+            id="login-email"
+            autoComplete="email"
             type="email"
             name="email"
             required
@@ -41,7 +44,7 @@ export default async function LoginPage() {
           </button>
         </form>
         <p className="mt-5 text-center text-[13px] text-muted-fg">
-          Nog geen Tibbe?{" "}
+          Samenwerken met Tibbe?{" "}
           <Link href="/#contact" className="font-600 text-accent" style={{ fontWeight: 600 }}>
             Plan een kennismaking
           </Link>

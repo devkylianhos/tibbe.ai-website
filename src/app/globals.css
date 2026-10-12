@@ -213,7 +213,7 @@ h1, h2, h3, h4, .font-display {
   }
 
   /* Juridische pagina's — leesbare prose */
-  .legal-prose { color: var(--muted-fg); font-size: 16px; line-height: 1.7; }
+  .legal-prose { overflow-wrap: anywhere; color: var(--muted-fg); font-size: 16px; line-height: 1.7; }
   .legal-prose h2 {
     font-family: var(--font-display);
     font-weight: 600;
@@ -237,7 +237,7 @@ h1, h2, h3, h4, .font-display {
   .legal-prose li { margin-bottom: 8px; }
   .legal-prose a { color: var(--accent); text-decoration: underline; }
   .legal-prose strong { color: var(--foreground); font-weight: 600; }
-  .legal-prose table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 15px; }
+  .legal-prose table { table-layout: fixed; width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 15px; }
   .legal-prose th, .legal-prose td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
   .legal-prose th { background: var(--sand); font-weight: 600; color: var(--foreground); }
   .legal-note {

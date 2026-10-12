@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <LegalShell title="Privacyverklaring" updated="5 oktober 2026">
+    <LegalShell title="Privacyverklaring" updated="12 oktober 2026">
       <div className="legal-note">
         Tibbe is een dienst van <strong>Tibbe</strong>,
-        Parelweg 11, 1812 RS Alkmaar, KvK 80015298. Vragen over je gegevens? Mail{" "}
+        Parelweg 11, 1812 RS Alkmaar, KvK 80015298. Vragen over je gegevens? Neem contact op met{" "}
         <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20mijn%20gegevens%20bij%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a>.
       </div>
 
@@ -25,8 +25,7 @@ export default function PrivacyPage() {
       <ul>
         <li>
           <strong>Contactgegevens.</strong> Naam, e-mailadres en telefoonnummer die
-          je achterlaat als je een kennismaking plant of je aanmeldt voor de
-          launchlijst.
+          je achterlaat als je een kennismaking plant of contact opneemt over een project.
         </li>
         <li>
           <strong>Accountgegevens.</strong> Het e-mailadres waarmee je inlogt op je
@@ -39,7 +38,7 @@ export default function PrivacyPage() {
         </li>
         <li>
           <strong>Werkinhoud.</strong> De content, berichten en gegevens die je
-          agent voor je verwerkt, in jouw eigen afgeschermde omgeving.
+          AI-dienst voor je verwerkt, in jouw eigen afgeschermde omgeving.
         </li>
         <li>
           <strong>Betaalgegevens.</strong> Bij een abonnement verloopt de betaling
@@ -57,7 +56,7 @@ export default function PrivacyPage() {
       <h2>Waarom we het verwerken</h2>
       <ul>
         <li>Om je aanvraag of kennismaking af te handelen.</li>
-        <li>Om de dienst te leveren en je agent te laten draaien (uitvoering van de overeenkomst).</li>
+        <li>Om de dienst te leveren en de afgesproken AI-dienst uit te voeren (uitvoering van de overeenkomst).</li>
         <li>Om onze dienst veilig te houden en te verbeteren (gerechtvaardigd belang).</li>
         <li>Om te voldoen aan wettelijke verplichtingen, zoals de administratie.</li>
       </ul>
@@ -77,7 +76,7 @@ export default function PrivacyPage() {
         <tbody>
           <tr><td>Google Analytics</td><td>Websiteanalyse na jouw toestemming</td></tr>
           <tr><td>Vercel</td><td>Hosting van de website</td></tr>
-          <tr><td>Anthropic (Claude)</td><td>Het AI-model achter je agent</td></tr>
+          <tr><td>Anthropic (Claude)</td><td>Het AI-model voor AI-ondersteunde taken</td></tr>
           <tr><td>Composio</td><td>Beveiligde koppelingen met je tools</td></tr>
           <tr><td>Stripe</td><td>Betalingen (bij een abonnement)</td></tr>
         </tbody>
@@ -100,8 +99,7 @@ export default function PrivacyPage() {
       <h2>Jouw rechten</h2>
       <p>
         Je hebt het recht om je gegevens in te zien, te corrigeren of te laten
-        verwijderen, en om bezwaar te maken tegen de verwerking. Stuur een mail
-        naar <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20mijn%20gegevens%20bij%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a> en we regelen
+        verwijderen, en om bezwaar te maken tegen de verwerking. Neem contact op met <a href="https://wa.me/31683127504?text=Hoi%2C%20ik%20heb%20een%20vraag%20over%20mijn%20gegevens%20bij%20Tibbe." target="_blank" rel="noopener">ons via WhatsApp</a> en we regelen
         het. Ben je het ergens niet mee eens, dan kun je een klacht indienen bij
         de Autoriteit Persoonsgegevens.
       </p>

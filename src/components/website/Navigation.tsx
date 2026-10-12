@@ -9,7 +9,7 @@ const links = [
   ['In de praktijk', '#praktijk'],
 ]
 
-export function Navigation() {
+export function Navigation({ homeLinks = false }: { homeLinks?: boolean }) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const trigger = useRef<HTMLButtonElement>(null)
@@ -35,12 +35,12 @@ export function Navigation() {
         </Link>
         <nav aria-label="Hoofdnavigatie" className="web-nav__desktop">
           {links.map(([label, href]) => (
-            <a key={href} href={href}>
+            <a key={href} href={homeLinks ? `/${href}` : href}>
               {label}
             </a>
           ))}
         </nav>
-        <a className="web-nav__cta" href="#contact" onClick={() => setOpen(false)}>
+        <a className="web-nav__cta" href={homeLinks ? "/#contact" : "#contact"} onClick={() => setOpen(false)}>
           Kennismaken <ArrowUpRight size={16} aria-hidden="true" />
         </a>
         <button
@@ -61,7 +61,7 @@ export function Navigation() {
         hidden={!open}
       >
         {links.map(([label, href]) => (
-          <a key={href} href={href} onClick={() => setOpen(false)}>
+          <a key={href} href={homeLinks ? `/${href}` : href} onClick={() => setOpen(false)}>
             {label}
             <ArrowUpRight size={18} aria-hidden="true" />
           </a>
