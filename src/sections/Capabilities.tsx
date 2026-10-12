@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import { useWebsiteMotion } from '../components/website/MotionProvider'
 import Image from 'next/image'
 import {
   ArrowRight,
@@ -16,11 +17,12 @@ const icons = { file: FileText, mail: Mail, chart: ChartNoAxesCombined, shield: 
 
 export function Capabilities() {
   const [selected, setSelected] = useState(0)
+  const { enabled } = useWebsiteMotion()
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
   const capability = capabilities[selected]
   const Icon = icons[capability.icon]
   const movePreview = (event: React.PointerEvent<HTMLDivElement>) => {
-    if (event.pointerType === 'touch') return
+    if (!enabled || event.pointerType === 'touch') return
     const bounds = event.currentTarget.getBoundingClientRect()
     const x = (event.clientX - bounds.left) / bounds.width - 0.5
     const y = (event.clientY - bounds.top) / bounds.height - 0.5

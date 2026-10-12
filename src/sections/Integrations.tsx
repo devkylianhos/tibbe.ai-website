@@ -16,7 +16,7 @@ export function Integrations() {
           <h2 id="integrations-heading">Koppel met de tools die je al gebruikt.</h2>
           <span className="web-mono">JOUW TOOLS. ÉÉN WERKSTROOM.</span>
         </div>
-        <ul className={styles.logos} aria-label="Voorbeelden van koppelbare tools">
+        <ul data-motion-stagger className={styles.logos} aria-label="Voorbeelden van koppelbare tools">
           {tools.map(({ name, slug }) => (
             <li key={slug} className={styles.logo}>
               <Image src={`/integrations/${slug}.svg`} width={32} height={32} alt="" />
