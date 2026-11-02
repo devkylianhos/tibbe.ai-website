@@ -1,13 +1,13 @@
 import { MotionToggle } from '../components/website/MotionProvider'
-import { ParticleVisual } from '../components/website/ParticleVisual'
+import { ParticleLogo } from '../components/website/ParticleLogo'
+import '@/styles/particle-logo.css'
 import { ArrowDown, Check } from 'lucide-react'
 import { ActionLink, SectionLabel } from '../components/website/Primitives'
 
 export function Hero() {
   return (
     <>
-      <section id="top" className="web-hero web-hero--cinema agency-hero" aria-labelledby="hero-title">
-        <ParticleVisual />
+      <section id="top" className="web-hero web-hero--cinema agency-hero hero--particle-logo" aria-labelledby="hero-title">
         <div className="web-container web-hero__grid">
           <div className="web-hero__copy">
             <SectionLabel>Jouw digitale partner voor het MKB</SectionLabel>
@@ -24,6 +24,7 @@ export function Hero() {
             </div>
             <p className="web-hero__note">Met Kylian. Over jouw plannen en een passende eerste stap.</p>
           </div>
+          <ParticleLogo />
         </div>
         <div className="web-container web-hero__bottom">
           <span>WEBSITES · WEBSHOPS · AUTOMATISERING</span>

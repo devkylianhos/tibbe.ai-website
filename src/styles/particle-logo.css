@@ -1,0 +1,42 @@
+/* The brand is the sole moving focal point; copy stays on its own calm surface. */
+.tibbe-web .hero--particle-logo .web-hero__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 36px;
+  min-height: 640px;
+  padding-block: 64px 80px;
+}
+.hero--particle-logo .web-hero__copy { text-align: left; }
+.hero--particle-logo .web-label,
+.hero--particle-logo .web-actions { justify-content: flex-start; }
+.tibbe-web .hero--particle-logo h1 {
+  font-size: clamp(42px, 4.6vw, 72px);
+  letter-spacing: -.04em;
+  line-height: 1.06;
+  margin: 0 0 28px;
+}
+.hero--particle-logo .motion-line { overflow: visible; }
+.hero--particle-logo .agency-hero__second { font-size: .57em; margin-top: 20px; }
+.tibbe-web .hero--particle-logo .web-hero__lead { margin: 0 0 28px; max-width: 52ch; }
+.particle-logo { min-width: 0; align-self: center; }
+.particle-logo__art { position: relative; aspect-ratio: 1; width: 100%; }
+.particle-logo canvas { display: block; width: 100%; height: 100%; }
+.particle-logo__art > svg { position: absolute; inset: 8%; width: 84%; height: 84%; pointer-events: none; }
+.particle-logo__art > canvas[data-ready=true] + svg { visibility: hidden; }
+.particle-logo__hint { text-align: center; color: #b0c7cc; font-size: 12px; margin: 8px 0 0; }
+@media (max-width: 960px) {
+  .tibbe-web .hero--particle-logo .web-hero__grid { grid-template-columns: 1fr; gap: 8px; padding-block: 48px; }
+  .hero--particle-logo .web-hero__copy { max-width: 680px; }
+  .particle-logo { width: min(100%, 360px); justify-self: center; }
+  .tibbe-web .hero--particle-logo h1 { font-size: clamp(36px, 6.8vw, 60px); }
+}
+@media (hover: none), (prefers-reduced-motion: reduce) { .particle-logo__hint { display: none; } }
+
+.particle-logo__controls { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.particle-logo__burst { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; padding: 8px 16px; border: 1px solid #57767d; border-radius: 999px; background: transparent; color: #d4e9ec; font: inherit; font-size: 12px; cursor: pointer; transition: background .2s, border-color .2s; }
+.particle-logo__burst:hover:not(:disabled) { background: #24414a; border-color: #91c8d6; }
+.particle-logo__burst:focus-visible { outline: 2px solid #9cd9e6; outline-offset: 4px; }
+.particle-logo__burst:disabled { opacity: .5; cursor: default; }
+
+.particle-logo__burst > svg { position: static; width: 15px; height: 15px; flex-shrink: 0; }
