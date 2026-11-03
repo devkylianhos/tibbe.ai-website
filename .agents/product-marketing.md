@@ -39,3 +39,13 @@ Bezoeker kiest de passende dienst en bespreekt een project met Kylian. Contact v
 
 ## Changelog
 - v1 (2026-10-12) — Vastgelegd uit bestaande positionering en gebruikersinstructies voor de websitebrede marketingreview.
+
+
+## Actuele richting — 2026-11-03
+Kylian bevestigde Tibbe als brede agentic agency voor het mkb: AI-agents en automatisering, beginnen bij één concreet proces, daarna passend beheer. Websites en webshops blijven mogelijk als zelfstandige opdracht. Deze richting vervangt de eerdere webbouw-first positionering hierboven; de eerdere context blijft als historie staan.
+
+Bezoekers krijgen via antwoordknoppen direct een voorlopig advies zonder verplichte contactgegevens. Contact met Kylian blijft optioneel. Kernzin: “We kijken waar het werk vastloopt en bouwen een oplossing die bij je bedrijf past.” Leg het woord agentic concreet uit. Geen onbewezen besparingen of garanties.
+
+De nieuwe aanbodpresentatie onderscheidt bouw, bouw + beheer en beheer van bestaande oplossingen. Tarieven, scope, looptijd en serviceafspraken worden per voorstel bepaald. Oudere abonnementsprijzen en voorwaarden in de repository zijn geen bevestiging voor deze nieuwe diensten.
+
+Status: gebouwd en getest op expliciet verzoek van Kylian; aparte wijzigingsbranch ter review, nog niet op productie gepubliceerd. Zie docs/reviews/agency-upgrade-2026-11-03.md voor controle en open punten.

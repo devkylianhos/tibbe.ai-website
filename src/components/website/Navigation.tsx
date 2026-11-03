@@ -5,7 +5,8 @@ import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { Logo } from '../Logo'
 
 const links = [
-  ['Mogelijkheden', '#mogelijkheden'],
+  ['Keuzehulp', '#keuzehulp'],
+  ['Aanbod', '#aanbod'],
   ['Werkwijze', '#werkwijze'],
   ['In de praktijk', '#praktijk'],
 ]

@@ -24,9 +24,9 @@ export function Contact() {
       <section id="contact" className="web-section web-contact">
         <div className="web-container web-contact__grid">
           <div data-reveal>
-            <SectionLabel>Een gesprek over jouw project</SectionLabel>
+            <SectionLabel>Samen je eerste stap bepalen</SectionLabel>
             <h2>
-              Bespreek je project
+              Bespreek je werkproces
               <br />
               met Kylian.
             </h2>
@@ -106,7 +106,7 @@ export function Contact() {
                 name="process"
                 aria-invalid={Boolean(errors.process)}
                 aria-describedby={errors.process ? 'contact-process-error' : undefined}
-                placeholder="Bijvoorbeeld: een nieuwe website en een betere opvolging van aanvragen."
+                placeholder="Bijvoorbeeld: we nemen elke dag ordergegevens over van e-mail naar een spreadsheet."
                 rows={3}
                 required
                 maxLength={1800}

@@ -15,7 +15,7 @@ export function Footer() {
           <div className="web-footer__top">
             <div className="web-footer__brand">
               <a href="/#top" aria-label="Tibbe — homepage"><Logo /></a>
-              <p>Websites en webshops die werken. Ook achter de schermen. Met automatisering en AI waar dat je bedrijf helpt.</p>
+              <p>Tibbe is je agentic agency voor AI-agents en automatisering. Persoonlijk meedenken, duidelijk uitleggen en zorgvuldig beheren.</p>
               <div className="web-footer__channels">
                 <a href={`mailto:${siteConfig.email}`} aria-label="E-mail Kylian"><Mail size={20} aria-hidden="true" /></a>
                 <a href={waLink()} aria-label="Neem contact op via WhatsApp"><MessageCircle size={20} aria-hidden="true" /></a>
@@ -30,13 +30,15 @@ export function Footer() {
             <nav aria-label="Over Tibbe">
               <h2>Over Tibbe</h2>
               <a href="/#oprichter">Maak kennis met Kylian</a>
+              <a href="/#keuzehulp">Vind je eerste stap</a>
+              <a href="/#aanbod">Bouw en beheer</a>
               <a href="/#werkwijze">Onze werkwijze</a>
               <a href="/#ervaring">In de praktijk</a>
               <a href="/#vragen">Veelgestelde vragen</a>
             </nav>
             <nav aria-label="Contact">
               <h2>Contact</h2>
-              <a href="/#contact">Bespreek je project</a>
+              <a href="/#contact">Bespreek je werkproces</a>
               <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
               <a href={waLink()}>WhatsApp <ArrowUpRight aria-hidden="true" size={14} /></a>
               <a href="/app">Tibbe-app <ArrowUpRight aria-hidden="true" size={14} /></a>
