@@ -218,7 +218,7 @@ export function FAQ() {
           </h2>
         </div>
         <div data-reveal>
-          {faqs.filter((_, index) => [1, 4, 5, 7, 8].includes(index)).map(([question, answer]) => (
+          {faqs.filter((_, index) => [0, 2, 3, 4, 7, 8].includes(index)).map(([question, answer]) => (
             <details key={question}>
               <summary>
                 {question}

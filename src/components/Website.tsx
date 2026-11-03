@@ -10,6 +10,9 @@ import '@/styles/premium-motion.css'
 import '@/styles/particle-visuals.css'
 import '@/styles/agency.css'
 import { Contact } from '../sections/Contact'
+import { ProcessChooser } from '../sections/ProcessChooser'
+import { Engagements } from '../sections/Engagements'
+import '@/styles/agency-improvements.css'
 import { Founder } from '../sections/Founder'
 
 export function Website() {
@@ -23,9 +26,11 @@ export function Website() {
       <Navigation />
       <main id="main-content" tabIndex={-1}>
         <Hero />
+        <ProcessChooser />
         <Capabilities />
         <Experience />
         <Process />
+        <Engagements />
         <Founder />
         <FAQ />
         <Contact />

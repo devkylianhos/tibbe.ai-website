@@ -19,7 +19,7 @@ export function Founder() {
         <div className="web-founder__copy" data-reveal>
           <h2 id="founder-title">Goed werk begint<br />met een gesprek.</h2>
           <p className="web-founder__lead">Je bespreekt je project met Kylian, oprichter van Tibbe.</p>
-          <p>We bekijken wat je wilt bouwen en hoe je bedrijf werkt. Je krijgt een concreet voorstel en weet waar je aan toe bent.</p>
+          <p>We kijken waar het werk vastloopt en bouwen een oplossing die bij je bedrijf past. Je krijgt uitleg in gewone taal, een concreet voorstel en duidelijke afspraken over het beheer.</p>
           <ActionLink href="#contact">Maak kennis met Kylian</ActionLink>
         </div>
       </div>

@@ -1,4 +1,4 @@
-export const siteConfig = { email: 'kylian@tibbe.app', name: 'Tibbe.ai' }
+export const siteConfig = { email: 'kylian@tibbe.app', name: 'Tibbe' }
 
 export const capabilities = [
   {
@@ -72,10 +72,10 @@ export const capabilities = [
 ] as const
 
 export const processSteps = [
-  { title: 'We luisteren.', label: 'JOUW BEDRIJF', copy: 'Je laat zien wat je nodig hebt en waar het werk vastloopt.' },
-  { title: 'Je krijgt een helder plan.', label: 'AFSPRAKEN VOORAF', copy: 'Je ontvangt een voorstel met de werkzaamheden, prijs en planning.' },
-  { title: 'We bouwen en testen.', label: 'SAMEN BEKIJKEN', copy: 'Je bekijkt het ontwerp en probeert de oplossing voordat die live gaat.' },
-  { title: 'Je team kan ermee werken.', label: 'OPLEVERING & VERVOLG', copy: 'Je krijgt uitleg en afspraken over beheer en ondersteuning.' },
+  { title: 'We luisteren.', label: 'JOUW BEDRIJF', copy: 'Je laat één terugkerende taak zien. Samen bepalen we het doel, de benodigde informatie en wie beslist.' },
+  { title: 'Je krijgt een helder plan.', label: 'AFSPRAKEN VOORAF', copy: 'Je ontvangt een afgebakend voorstel met bouwkosten, planning en eventuele maandelijkse kosten apart.' },
+  { title: 'We bouwen en testen.', label: 'SAMEN BEKIJKEN', copy: 'We testen het gewone werk én uitzonderingen. Je team probeert de oplossing voordat die live gaat.' },
+  { title: 'Je team kan ermee werken.', label: 'OPLEVERING & VERVOLG', copy: 'Je krijgt uitleg, documentatie en afspraken over controle, onderhoud en het opvolgen van storingen.' },
 ]
 
 export const faqs = [
@@ -83,7 +83,7 @@ export const faqs = [
   ['Kan ik ook alleen een website of webshop laten bouwen?', 'Ja. Je kunt met een website of webshop beginnen. Koppelingen en AI voegen we alleen toe als die passen bij je vraag en budget.'],
   ['Wat is het verschil tussen automatisering en AI?', 'Automatisering voert vaste stappen uit, zoals een aanvraag doorgeven aan je klantensysteem. AI kan helpen om een bericht te begrijpen, samen te vatten of een antwoord voor te bereiden. We bekijken per taak wat nodig is.'],
   ['Kunnen we onze huidige software blijven gebruiken?', 'Dat onderzoeken we eerst. We bekijken welke koppelingen mogelijk zijn, welke toegang nodig is en of je huidige abonnementen dat ondersteunen. Je hoeft dus niet vooraf alles te vervangen.'],
-  ['Wat bepaalt het budget?', 'Het aantal pagina’s of producten, de beschikbare teksten en beelden, het ontwerp en de benodigde koppelingen bepalen de omvang. We zetten de werkzaamheden en prijs vooraf in een voorstel. Softwarelicenties, hosting en eventueel beheer benoemen we apart.'],
+  ['Wat bepaalt het budget?', 'De stappen in het proces, kwaliteit van je gegevens, koppelingen en benodigde controles bepalen de omvang. Je krijgt de eenmalige bouwkosten en eventueel maandelijks beheer afzonderlijk in een voorstel. Software, AI-gebruik en hosting benoemen we apart.'],
   ['Hoe wordt de planning bepaald?', 'We stemmen de planning af op de omvang, het aanleveren van inhoud en toegang tot systemen. In het voorstel staan de fasen en feedbackmomenten. Je weet wat we van jou nodig hebben voordat de bouw begint.'],
   ['Wat krijg ik bij oplevering?', 'We leveren de afgesproken pagina’s of werkstroom op, testen de belangrijkste gebruikersroutes en geven uitleg over het gebruik. In het voorstel leggen we vast welke inhoud, koppelingen en documentatie bij jouw opdracht horen.'],
   ['Hoe werken beheer en ondersteuning?', 'We spreken vooraf af wie inhoud bijwerkt, technische updates verzorgt en vragen of storingen oppakt. Eenmalige bouw en eventuele doorlopende ondersteuning staan apart in het voorstel.'],

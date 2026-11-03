@@ -47,14 +47,14 @@ export const automationPage: ServicePageContent = {
   audience: 'Voor teams die steeds dezelfde gegevens overnemen, aanvragen verdelen of achter opvolging aan moeten.',
   deliverables: ['Een uitgewerkte werkstroom met begin, einde en verantwoordelijke', 'De afgesproken koppelingen en eventuele AI-ondersteuning', 'Tests met normale aanvragen, ontbrekende gegevens en fouten', 'Uitleg over goedkeuren, uitzonderingen en dagelijks gebruik'],
   scope: 'Beschikbare koppelingen, toegangsrechten en de kwaliteit van gegevens bepalen wat mogelijk is. We benoemen software- en gebruikskosten apart en spreken af wie storingen en wijzigingen oppakt.',
-  label: 'Automatisering & AI', title: 'Automatiseer het werk dat steeds terugkomt',
+  label: 'AI-agents & automatisering', title: 'Geef terugkerend werk een duidelijke route',
   cta: 'Bespreek je werkproces', sectionTitle: 'Van losse handelingen naar een vaste werkwijze',
   questions: [
     ['Met welk proces kunnen we het beste beginnen?', 'Kies een taak die vaak terugkomt en waarvan je de stappen kunt laten zien. Bijvoorbeeld aanvragen vastleggen, offertes opvolgen of ordergegevens overnemen. Samen bepalen we waar een eerste koppeling zinvol is.'],
     ['Hebben we hiervoor altijd AI nodig?', 'Nee. Een vaste regel kan genoeg zijn om gegevens door te geven of een herinnering te maken. AI zetten we in als een stap vraagt om tekst begrijpen, samenvatten of een antwoord voorbereiden.'],
     ['Wat gebeurt er als informatie ontbreekt of iets misgaat?', 'We testen zulke situaties vooraf. We spreken af welke acties stoppen, wie een melding krijgt en wanneer iemand een voorstel moet goedkeuren. Ook beheer en het opvolgen van storingen leggen we vast.'],
   ],
-  intro: 'We verbinden terugkerende stappen in je dagelijkse werk. Vaste regels regelen de routine. AI helpt bij het begrijpen van informatie en het voorbereiden van antwoorden.',
+  intro: 'We bouwen en beheren AI-agents en automatiseringen voor één concreet proces. Vaste regels verbinden je software. AI helpt informatie begrijpen of antwoorden voorbereiden. Je team houdt controle over belangrijke acties.',
   parts: [
     { title: 'Eerst het werk begrijpen.', copy: 'We bekijken één taak die steeds terugkomt. Waar begint die, welke informatie is nodig en wie beslist wat er daarna gebeurt?' },
     { title: 'Je software verbinden.', copy: 'We onderzoeken de mogelijkheden van je huidige systemen. Aanvragen, klantgegevens en herinneringen krijgen een afgesproken route.' },
